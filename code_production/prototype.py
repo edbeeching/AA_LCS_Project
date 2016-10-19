@@ -1,3 +1,7 @@
+
+#classic forward LCS dynamic prog implemented. naive user input just for testing purposes (should change). 
+#assumes the two text files to compare are in/nested in the same directory as the script
+
 import os
 import numpy
 
@@ -60,7 +64,7 @@ def LCS(file1,file2,mode):
 
 
 ##########################################################################################
-# Should change this part later (put together or testing purposes)
+# Should change this part later (put together for testing purposes)
 file1 = raw_input("Please enter first file name with path from current working directory ")
 file2 = raw_input("Please enter second file name with path from current working directory ")
 
