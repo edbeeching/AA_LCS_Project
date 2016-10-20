@@ -32,7 +32,7 @@ def compute_cost(j,costs,line_cost):
     sum = 10000
     k = 0
     for i in range(0,j+1):
-        if i is 0 :
+        if i is 0:
             if line_cost[i,j] < sum:
                 sum =  line_cost[i, j]
                 k = i
@@ -69,19 +69,38 @@ def print_neatly(listOfStrings, numberOfLinesPerRow):
     for i in range(0, n):
         for j in range(i, min(n, i + numberOfLinesPerRow / 2)):
             line_cost[i, j] = compute_line_cost(i, j, extras, n)
-    print(line_cost)
+    ##print(line_cost)
     costs = numpy.zeros(n, dtype="int32")
-    print(costs)
+    ##print(costs)
     para = numpy.zeros(n, dtype="int32")
     for j in range(0,n):
-        costs[j], para[j]  = compute_cost(j, costs, line_cost)
+        costs[j], para[j] = compute_cost(j, costs, line_cost)
 
-    print(costs)
-    print(para)
+    ##print(costs)
+    ##print(para)
+
+    word_key = [len(listOfStrings)]
+    val = para[n-1]
+    word_key.insert(0,val)
+    ##print(val)
+    while(val>0):
+        val = para[val-1]
+        word_key.insert(0, val)
+
+    ##print(word_key)
+
+    print("----------------")
+    key_index = 0
+    for i in range(0,len(listOfStrings)):
+        if word_key[key_index+1]<=i:
+            print()
+            key_index+=1
+        print(listOfStrings[i], end=" ")
+    print("\n----------------")
 
 
 
 if __name__ == '__main__':
-    ## run this following if this is the main program
+    ## run the following if this is the main program
     testString = ["This", "is", "a", "test", "string", "for", "printing", "neatly"]
     print_neatly(testString, 16)
