@@ -14,5 +14,5 @@ To do list: (please add stuff!)
 - [ ] Technique for plagarism score for the LCS
 - [ ] User Interface ??
 - [ ] More clever pre-processing / post processing
-- [ ] Report
+- [ ] Report (Writen in LateX)
 - [ ] Presentation for defense
