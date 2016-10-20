@@ -8,7 +8,7 @@ To do list: (please add stuff!)
 * LCS Classic - Backwards
 * LCS Dynamic
 * LCS B & B (we have no learnt this yet but if anyone knows this approach?)
-* Printing neatly (there are several techniques so this task may expand)
+* Printing neatly (there are several techniques so this task may expand) (PART1 COMPLETE by ED 20/10/2016)
 * Run Time and space complexity tests and analysis
 * Comparisons on the corpus
 * Technique for plagarism score for the LCS
