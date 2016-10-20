@@ -6,7 +6,7 @@ To do list: (please add stuff!)
 - [ ] Text Pre-processing 
 - [X] LCS Classic - Forwards    (COMPLETE by JOE 18/10/2016)
 - [ ] LCS Classic - Backwards
-- [ ] LCS Dynamic
+- [ ] LCS Recursive
 - [ ] LCS B & B (we have no learnt this yet but if anyone knows this approach?)
 - [X] Printing neatly (there are several techniques so this task may expand) (PART1 COMPLETE by ED 20/10/2016)
 - [ ] Run Time and space complexity tests and analysis
