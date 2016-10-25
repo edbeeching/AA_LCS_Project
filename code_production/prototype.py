@@ -65,20 +65,21 @@ def LCS(file1,file2,mode):
 
 ##########################################################################################
 # Should change this part later (put together for testing purposes)
-file1 = raw_input("Please enter first file name with path from current working directory ")
-file2 = raw_input("Please enter second file name with path from current working directory ")
+if __name__ == "__main__":
+    file1 = raw_input("Please enter first file name with path from current working directory ")
+    file2 = raw_input("Please enter second file name with path from current working directory ")
 
-cwd = os.getcwd()
-file1 = cwd + "\\" + file1
-file2 = cwd + "\\" + file2
+    cwd = os.getcwd()
+    file1 = cwd + "\\" + file1
+    file2 = cwd + "\\" + file2
 
-mode = raw_input("Please enter which LCS algorithm to use (classic, linear-space, or recursive): ")
+    mode = raw_input("Please enter which LCS algorithm to use (classic, linear-space, or recursive): ")
 
-c, b, length, LCSLIST = LCS(file1,file2,mode)
-print "The longest common subsequence is " + str(length)
-print "Here is the LCS: "
-for x in LCSLIST:
-    print x
+    c, b, length, LCSLIST = LCS(file1,file2,mode)
+    print "The longest common subsequence is " + str(length)
+    print "Here is the LCS: "
+    for x in LCSLIST:
+        print x
 
 
 
