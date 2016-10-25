@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Oct 23 16:30:08 2016
-
 @author: jeremie BLANCHARD
 """
 
@@ -24,7 +23,8 @@ def LCS_linear_space(file1,file2):
     Y = make_array(file2)
     length_X = len(X)
     length_Y = len(Y)
-
+    
+    b = numpy.empty((length_X,length_Y), dtype = "str")
     c = numpy.empty((length_X,length_Y), dtype = "int")
 
     for i in range(1,length_X):
