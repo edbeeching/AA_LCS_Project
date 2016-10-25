@@ -81,7 +81,7 @@ def print_neatly(listOfStrings, numberOfLinesPerRow):
     while val > 0:
         val = para[val-1]
         word_key.insert(0, val)
-
+    print (word_key)
     print("----------------")
     key_index = 0
     for i in range(0, len(listOfStrings)):
@@ -103,4 +103,6 @@ if __name__ == '__main__':
     for word in test_file.read().split():
         testString3.append(word)
 
-    print_neatly(testString3, 32)
+    print_neatly(testString3, 20)
+
+    # Add way to include paragraphs in printing neatly
