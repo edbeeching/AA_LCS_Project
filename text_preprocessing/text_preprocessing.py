@@ -36,8 +36,8 @@ def wrinting_preprocessed_file(filepath):
     file = read_file(filepath)
     pathsep = filepath.split(os.path.sep)
     pathsep[len(pathsep)-2] = 'corpus-preprocessed'
+    pathsep[len(pathsep)-1] = pathsep[len(pathsep)-1].replace('.txt','_preprocessed.txt')
     filepath_preprocessed = os.path.join('\\'.join(pathsep))
-    filepath_preprocessed += '_preprocessed'
     write_file(preproceesing_file(file), filepath_preprocessed)
     return
 
