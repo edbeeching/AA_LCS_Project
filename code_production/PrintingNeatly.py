@@ -3,60 +3,31 @@ from __future__ import print_function
 import numpy
 import sys
 
-def compute_extras(i, j, listOfStrings, numberOfLinesPerRow):
 
-    sum = numberOfLinesPerRow
-    for string in listOfStrings[i:j+1]:
+def compute_extras(i, j, list_of_strings, lines_per_row):
+
+    sum = lines_per_row
+    for string in list_of_strings[i:j+1]:
         sum -= len(string)
     sum -= (j-i)
     return sum
 
-def compute_extras_dynamic(i, j, listOfStrings, numberOfLinesPerRow, extrass):
+
+def compute_extras_dynamic(i, j, list_of_strings, lines_per_row, extrass):
     if i == j:
-        return numberOfLinesPerRow - len(listOfStrings[j])
+        return lines_per_row - len(list_of_strings[j])
     else:
-        return extrass[i, j-1] - len(listOfStrings[j]) - 1
+        return extrass[i, j-1] - len(list_of_strings[j]) - 1
 
 
 def compute_line_cost(i, j, extras, n):
 
-    if extras[i,j]<0:
+    if extras[i, j] < 0:
         # return sys.maxint This overflows in some cases, so better to use something smaller
         return 10000000
     if j+1 is n:
         return 0
-    return extras[i,j]**3
-
-
-def compute_extras_unit_test(listOfStrings, numberOfLinesPerRow):
-    # line_counter = 0
-    # print("----------------")
-    # for string in listOfStrings:
-    #     line_counter += len(string) + 1
-    #     if (line_counter > numberOfLinesPerRow + 1):
-    #         print()
-    #         line_counter = len(string) + 1
-    #     print(string, end=" ")
-    # print("\n----------------")
-
-    # The code below does printing neatly as per the definition in class
-
-    # Computation of extras[i,j]
-    n = len(listOfStrings)
-    extras = numpy.zeros((n, n), dtype="int32")
-    for i in range(0, n):
-        for j in range(i, min(n, i + (numberOfLinesPerRow / 2))):
-            extras[i, j] = compute_extras(i, j, listOfStrings, numberOfLinesPerRow)
-
-    extras2 = numpy.zeros((n, n), dtype="int32")
-    for i in range(0, n):
-        for j in range(i, min(n, i + (numberOfLinesPerRow / 2))):
-            extras2[i,j] = compute_extras_dynamic(i, j, listOfStrings, numberOfLinesPerRow, extras2)
-    numpy.savetxt("extras.txt",extras,fmt='%10i',delimiter=',')
-    numpy.savetxt("extras2.txt",extras2,fmt='%10i',  delimiter=',')
-    print(extras)
-    print()
-    print(extras2)
+    return extras[i, j]**3
 
 
 def compute_cost(j, costs, line_cost):
@@ -76,49 +47,44 @@ def compute_cost(j, costs, line_cost):
 
     return tot, k
 
-def print_neatly_greedy(listOfStrings, numberOfLinesPerRow):
+
+def print_neatly_greedy(list_of_strings, lines_per_row):
     # Function to print neatly using most basic way
     output = []
     line_counter = 0
     line_string = ""
     # print("----------------")
-    for string in listOfStrings:
+    for string in list_of_strings:
         line_counter += len(string) + 1
-        if line_counter > numberOfLinesPerRow+1:
-            # print()
+        if line_counter > lines_per_row+1:
             line_counter = len(string) + 1
             output.append(line_string[:-1])
             line_string = ""
 
         line_string += string
         line_string += " "
-        # print(string, end=" ")
     output.append(line_string[:-1])
-    # print("\n----------------")
-
-    # print(output)
 
     return output
 
-def print_neatly_dynamic(listOfStrings, numberOfLinesPerRow):
 
-
+def print_neatly_dynamic(list_of_strings, lines_per_row):
 
     # The code below does printing neatly as per the definition in class
 
     # Computation of extras[i,j]
-    n = len(listOfStrings)
+    n = len(list_of_strings)
     extras = numpy.zeros((n, n), dtype="int32")
     for i in range(0, n):
-        for j in range(i, min(n, i + numberOfLinesPerRow/2)):
-            extras[i, j] = compute_extras_dynamic(i, j, listOfStrings, numberOfLinesPerRow, extras)
+        for j in range(i, min(n, i + lines_per_row/2)):
+            extras[i, j] = compute_extras_dynamic(i, j, list_of_strings, lines_per_row, extras)
             # extras[i, j] = compute_extras(i, j, listOfStrings, numberOfLinesPerRow)
 
     # Computation of line costs
     line_cost = numpy.zeros((n, n), dtype="int32")
     line_cost[:] = 10000000
     for i in range(0, n):
-        for j in range(i, min(n, i + numberOfLinesPerRow / 2)):
+        for j in range(i, min(n, i + lines_per_row / 2)):
             line_cost[i, j] = compute_line_cost(i, j, extras, n)
 
     # Computation of best costs
@@ -128,32 +94,28 @@ def print_neatly_dynamic(listOfStrings, numberOfLinesPerRow):
         costs[j], para[j] = compute_cost(j, costs, line_cost)
 
     # The word key contains the a map of which strings are on which row
-    word_key = [len(listOfStrings)]
+    word_key = [len(list_of_strings)]
     val = para[n-1]
     word_key.insert(0, val)
 
     while val > 0:
         val = para[val-1]
         word_key.insert(0, val)
-    #print (word_key)
-    #print("----------------")
 
     output = []
     line_string = ""
     key_index = 0
 
-    for i in range(0, len(listOfStrings)):
+    for i in range(0, len(list_of_strings)):
         if word_key[key_index+1] <= i:
-            # print()
             key_index += 1
             output.append(line_string[:-1])
             line_string = ""
-        # print(listOfStrings[i], end=" ")
-        line_string += listOfStrings[i]
+        line_string += list_of_strings[i]
         line_string += " "
-     # print("\n----------------")
     output.append(line_string[:-1])
     return output
+
 
 if __name__ == '__main__':
     # run the following if this is the main program

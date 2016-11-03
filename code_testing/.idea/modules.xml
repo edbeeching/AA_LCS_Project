@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../../PycharmProjects/PyQt4_test/.idea/PyQt4_test.iml" filepath="$PROJECT_DIR$/../../../PycharmProjects/PyQt4_test/.idea/PyQt4_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/code_testing.iml" filepath="$PROJECT_DIR$/.idea/code_testing.iml" />
     </modules>
   </component>
