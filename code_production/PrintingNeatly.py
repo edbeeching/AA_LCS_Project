@@ -6,11 +6,11 @@ import sys
 
 def compute_extras(i, j, list_of_strings, lines_per_row):
 
-    sum = lines_per_row
+    total = lines_per_row
     for string in list_of_strings[i:j+1]:
-        sum -= len(string)
-    sum -= (j-i)
-    return sum
+        total -= len(string)
+    total -= (j-i)
+    return total
 
 
 def compute_extras_dynamic(i, j, list_of_strings, lines_per_row, extrass):
