@@ -16,7 +16,7 @@ def preproceesing_file(file):
     #file = file.replace('!', '')
     #file = file.replace(';', '')
 
-    preprocessed_file =file
+    preprocessed_file = file
     return preprocessed_file
 def adv_preproceesing_file(file):
     file = file.replace('‘', '\'')
@@ -27,8 +27,8 @@ def adv_preproceesing_file(file):
     file = file.replace('  ', ' ')
     file = file.replace('\'', '')
     file = file.replace('\"', '')
-    file = file.replace('.', '')
-    file = file.replace(',', '')
+#    file = file.replace('.', '')
+#    file = file.replace(',', '')
     file = file.replace('/', '')
     file = file.replace('?', '')
     file = file.replace('!', '')
