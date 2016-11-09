@@ -1,6 +1,5 @@
 
 #classic forward LCS dynamic prog implemented. naive user input just for testing purposes (should change). 
-#assumes the two text files to compare are in/nested in the same directory as the script
 
 import os
 import numpy
@@ -18,7 +17,7 @@ def make_array(file1):
 def LCSclassic(file1,file2):
     X = make_array(file1)
     Y = make_array(file2)
-    m = len(X)  #X[m-1] is the last element of X (since python is 0 indexed)
+    m = len(X) #X[m-1] is the last element of X (since python is 0 indexed)
     n = len(Y)
     b = numpy.empty((m,n), dtype = "str")
     c = numpy.empty((m,n), dtype = "int")
@@ -66,20 +65,56 @@ def LCS(file1,file2,mode):
 ##########################################################################################
 # Should change this part later (put together for testing purposes)
 if __name__ == "__main__":
-    file1 = raw_input("Please enter first file name with path from current working directory ")
-    file2 = raw_input("Please enter second file name with path from current working directory ")
 
+
+    #########################################################
+    ## Script to get LCS data on corpus w/ advanced preprocessing
+    mode = "classic"
     cwd = os.getcwd()
-    file1 = cwd + "\\" + file1
-    file2 = cwd + "\\" + file2
+    parent = os.path.abspath(os.path.join(cwd, os.pardir))
+    file_list = os.listdir('..\\corpus-adv_preprocessed')
+    lengths = []
+    ratios = []
 
-    mode = raw_input("Please enter which LCS algorithm to use (classic, linear-space, or recursive): ")
+    
+    for each in file_list:
+        task = each[9]
+        file1 = parent + "\\corpus-adv_preprocessed\\" + each
+        file2 = parent + "\\corpus-adv_preprocessed\\orig_task" + task + "_adv_preprocessed.txt"
+        c, b, length, LCSLIST = LCS(file1,file2,mode)
+        totallength = c.shape[0] - 1
+        lengths.append(length)
+        ratios.append(float(length) / totallength)
 
-    c, b, length, LCSLIST = LCS(file1,file2,mode)
-    print "The longest common subsequence is " + str(length)
-    print "Here is the LCS: "
-    for x in LCSLIST:
-        print x
+    for each in lengths:
+        print each
+    for each in ratios:
+        print round(each,5)
+        
+
+
+
+
+    
+##    preprocess = raw_input("Press y for preprocessed text or n for not preprocessed text ")   
+##            
+##    group = raw_input("Please enter the group ")
+##    person = raw_input("Please enter the person ")
+##    task = raw_input("Please enter the task ")
+##
+##    cwd = os.getcwd()
+##    if preprocess == "n":
+##        file1 = cwd + "\\..\\corpus-20090418\\g" + str(group) + "p" + str(person) + "_task" + str(task) + ".txt"
+##        file2 = cwd + "\\..\\corpus-20090418\\orig_task" + str(task) + ".txt"
+##    else:
+##        file1 = cwd + "\\..\\corpus-preprocessed\\g" + str(group) + "p" + str(person) + "_task" + str(task) + "preprocessed.txt"
+##        file2 = cwd + "\\..\\corpus-preprocessed\\orig_task" + str(task) + "corpus-preprocessed.txt"
+##
+##    mode = raw_input("Please enter which LCS algorithm to use (classic, linear-space, or recursive): ")
+##
+##    c, b, length, LCSLIST = LCS(file1,file2,mode)
+##    print "The longest common subsequence is " + str(length)
+    
 
 
 
