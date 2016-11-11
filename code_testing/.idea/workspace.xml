@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="801abd12-a82f-44f9-aee2-f57024d56752" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-final09.xls" afterPath="$PROJECT_DIR$/../corpus-final09.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../code_production/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../code_production/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/branch_and_bound.py" afterPath="$PROJECT_DIR$/branch_and_bound.py" />
@@ -67,8 +66,8 @@
       <file leaf-file-name="branch_and_bound.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/branch_and_bound.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="123" column="37" lean-forward="true" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
+            <state relative-caret-position="3718">
+              <caret line="169" column="34" lean-forward="false" selection-start-line="169" selection-start-column="34" selection-end-line="169" selection-end-column="34" />
               <folding>
                 <element signature="e#134#171#0" expanded="true" />
               </folding>
@@ -79,7 +78,7 @@
       <file leaf-file-name="text_preprocessing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../text_preprocessing/text_preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
+            <state relative-caret-position="374">
               <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding />
             </state>
@@ -90,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/../code_production/prototype.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
-              <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+              <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -455,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1476976783347</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Branch and bound almost finished, may need better definition for upper bound">
+      <created>1478809826984</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1478809826984</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -467,7 +473,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31425598" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2466181" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -516,7 +522,8 @@
     <MESSAGE value="Almost finished printing neatly 1" />
     <MESSAGE value="Printing neatly complete, I think. some tests required." />
     <MESSAGE value="Printing neatly complete." />
-    <option name="LAST_COMMIT_MESSAGE" value="Printing neatly complete." />
+    <MESSAGE value="Branch and bound almost finished, may need better definition for upper bound" />
+    <option name="LAST_COMMIT_MESSAGE" value="Branch and bound almost finished, may need better definition for upper bound" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -919,7 +926,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../text_preprocessing/text_preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
+        <state relative-caret-position="374">
           <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding />
         </state>
@@ -928,7 +935,7 @@
     <entry file="file://$PROJECT_DIR$/../code_production/prototype.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -946,8 +953,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/branch_and_bound.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="123" column="37" lean-forward="true" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
+        <state relative-caret-position="3718">
+          <caret line="169" column="34" lean-forward="false" selection-start-line="169" selection-start-column="34" selection-end-line="169" selection-end-column="34" />
           <folding>
             <element signature="e#134#171#0" expanded="true" />
           </folding>

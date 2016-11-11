@@ -144,23 +144,38 @@ if __name__ == '__main__':
     print("estimate of best is ", best)
     print("max length is ", max_lcs_length)
     print("--")
+    logfile = open('log.txt','w')
+    logfile.write("estimate of best is " + str(best)+"\n")
+    logfile.write("max length is "+ str(max_lcs_length)+"\n")
+    logfile.write("--------------------------------"+"\n")
+
     while not lifo_queue.empty():
         node = lifo_queue.get()
-        # print(node)
+        # print(node+ "\n")
+        if node[3] > best:
+            logfile.write(str(get_solution(words1, words2, node[0])) + str(node) + "\n")
+        else:
+            logfile.write(" CUT "+str(get_solution(words1, words2, node[0])) + str(node) + " CUT\n")
+
         if node[3] > best and node[1] < max_lcs_length-1:
             node1, node2 = explore(node, words1, words2)
             if node1[3] > node2[3]:
-                lifo_queue.put(node2)
-                lifo_queue.put(node1)
+                if node2[3] > best:
+                    lifo_queue.put(node2)
+                if node1[3] > best:
+                    lifo_queue.put(node1)
             else:
-                lifo_queue.put(node1)
-                lifo_queue.put(node2)
+                if node1[3] > best:
+                    lifo_queue.put(node1)
+                if node2[3] > best:
+                    lifo_queue.put(node2)
 
         else:
             if node[1] == (max_lcs_length - 1):
                 print("at end of tree")
             if node[3] > best and node[1] == (max_lcs_length - 1):
                 print("New Best found", node)
+                logfile.write("--------------------------------" + "\n")
                 best = node[3]
                 best_solution = node[0]
 
@@ -169,7 +184,7 @@ if __name__ == '__main__':
     solution = get_solution(words1, words2, best_solution)
     print("{0:016b}".format(best_solution))
     print(solution)
-
+    logfile.close()
     # # Test functions to ensure expected results
     # # find_bounds(list1, list2):
     # print("Find bounds")
