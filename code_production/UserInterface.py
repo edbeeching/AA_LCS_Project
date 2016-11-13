@@ -34,16 +34,19 @@ class LCS_UI(QtGui.QMainWindow):
         self.tab2 = QtGui.QWidget()
         self.tab3 = QtGui.QWidget()
         self.tab4 = QtGui.QWidget()
+        self.tab5 = QtGui.QWidget()
 
         self.tabWidget.addTab(self.tab1, "LCS Unit")
         self.tabWidget.addTab(self.tab2, "Table")
-        self.tabWidget.addTab(self.tab3, "Graph 1")
-        self.tabWidget.addTab(self.tab4, "Graph 2")
+        self.tabWidget.addTab(self.tab3, "General graph")
+        self.tabWidget.addTab(self.tab4, "Graph by task")
+        self.tabWidget.addTab(self.tab5, "Repartition by Category")
 
         self.tab1UI()
         self.tab2UI()
         self.tab3UI()
         self.tab4UI()
+        self.tab5UI()
 
         self.setWindowTitle("Plagiarism Detector")
         self.statusBar().showMessage('Ready')
@@ -275,17 +278,20 @@ class LCS_UI(QtGui.QMainWindow):
     	self.tab3.setLayout(layout)
 
     def tab4UI(self):
-        PlotBayCat = []
-        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'a'))
-        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'b'))
-        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'c'))
-        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'d'))
-        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'e'))
-        
         layout = QtGui.QGridLayout()
-        for i in range(0,4): layout.addWidget(PlotBayCat[i],int(i/2),int(i%2))
+
+        PlotByCat = Plotting.plotByCategory(self)
+        layout.addWidget(PlotByCat)
 
         self.tab4.setLayout(layout)
+
+    def tab5UI(self):
+        layout = QtGui.QGridLayout()
+
+        PlotByCat = Plotting.plotByCategory2(self)
+        layout.addWidget(PlotByCat)
+
+        self.tab5.setLayout(layout)
 
 def main():
     app = QtGui.QApplication(sys.argv)

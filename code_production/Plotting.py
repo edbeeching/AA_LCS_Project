@@ -6,7 +6,12 @@ import PandasModel
 import pandas as pd
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib.pyplot as plot
+import numpy as np
+import Statistics as stats
 
+#################################################
+#                  FIRST GRAPH                  #
+#################################################
 
 def plotAllLCS(self):
 	figure = plot.figure()
@@ -39,46 +44,116 @@ def plotAllLCS(self):
 	canvas.draw()
 	return canvas
 
-def plotRatioOverCategory(self,task):
+
+
+##################################################
+#                  SECOND GRAPH                  #
+##################################################
+
+
+def subplotByCategoryLabels(self,axIn,axOut):
+	handles,labelsX = axIn.get_legend_handles_labels()
+	labels = ['non','light','heavy','cut']
+	axOut.legend(handles,labels,loc='center')
+	axOut.get_xaxis().set_visible(False)
+	axOut.get_yaxis().set_visible(False)
+	axOut.set_title('legend')
+
+def subplotByCategory(self,task,ax):
 	xl = pd.ExcelFile("../corpus-final09.xls")
 	df = xl.parse("File list")
-
-	categories = ['non','light','heavy','cut']
-
 	dfTask = df.loc[df['Task'] == task]
-	
 	selectNon = dfTask.loc[df['Category'] == 'non']
 	selectLight = dfTask.loc[df['Category'] == 'light']
 	selectHeavy = dfTask.loc[df['Category'] == 'heavy']
 	selectCut = dfTask.loc[df['Category'] == 'cut']
+
+	colName = 'LCS Ratio (By Sentence, Advanced Pre)'
+	ax.plot(selectNon[colName],'yo')
+	ax.plot(selectLight[colName],'gs')
+	ax.plot(selectHeavy[colName],'b^')
+	ax.plot(selectCut[colName],'rD')
 	
+	ax.set_xlabel('#File')
+	ax.set_ylabel('LCS Ratio')
+	
+	ax.set_title('Task '+task)
+
+def plotByCategory(self):
 	figure = plot.figure()
 	canvas = FigureCanvas(figure)
 
-	ax = figure.add_subplot(111)
-	
 	figure.suptitle('LCS Ratios / Plagiarism Category', fontsize=20)
-	colName = 'LCS Ratio (By Sentence, Advanced Pre)'
+	
+	ax1 = figure.add_subplot(231)
+	subplotByCategory(self,'a',ax1)
 
-	ax.plot(selectNon[colName],'y-')
-	ax.plot(selectLight[colName],'g-')
-	ax.plot(selectHeavy[colName],'b-')
-	ax.plot(selectCut[colName],'r-')
+	ax2 = figure.add_subplot(232)
+	subplotByCategory(self,'b',ax2)
 
-	handles,labelsX = ax.get_legend_handles_labels()
+	ax3 = figure.add_subplot(233)
+	subplotByCategory(self,'c',ax3)
 
-	labels = ['non','light','heavy','cut']
-	ax.legend(handles,labels,loc='lower right')
-	ax.text(0,0,'TASK '+task,fontsize=15)
+	ax4 = figure.add_subplot(234)
+	subplotByCategory(self,'d',ax4)
 
-	ax.set_xlabel('#File')
-	ax.set_ylabel('LCS Ratio')
+	ax5 = figure.add_subplot(235)
+	subplotByCategory(self,'e',ax5)
 
+	ax6 = figure.add_subplot(236)
+	subplotByCategoryLabels(self,ax1,ax6)
+
+
+	plot.tight_layout()
+	figure = plot.gcf()
 
 	canvas.draw()
 	return canvas
 
-	# print(select)
+
+#################################################
+#                  THIRD GRAPH                  #
+#################################################
+
+def plotByCategory2(self):
+	figure = plot.figure()
+	canvas = FigureCanvas(figure)
+
+	xl = pd.ExcelFile("../corpus-final09.xls")
+	df = xl.parse("File list")
+
+	colName = 'LCS Ratio (By Sentence, Advanced Pre)'
+
+	# selectNon = df.loc[df['Category'] == 'non']
+	
+	categories = ['non','light','heavy','cut']
+	colors = ['y.','g.','b.','r.']
+
+	ax = figure.add_subplot(111)
+	ax.axis([-1,4,0,1.2])
+
+	values = []
+	means = []
+	std_devs = []
+	for x in range(0,4):
+		values.append(df.loc[df['Category'] == categories[x]][colName])
+		ax.plot(len(values[x])*[x],values[x],colors[x])
+		m = stats.mean(values[x])
+		std = stats.standard_deviation(values[x])
+		m_str = str('%.3f' % round(m,3))
+		std_str = str('%.3f' % round(std,3))
+		ax.text((x+.1),m,'mean = '+m_str+'\nstd =  '+std_str)
+
+
+	handles,labelsX = ax.get_legend_handles_labels()
+	ax.legend(handles,categories,loc='lower right')
+
+	ax.yaxis.grid()
+	ax.xaxis.set_ticklabels(['','non','light','heavy','cut',''])
+
+	canvas.draw()
+	return canvas
+
 
 
 
