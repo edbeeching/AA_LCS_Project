@@ -1,10 +1,20 @@
 
 from PyQt4 import QtGui, QtCore
+
 import sys, os
 import prototype
 import PrintingNeatly
 import PandasModel
 import pandas as pd
+
+
+import Plotting
+
+# from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
+# import matplotlib.pyplot as plot
+# import random
+
+
 
 class LCS_UI(QtGui.QMainWindow):
     def __init__(self, parent=None):
@@ -23,15 +33,19 @@ class LCS_UI(QtGui.QMainWindow):
         self.tab1 = QtGui.QWidget()
         self.tab2 = QtGui.QWidget()
         self.tab3 = QtGui.QWidget()
+        self.tab4 = QtGui.QWidget()
 
-        self.tabWidget.addTab(self.tab1, "Tab 1")
-        self.tabWidget.addTab(self.tab2, "Tab 2")
-        self.tabWidget.addTab(self.tab3, "Tab 3")
+        self.tabWidget.addTab(self.tab1, "LCS Unit")
+        self.tabWidget.addTab(self.tab2, "Table")
+        self.tabWidget.addTab(self.tab3, "Graph 1")
+        self.tabWidget.addTab(self.tab4, "Graph 2")
 
         self.tab1UI()
         self.tab2UI()
+        self.tab3UI()
+        self.tab4UI()
 
-        self.setWindowTitle("Plagarism Detector")
+        self.setWindowTitle("Plagiarism Detector")
         self.statusBar().showMessage('Ready')
 
 
@@ -180,7 +194,7 @@ class LCS_UI(QtGui.QMainWindow):
             text = file_object.read()
             self.wiki_text.setPlainText(text)
             file_object.close()
-            c, b, length, LCSLIST = prototype.LCSclassic("../corpus-preprocessed/" + filename[:-4] + "_preprocessed.txt",
+            length, c, b, lengthLCS, LCSLIST  = prototype.LCSclassic("../corpus-preprocessed/" + filename[:-4] + "_preprocessed.txt",
                                                          "../corpus-20090418/orig_task" + self.task_combo_box.currentText()+ ".txt")
             self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
             self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
@@ -202,7 +216,7 @@ class LCS_UI(QtGui.QMainWindow):
             text = file_object.read()
             self.wiki_text.setPlainText(text)
             file_object.close()
-            c, b, length, LCSLIST = prototype.LCSclassic("../corpus-preprocessed/" + filename[:-4] + "_preprocessed.txt",
+            length, c, b, lengthLCS, LCSLIST  = prototype.LCSclassic("../corpus-preprocessed/" + filename[:-4] + "_preprocessed.txt",
                                                          "../corpus-preprocessed/orig_task" + self.task_combo_box.currentText() + "_preprocessed.txt")
 
             self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
@@ -225,7 +239,7 @@ class LCS_UI(QtGui.QMainWindow):
             text = file_object.read()
             self.wiki_text.setPlainText(text)
             file_object.close()
-            c, b, length, LCSLIST = prototype.LCSclassic("../corpus-adv_preprocessed/" + filename[:-4] + "_adv_preprocessed.txt",
+            length, c, b, lengthLCS, LCSLIST  = prototype.LCSclassic("../corpus-adv_preprocessed/" + filename[:-4] + "_adv_preprocessed.txt",
                                                          "../corpus-adv_preprocessed/orig_task" + self.task_combo_box.currentText() + "_adv_preprocessed.txt")
 
             self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
@@ -253,7 +267,25 @@ class LCS_UI(QtGui.QMainWindow):
 
         self.tab2.setLayout(layout)
 
+    def tab3UI(self):
+    	PlotAllLCS = Plotting.plotAllLCS(self)
+    	layout = QtGui.QHBoxLayout()
+    	layout.addWidget(PlotAllLCS)
 
+    	self.tab3.setLayout(layout)
+
+    def tab4UI(self):
+        PlotBayCat = []
+        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'a'))
+        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'b'))
+        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'c'))
+        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'d'))
+        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'e'))
+        
+        layout = QtGui.QGridLayout()
+        for i in range(0,4): layout.addWidget(PlotBayCat[i],int(i/2),int(i%2))
+
+        self.tab4.setLayout(layout)
 
 def main():
     app = QtGui.QApplication(sys.argv)
