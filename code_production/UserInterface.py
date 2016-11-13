@@ -194,8 +194,8 @@ class LCS_UI(QtGui.QMainWindow):
             text = file_object.read()
             self.wiki_text.setPlainText(text)
             file_object.close()
-            length, lengthLCS, LCSLIST  = prototype.LCSclassic("../corpus-preprocessed/" + filename[:-4] + "_preprocessed.txt",
-                                                         "../corpus-20090418/orig_task" + self.task_combo_box.currentText()+ ".txt")
+            length, lengthLCS, LCSLIST  = prototype.LCS("../corpus-preprocessed/" + filename[:-4] + "_preprocessed.txt",
+                                                         "../corpus-20090418/orig_task" + self.task_combo_box.currentText()+ ".txt", "classic")
             self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
             self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
 
@@ -216,8 +216,8 @@ class LCS_UI(QtGui.QMainWindow):
             text = file_object.read()
             self.wiki_text.setPlainText(text)
             file_object.close()
-            length, lengthLCS, LCSLIST  = prototype.LCSclassic("../corpus-preprocessed/" + filename[:-4] + "_preprocessed.txt",
-                                                         "../corpus-preprocessed/orig_task" + self.task_combo_box.currentText() + "_preprocessed.txt")
+            length, lengthLCS, LCSLIST  = prototype.LCS("../corpus-preprocessed/" + filename[:-4] + "_preprocessed.txt",
+                                                         "../corpus-preprocessed/orig_task" + self.task_combo_box.currentText() + "_preprocessed.txt", "classic")
 
             self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
             self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
@@ -239,8 +239,8 @@ class LCS_UI(QtGui.QMainWindow):
             text = file_object.read()
             self.wiki_text.setPlainText(text)
             file_object.close()
-            length, lengthLCS, LCSLIST  = prototype.LCSclassic("../corpus-adv_preprocessed/" + filename[:-4] + "_adv_preprocessed.txt",
-                                                         "../corpus-adv_preprocessed/orig_task" + self.task_combo_box.currentText() + "_adv_preprocessed.txt")
+            length, lengthLCS, LCSLIST  = prototype.LCS("../corpus-adv_preprocessed/" + filename[:-4] + "_adv_preprocessed.txt",
+                                                         "../corpus-adv_preprocessed/orig_task" + self.task_combo_box.currentText() + "_adv_preprocessed.txt", "classic")
 
             self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
             self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
