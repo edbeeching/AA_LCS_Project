@@ -1,11 +1,54 @@
-""" This module implements longest common subsequence with a branch and bound approach
-    Created by Edward Beeching 09/11/2016 """
+"""
+    This module implements longest common subsequence with a branch and bound approach
+    Created by Edward Beeching 09/11/2016
+
+    The only "public" function is the branch_n_bound(words1, words2) which takes two lists of words / chars / etc and
+    returns the longest common subsequence using a the branch a bound method.
+
+    The method itself uses a last in first out queue (LIFO Queue) to traverse the tree looking for solutions.
+
+
+    The function _find_bounds(list1, list2)
+        The upper and lower bounds of the LCS are computed using a hash table for efficiency.
+
+        For example strings A,B,C,D,C,E  & C,D,E,F,G,C
+
+        Lower bound:
+        Maximum occurence of a single letter is [C,C] therefore this is the length of the smallest possible substring
+
+
+        Upper bound:
+        Sum of occurences of letters in common better both strings, in this case this will be
+        [C,C] + [D] + [E] = 4
+        This will be the length of the longest possible subsequence
+
+    The function _find_index_of_first(first, start, wordlist)
+        This looks for a character or word "first" in the wordlist starting at the index "start"
+
+        For Example A,B,C,A,B,C
+
+        if first=A, start=0 the function returns 0
+        if first=B, start=0 the function returns 1
+        if first=A, start=1 the function returns 3
+        if first=D, start=0 the function returns 10^9
+
+
+
+"""
 from __future__ import print_function
 import Queue
 import copy
 
 
 def branch_n_bound(words1, words2):
+    """
+    This function computes the LCS using a branch and bound method. See comments at start of module for further details.
+
+    :param words1: The first list of strings to compare
+    :param words2: The second list of strings to compare
+    :return: The LCS, returned as a list of strings
+    """
+
     max_lcs_length = min(len(words1), len(words2))
     best, _upper = _find_bounds(words1, words2)
 
@@ -56,6 +99,13 @@ def branch_n_bound(words1, words2):
 
 
 def _find_bounds(list1, list2):
+    """
+    See intro for details of this function.
+
+    :param list1: The first list of strings to compare
+    :param list2: The second list of strings to compare
+    :return: returns two integers, the lower and upper bounds
+    """
     if len(list1) > len(list2):
         return _find_bounds(list2, list1)
 
@@ -92,6 +142,15 @@ def _find_bounds(list1, list2):
 
 
 def _find_index_of_first(first, start, word_list):
+    """
+    Finds the first index of a characted/string in a list of strings, if the char does not exist, return 10^9
+
+    :param first:
+    :param start:
+    :param word_list:
+    :return:
+    """
+
     if start > len(word_list)-1:
         return 1000000000
     for index, word in enumerate(word_list[start:]):
