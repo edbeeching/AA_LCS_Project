@@ -1,0 +1,44 @@
+DOCUMENTATION
+
+function make_array(file1)
+input : filename
+output : list of words in file 
+* the first element in the output array is an empty string.
+* this is done because the LCS algorithm assumes base-1 indexing
+
+function make_sentence_array(file1)
+input : filename
+output : list of lists of words. Each list of words is a sentence.
+*indexing note from above applies
+
+function make_compsentence_array(file1)
+input : filename
+output : list of words in file, with punctuation removed.
+*indexing note applies
+*This function is needed to compute the sentence by sentence LCS
+
+function LCSclassic(X,Y)
+input : 2 lists of words
+output: list of words in LCS
+*classic dynammic programming algorithm
+
+function LCS(file1,file2,mode)
+input : 2 file names, mode 
+output : length of first array, length of LCS, list of words in LCS
+*This is a driver (helper) function for LCS. The idea is once the other LCS
+algorithms have been implemented, the argument "mode" can be which algorithm
+
+function LCS_Sentence(file1,file2,mode)
+input : 2 file names, mode
+output : length of first array, length of LCS, list of words in LCS
+*This is the same as the LCS function except it's using sentence by sentence 
+processing. The idea is the same, once other algorithms have been implemented,
+the user can do sentence by sentence using any of the algorithms, specified by mode.
+
+function LCS_list(b,X,m,n,S)
+input: b matrix from dynammic programming alg, list of words for the file,
+length of X (m), length of second text (n), and S is the LCS words which it builds
+output: S, filled with words of LCS
+*This is the recursive function to build the LCS from the b matrix. It should
+only work for the dynammic programming algorithm, since it needs the b matrix.
+
