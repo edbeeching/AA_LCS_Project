@@ -31,7 +31,7 @@
       <file leaf-file-name="zeb_printing_neatly1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zeb_printing_neatly1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
+            <state relative-caret-position="17">
               <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
                 <element signature="e#1#38#0" expanded="true" />
@@ -44,7 +44,7 @@
       <file leaf-file-name="zeb_excel_to_panndas.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zeb_excel_to_panndas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
+            <state relative-caret-position="85">
               <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
@@ -54,7 +54,7 @@
       <file leaf-file-name="tag_cloud.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tag_cloud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="136">
               <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="e#143#162#0" expanded="true" />
@@ -66,10 +66,17 @@
       <file leaf-file-name="branch_and_bound.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/branch_and_bound.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3718">
-              <caret line="169" column="34" lean-forward="false" selection-start-line="169" selection-start-column="34" selection-end-line="169" selection-end-column="34" />
+            <state relative-caret-position="550">
+              <caret line="169" column="0" lean-forward="true" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
               <folding>
-                <element signature="e#134#171#0" expanded="true" />
+                <element signature="e#133#170#0" expanded="true" />
+                <element signature="e#238#2063#0" expanded="false" />
+                <element signature="e#884#1987#0" expanded="false" />
+                <element signature="e#2102#2981#0" expanded="false" />
+                <element signature="e#3039#3280#0" expanded="false" />
+                <element signature="e#3339#3526#0" expanded="false" />
+                <element signature="e#3569#4757#0" expanded="false" />
+                <element signature="e#4812#5105#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -78,7 +85,7 @@
       <file leaf-file-name="text_preprocessing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../text_preprocessing/text_preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="289">
               <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding />
             </state>
@@ -88,7 +95,7 @@
       <file leaf-file-name="prototype.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../code_production/prototype.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
+            <state relative-caret-position="238">
               <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
               <folding />
             </state>
@@ -126,10 +133,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="89" />
-    <option name="y" value="-9" />
-    <option name="width" value="1840" />
-    <option name="height" value="1098" />
+    <option name="x" value="70" />
+    <option name="y" value="-8" />
+    <option name="width" value="1858" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -461,19 +468,26 @@
       <option name="project" value="LOCAL" />
       <updated>1478809826984</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Branch and bound almost finished, may need better definition for upper bound">
+      <created>1478892541043</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1478892541043</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="-9" width="1840" height="1098" extended-state="6" />
-    <editor active="true" />
+    <frame x="70" y="-8" width="1858" height="1096" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2466181" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19371197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -483,7 +497,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -530,6 +544,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
+      <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -908,7 +923,7 @@
     <entry file="file://$PROJECT_DIR$/../code_production/zeb_UI2.py" />
     <entry file="file://$PROJECT_DIR$/zeb_excel_to_panndas.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
+        <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
@@ -916,7 +931,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tag_cloud.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="136">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#143#162#0" expanded="true" />
@@ -926,7 +941,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../text_preprocessing/text_preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="289">
           <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding />
         </state>
@@ -934,7 +949,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../code_production/prototype.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="238">
           <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
           <folding />
         </state>
@@ -942,7 +957,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zeb_printing_neatly1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
+        <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="e#1#38#0" expanded="true" />
@@ -953,10 +968,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/branch_and_bound.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3718">
-          <caret line="169" column="34" lean-forward="false" selection-start-line="169" selection-start-column="34" selection-end-line="169" selection-end-column="34" />
+        <state relative-caret-position="550">
+          <caret line="169" column="0" lean-forward="true" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
           <folding>
-            <element signature="e#134#171#0" expanded="true" />
+            <element signature="e#133#170#0" expanded="true" />
+            <element signature="e#238#2063#0" expanded="false" />
+            <element signature="e#884#1987#0" expanded="false" />
+            <element signature="e#2102#2981#0" expanded="false" />
+            <element signature="e#3039#3280#0" expanded="false" />
+            <element signature="e#3339#3526#0" expanded="false" />
+            <element signature="e#3569#4757#0" expanded="false" />
+            <element signature="e#4812#5105#0" expanded="false" />
           </folding>
         </state>
       </provider>
