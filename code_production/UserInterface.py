@@ -194,7 +194,7 @@ class LCS_UI(QtGui.QMainWindow):
             text = file_object.read()
             self.wiki_text.setPlainText(text)
             file_object.close()
-            length, c, b, lengthLCS, LCSLIST  = prototype.LCSclassic("../corpus-preprocessed/" + filename[:-4] + "_preprocessed.txt",
+            length, lengthLCS, LCSLIST  = prototype.LCSclassic("../corpus-preprocessed/" + filename[:-4] + "_preprocessed.txt",
                                                          "../corpus-20090418/orig_task" + self.task_combo_box.currentText()+ ".txt")
             self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
             self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
