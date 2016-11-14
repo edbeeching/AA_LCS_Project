@@ -22,21 +22,14 @@ def init_pieChart():
 	return figure
 
 def update_pieChart(figure,length,lengthLCS):
-	# figure.clear()
-	# figure = plot.figure()
-	# canvas = FigureCanvas(figure)
-
 	ax = figure.add_subplot(111)
 	ax.clear()
 	
 	labels = ['Original','Copied']
 	plagiarismPercentage = (lengthLCS / (length * 1.0))
-	print ('\n')
 	p2 = int(100 * plagiarismPercentage)
 	p1 = int(100 - p2)
 	sizes = [p1,p2]
-	print (p1)
-	print (p2)
 	colors = ['green','red']
 
 	ax.pie(
@@ -48,10 +41,6 @@ def update_pieChart(figure,length,lengthLCS):
 	ax.axis('equal')
 	patches, texts = ax.pie(sizes, colors=colors, startangle=90)
 	ax.legend(patches, labels, loc="best")
-
-	# canvas.draw()
-	# return canvas
-
 
 
 
