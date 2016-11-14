@@ -7,13 +7,8 @@ import PrintingNeatly
 import PandasModel
 import pandas as pd
 
-
+from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
 import Plotting
-
-# from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
-# import matplotlib.pyplot as plot
-# import random
-
 
 
 class LCS_UI(QtGui.QMainWindow):
@@ -137,8 +132,13 @@ class LCS_UI(QtGui.QMainWindow):
 
         self.corpus_length_label = QtGui.QLabel("Corpus length")
         self.substring_length_label  = QtGui.QLabel("LCS Length")
+        self.pieChart = Plotting.init_pieChart()
+        self.pieChartCanvas = FigureCanvas(self.pieChart)
+        self.pieChartCanvas.draw()
+
         v2_layout.addWidget(self.corpus_length_label)
         v2_layout.addWidget(self.substring_length_label)
+        v2_layout.addWidget(self.pieChartCanvas)
         v2_layout.addStretch(stretch=1)
 
         h_layout.addLayout(v1_layout, stretch=2)
@@ -201,6 +201,8 @@ class LCS_UI(QtGui.QMainWindow):
                                                          "../corpus-20090418/orig_task" + self.task_combo_box.currentText()+ ".txt", "classic")
             self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
             self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
+            Plotting.update_pieChart(self.pieChart,length,lengthLCS)
+            self.pieChartCanvas.draw()
 
             neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
 
@@ -224,6 +226,7 @@ class LCS_UI(QtGui.QMainWindow):
 
             self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
             self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
+            Plotting.update_pieChart(self.pieChart,length,lengthLCS)
 
             neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
 
@@ -244,9 +247,11 @@ class LCS_UI(QtGui.QMainWindow):
             file_object.close()
             length, lengthLCS, LCSLIST  = prototype.LCS("../corpus-adv_preprocessed/" + filename[:-4] + "_adv_preprocessed.txt",
                                                          "../corpus-adv_preprocessed/orig_task" + self.task_combo_box.currentText() + "_adv_preprocessed.txt", "classic")
+            
 
             self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
             self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
+            Plotting.update_pieChart(self.pieChart,length,lengthLCS)
 
             neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
 

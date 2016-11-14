@@ -9,6 +9,53 @@ import matplotlib.pyplot as plot
 import numpy as np
 import Statistics as stats
 
+
+
+
+
+###############################################
+#                  PIE CHART                  #
+###############################################
+def init_pieChart():
+	figure = plot.figure()
+	update_pieChart(figure,100,50) # to remove
+	return figure
+
+def update_pieChart(figure,length,lengthLCS):
+	# figure.clear()
+	# figure = plot.figure()
+	# canvas = FigureCanvas(figure)
+
+	ax = figure.add_subplot(111)
+	ax.clear()
+	
+	labels = ['Original','Copied']
+	plagiarismPercentage = (lengthLCS / (length * 1.0))
+	print ('\n')
+	p2 = int(100 * plagiarismPercentage)
+	p1 = int(100 - p2)
+	sizes = [p1,p2]
+	print (p1)
+	print (p2)
+	colors = ['green','red']
+
+	ax.pie(
+		sizes,
+		colors=colors,
+		autopct='%1.1f%%',
+		startangle=90
+	)
+	ax.axis('equal')
+	patches, texts = ax.pie(sizes, colors=colors, startangle=90)
+	ax.legend(patches, labels, loc="best")
+
+	# canvas.draw()
+	# return canvas
+
+
+
+
+
 #################################################
 #                  FIRST GRAPH                  #
 #################################################
