@@ -24,31 +24,32 @@ def LCS_linear_space(file1,file2):
     length_X = len(X)
     length_Y = len(Y)
     
-    b = numpy.empty((length_X,length_Y), dtype = "str")
-    c = numpy.empty((length_X,length_Y), dtype = "int")
+    b = numpy.empty((2,length_Y), dtype = "str")
+    c = numpy.empty((2,length_Y), dtype = "int")
 
     for i in range(1,length_X):
-        c[i,0]= 0
-        for j in range(1,length_X):
+        c[1,0]= 0
+        for j in range(1,length_Y):
             if (X[i]==Y[j]):
-                c[i,j] = c[i-1,j-1] + 1
-                b[i,j] = "d"    #for diagonal
-            elif (c[i-1,j] >= c[i,j-1]):
-                c[i,j] = c[i-1,j]
-                b[i,j] = "u"    #for up
+                c[1,j] = c[0,j-1] + 1
+                #b[i,j] = "d"    #for diagonal
+            elif (c[1,j-1]<c[0,j]):
+                c[1,j] = c[0,j]
+                #b[i,j] = "u"    #for up
             else:
-                c[i,j] = c[i,j-1]
-                b[i,j] = "l"    #for left
-        for j in range(0,length_X):
+                c[1,j] = c[1,j-1]
+               # b[i,j] = "l"    #for left
+        for j in range(0,length_Y):
             c[0,j] = c[1,j]
-    length = c[length_X-1,length_Y-1]
+
+    length = c[1,length_Y-1]
     #LCS_List = LCS_list(b,X,length_X-1,length_Y-1,[])
     return c, b, length#, LCS_List
     
 
 #driver for LCS
 def LCS(file1,file2,mode):
-    if mode =="linear-space":
+    if mode =="ls":
         c, b, length = LCS_linear_space(file1,file2)
         return c, b, length
 
