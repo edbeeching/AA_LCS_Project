@@ -1,0 +1,4 @@
+   la numbe  model   sol  proble   retrieva     ba     mathematica bases:  theory, algeb  probabilistic.  vec spac mode     methods,     algebra model.
+  vec spac mode  documen     vector. wi  vector,  dimensi correspond   separa te   te  typicall  sing word, ke  phrase.   te doe  occ wi  document,  val   vec .   te occur   document,  val  non-zero.
+ calcula  relevan  documen    ke searc  co val   ang   vector  easie  calcula instea   actua angle.
+ vec spac model,,   wi  limitations:  ha  similarit values, l documen     orde  word   matte fal positi matc   b   term conta wi word themselve  documen  sho matc    semantic  ret fal negati matches.     numbe  o model   ba   exte  vec spac model,    desig    eradica  problems.

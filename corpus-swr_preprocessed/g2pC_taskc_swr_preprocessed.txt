@@ -1,0 +1,5 @@
+  vec spac mode vsm, documen ta  f  bag  word -  standa  retrieva approac whic repre documen    mathematica ba structure, rec  term     ofte  occur. 
+ vec spac mode     retrieva  dete  simila documen ,   simila documen    searc query. 
+  collecti  documents,  documen   vie   vec     term   document,   te   axis. querie      vector   vec spac model,   decid whic documen matc  quer  closes   matte  selec  documen vec whic  neares   quer vector. 
+ quer vec  compa   documen vec  t   vec similarit measure, whic   co   ang   quer vec   documen vector. 
+ equati  calcula  divid  do produc   quer vec   documen vec   modul   quer vec multi   modul   documen vector.  denomina   acco difference   leng   vector,      norma  length. whic documen return  highes co similarit sc  conside    closes match documen   query. 

@@ -1,10 +1,10 @@
-In probability theory, Bayes theorem or Bayes law after Rev Thomas Bayes provides relation between the conditional and marginal probabilities of two random events. It is usually used to calculate posterior probabilities given observations. For example: a patient might be observed to show certain symptoms. Bayes theorem could be used to compute the probability that a certain diagnosis is right, given that observation.
-Since it is a formal theorem, Bayes theorem holds in all popular interpretations of probability. 
-Bayes theorem relates the conditional and marginal probabilities of events a and b, where b has a non-vanishing probability:
-  Pa|b = Pa|bPaPb
-Terms in Bayes theorem are named by a convention:
-PA is the prior probability or marginal probability of A. It does not take into account any information about B and therefore is considered “prior”.
-PA|B is the conditional probability of A, given B. It it is derived from or depends upon the specified value of B. Usually it is called the posterior probability 
-PB|A is the conditional probability of B given A.
-PB a.k.a. the normalizing constant is the prior or marginal probability of B.
-Obviously, Bayes theorem describes the way in which ones assumptions about observing the eventa are changed by having observed the event b.
+in probability theory, bayes theorem or bayes law after rev thomas bayes provides relation between the conditional and marginal probabilities of two random events. it is usually used to calculate posterior probabilities given observations. for example: a patient might be observed to show certain symptoms. bayes theorem could be used to compute the probability that a certain diagnosis is right, given that observation.
+since it is a formal theorem, bayes theorem holds in all popular interpretations of probability. 
+bayes theorem relates the conditional and marginal probabilities of events a and b, where b has a non-vanishing probability:
+  pa|b = pa|bpapb
+terms in bayes theorem are named by a convention:
+pa is the prior probability or marginal probability of a. it does not take into account any information about b and therefore is considered prior .
+pa|b is the conditional probability of a, given b. it it is derived from or depends upon the specified value of b. usually it is called the posterior probability 
+pb|a is the conditional probability of b given a.
+pb a.k.a. the normalizing constant is the prior or marginal probability of b.
+obviously, bayes theorem describes the way in which ones assumptions about observing the eventa are changed by having observed the event b.

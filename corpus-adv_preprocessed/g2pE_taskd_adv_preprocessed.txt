@@ -1,8 +1,8 @@
-The Probability of an event happening mean considering the likelihood of or the number of the instance occurring, and dividing this value by the total number of events. The equation for this calculation would look as follows:
-Probability P = number of instance  total number of events
-On the other hand Probability Theory P usually involves assigning values to events. For example:
-P=1: event is certain to occur
-P=0: event is certain NOT to occur
-P=0.5: event occurs half of the time. 
-There is also Conditional Probability which is usually interested in the way variables relate to each other. Bayes Theorem is the name given to an important theorem relating
-Conditional probabilities and it can be seen as a way of understanding how the probability that a theory is true, is affected by a new piece of evidence. It has been used in a wide variety of contexts, ranging from marine biology to the development of Bayesian spam blockers for email systems. 
+the probability of an event happening mean considering the likelihood of or the number of the instance occurring, and dividing this value by the total number of events. the equation for this calculation would look as follows:
+probability p = number of instance  total number of events
+on the other hand probability theory p usually involves assigning values to events. for example:
+p=1: event is certain to occur
+p=0: event is certain not to occur
+p=0.5: event occurs half of the time. 
+there is also conditional probability which is usually interested in the way variables relate to each other. bayes theorem is the name given to an important theorem relating
+conditional probabilities and it can be seen as a way of understanding how the probability that a theory is true, is affected by a new piece of evidence. it has been used in a wide variety of contexts, ranging from marine biology to the development of bayesian spam blockers for email systems. 

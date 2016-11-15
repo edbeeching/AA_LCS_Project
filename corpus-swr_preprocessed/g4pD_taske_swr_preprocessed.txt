@@ -1,0 +1,4 @@
+d program   me  provid solution  potentia problem exhib  propertie  overlap s problem  optima structure.   highl   d programming.  advanta     consumpti  compari  o amate methods.
+         te program   fie   no    compute programming.   o    deri   te mathematica program whic   simila    optimization.      prog    optima    produc action.  typica exam     finali sched  even   exhibition.  lead   concep  program   hel  fi  accep   action, whic    te   algorithm
+ subproblems,, sol  divid   sub-subproblems, , unti    sim ca   sol  constan time.
+overlap subproblem    sa subproblem    sol   large problems. exam    fibonacc sequenc f3 = f1 + f2  f4 = f2 + f3  com  numbe involve com f2.   f3  f4  ne  com f5,  nai approac  com f5  e  com f2 twic.    whe  encounte  overlap subproblems,  nai approac , recom optima solution    sol subproblems.

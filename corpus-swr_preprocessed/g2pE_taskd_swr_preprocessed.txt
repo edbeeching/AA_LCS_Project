@@ -1,0 +1,8 @@
+ probabilit   even happe  conside  likeliho    numbe   instanc occurring,  divid  val   tota numbe  events.  equati   calculati wo lo  follows:
+probabilit  = numbe  instanc  tota numbe  events
+  o  probabilit theor   involve assig   events.  example:
+p=1: even    occur
+p=0: even     occur
+p=0.5: even occur ha   time. 
+   conditi probabilit whic   interes    variable rela  . baye theo        theo relating
+conditi probabilitie          understa   probabilit   theor  true,      piec  evidence.        variet  contexts, rang  ma biolog   developmen  baye  blocker  emai systems. 

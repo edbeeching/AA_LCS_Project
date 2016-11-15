@@ -1,0 +1,13 @@
+ object-orien programming, inheritanc     f  classes
+instance  whic  cal objec  classe  ha already
+ defined.
+inheritanc    cal generalization,   is-a
+relationship   hierarch  classe  objects. for
+instance,  fr   generalizati  apple, orange, mango
+ .   conside fr    abstracti  apple,
+orange,. conversely,  apple  fruit.e.,  ap is-a
+fruit, apple  naturall inhe   propertie comm  all
+ruit, suc    flesh containe   se   plant.
+inheritanc  typicall accom   overrid replacing
+  m method expo  ancestor,   add  method to
+tho expo   ancestor.

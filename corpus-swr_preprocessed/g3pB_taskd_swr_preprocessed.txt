@@ -1,0 +1,3 @@
+baye theo ofte cal baye la connec  conditi  margi probabilitie  t arbitrar events.      calcula posteri probabilitie  observations. 
+baye theo pla  ke    deba   principle  statistics: frequentis  baye interpretation disag     whic probabilitie sho  assig  applications. 
+baye theo  usef  evalua  resul  dr tests.   tes  identif  dr  99%   time,   identif  non-  tes negati 99%   time,        accura test., baye theo wil revea  fla  de   hig accurac   test,  probabilit   employe wh tes positi  d  drug    33%.

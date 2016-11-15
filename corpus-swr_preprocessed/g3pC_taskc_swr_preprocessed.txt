@@ -1,0 +1,9 @@
+  vec spac mode   retrieva model  pages
+ querie  high-dimensi spar vectors.  ite   vector
+repre   keyword.
+ similiarit betweee t    quer   pa   computed
+  do produc form  f  co . this
+repre  ang ,   n-dimensi space. results
+wil ra  -1  1,  1   clo match.   vectors
+wil  ha  negati values,   wil   greate than
+ equa  0.  co  com using: co  = |a||b|a.b

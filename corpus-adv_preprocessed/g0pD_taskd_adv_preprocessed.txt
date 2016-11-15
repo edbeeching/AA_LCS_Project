@@ -1,1 +1,1 @@
-Bayes theorm in connection with conditional probabilities is of fundamental importance, since it permits a calculation of PROBAB from PROBBA. Statistical information that is often gathered in great volume can therefore be avoided 
+baye s theorm in connection with conditional probabilities is of fundamental importance, since it permits a calculation of probab from probba. statistical information that is often gathered in great volume can therefore be avoided 

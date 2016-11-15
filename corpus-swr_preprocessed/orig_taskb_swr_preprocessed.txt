@@ -1,0 +1,8 @@
+pagera   li anal algori    goog inte searc eng  assign  numerica weigh   elemen   hyperli   documents, suc     web,   purpo  meas  relati importanc wi  set.  algori   ap   collecti  entitie  reciproca quotation  references.  numerica    assign    elemen    cal  pagera    de  pre.
+  pagera   tradema  google,   pagera proces   paten.s. paten 6,285,999 .,  paten  assig  sta universit    google. goog  exclusi licen righ   paten  sta university.  universit recei 1.8  share  goog  excha     paten  share    2005  $336.
+goog describe pagerank:
+ pagera relie   uniquel democra nat       vas li struct   indica   individua .  essence, goog interpre  li  pa   pa    vote, , ., goog   m   shee   votes,  link  pa receive   analyze  pa  cas  vote. vote cas     themselve  weig m heavil  hel  ma ot. 
+ o,  pagera    ballo    o           pa.  hyperli   pa co   vo  support.  pagera   pa  def recursivel  depend   numbe  pagera me     li   inc links.  pa   li      hig pagera receive  hig rank.     link    pa    suppor .
+goog assign  nume weigh  0-10   webpa   inte  pagera denote    importanc   eye  google.  pagera  deri   theoretica probabilit val   logari sca li  richte scale.  pagera    pa  roughl ba   quantit  inbo link  wel   pagera    provid  links.     o factors,.g. relevanc  searc word   pa  actua vi   pa repor   goog toolba  influenc  pagerank.  orde  preven manipulation, spo  spamdexing, goog   spec detail   o factor influenc pagerank.
+numero acade paper conce pagera ha  pub  pa  brin origi paper.  practice,  pagera concep  prove   vulne  manipulation,  extensi researc   devo  identif falsel infla pagera    ig link  documen  falsel infla pagerank.
+o link-ba ra algorithm    includ  h algori inven  j kleinbe   te .com,  ib c project,   trustra algorithm.

@@ -1,0 +1,4 @@
+objec orien program   st  program  suppor encapsulation, inheritance,  polymorphism. inheritanc  deri   clas   ba class.       paren clas  chi classe  inheritance. inheritanc  firstl deri  1967.
+ chi clas    feature  paren clas      ba clas m     includ  additi features. inheritanc    modificati  implementati  feature  compute program language.  possib  chi clas    attribute  paren clas     possib    attribute  chi clas  ha  ba clas   class.
+ categorizati  compute langua  inheritanc   usef tool.categorizati def   powerf feature.      generalisati   h learning.   a   ne   stored.
+generlisati      inheritance.  ma rea     hierarc struct  objec  classes.   unders  mechani   examples: li fr  a ma clas  ma ap ,ora  chi class   ma class.  inhe   propertie  fr class.

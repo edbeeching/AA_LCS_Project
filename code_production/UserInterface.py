@@ -7,13 +7,8 @@ import PrintingNeatly
 import PandasModel
 import pandas as pd
 
-
+from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
 import Plotting
-
-# from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
-# import matplotlib.pyplot as plot
-# import random
-
 
 
 class LCS_UI(QtGui.QMainWindow):
@@ -34,16 +29,19 @@ class LCS_UI(QtGui.QMainWindow):
         self.tab2 = QtGui.QWidget()
         self.tab3 = QtGui.QWidget()
         self.tab4 = QtGui.QWidget()
+        self.tab5 = QtGui.QWidget()
 
         self.tabWidget.addTab(self.tab1, "LCS Unit")
         self.tabWidget.addTab(self.tab2, "Table")
-        self.tabWidget.addTab(self.tab3, "Graph 1")
-        self.tabWidget.addTab(self.tab4, "Graph 2")
+        self.tabWidget.addTab(self.tab3, "General graph")
+        self.tabWidget.addTab(self.tab4, "Graph by task")
+        self.tabWidget.addTab(self.tab5, "Repartition by Category")
 
         self.tab1UI()
         self.tab2UI()
         self.tab3UI()
         self.tab4UI()
+        self.tab5UI()
 
         self.setWindowTitle("Plagiarism Detector")
         self.statusBar().showMessage('Ready')
@@ -93,6 +91,8 @@ class LCS_UI(QtGui.QMainWindow):
         self.preproc_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.preproc_btn))
         self.adv_preproc_btn = QtGui.QRadioButton("Adv PreProc")
         self.adv_preproc_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.adv_preproc_btn))
+        self.adv_preproc_sentence_btn = QtGui.QRadioButton("Adv PreProc And Sentence")
+        self.adv_preproc_sentence_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.adv_preproc_sentence_btn))
 
         h1_layout.addWidget(task_label)
         h1_layout.addWidget(self.task_combo_box)
@@ -101,6 +101,7 @@ class LCS_UI(QtGui.QMainWindow):
         h1_layout.addWidget(self.raw_btn)
         h1_layout.addWidget(self.preproc_btn)
         h1_layout.addWidget(self.adv_preproc_btn)
+        h1_layout.addWidget(self.adv_preproc_sentence_btn)
         h1_layout.addStretch()
 
 
@@ -134,8 +135,13 @@ class LCS_UI(QtGui.QMainWindow):
 
         self.corpus_length_label = QtGui.QLabel("Corpus length")
         self.substring_length_label  = QtGui.QLabel("LCS Length")
+        self.pieChart = Plotting.init_pieChart()
+        self.pieChartCanvas = FigureCanvas(self.pieChart)
+        self.pieChartCanvas.draw()
+
         v2_layout.addWidget(self.corpus_length_label)
         v2_layout.addWidget(self.substring_length_label)
+        v2_layout.addWidget(self.pieChartCanvas)
         v2_layout.addStretch(stretch=1)
 
         h_layout.addLayout(v1_layout, stretch=2)
@@ -162,12 +168,14 @@ class LCS_UI(QtGui.QMainWindow):
         self.tab1_radio_toggled(self.raw_btn)
         self.tab1_radio_toggled(self.preproc_btn)
         self.tab1_radio_toggled(self.adv_preproc_btn)
+        self.tab1_radio_toggled(self.adv_preproc_sentence_btn)
 
     def tab1_text_combo_activated(self, text):
         self.statusBar().showMessage("Task: " + text + " selected.")
         self.tab1_radio_toggled(self.raw_btn)
         self.tab1_radio_toggled(self.preproc_btn)
         self.tab1_radio_toggled(self.adv_preproc_btn)
+        self.tab1_radio_toggled(self.adv_preproc_sentence_btn)
 
     def tab1_radio_toggled(self, button):
         if button.text() == "Raw" and button.isChecked():
@@ -180,6 +188,9 @@ class LCS_UI(QtGui.QMainWindow):
         if button.text() == "Adv PreProc" and button.isChecked():
             self.change_text("adv proc")
             self.statusBar().showMessage("Displaying Advanced Preprocessed Text")
+        if button.text() == "Adv PreProc And Sentence" and button.isChecked():
+            self.change_text("adv proc sentence")
+            self.statusBar().showMessage("Displaying Advanced Preprocessed Text with LCS sentence algorithm")
 
     def change_text(self, text_type):
         if text_type == "raw":
@@ -198,6 +209,8 @@ class LCS_UI(QtGui.QMainWindow):
                                                          "../corpus-20090418/orig_task" + self.task_combo_box.currentText()+ ".txt", "classic")
             self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
             self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
+            Plotting.update_pieChart(self.pieChart,length,lengthLCS)
+            self.pieChartCanvas.draw()
 
             neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
 
@@ -221,6 +234,7 @@ class LCS_UI(QtGui.QMainWindow):
 
             self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
             self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
+            Plotting.update_pieChart(self.pieChart,length,lengthLCS)
 
             neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
 
@@ -241,9 +255,34 @@ class LCS_UI(QtGui.QMainWindow):
             file_object.close()
             length, lengthLCS, LCSLIST  = prototype.LCS("../corpus-adv_preprocessed/" + filename[:-4] + "_adv_preprocessed.txt",
                                                          "../corpus-adv_preprocessed/orig_task" + self.task_combo_box.currentText() + "_adv_preprocessed.txt", "classic")
+            
 
             self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
             self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
+            Plotting.update_pieChart(self.pieChart,length,lengthLCS)
+
+            neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
+
+            self.substring.setPlainText("\n".join(neatly))
+            return
+        if text_type == "adv proc sentence":
+            filename = self.text_combo_box.currentText()
+            file_object = open("../corpus-adv_preprocessed/" + filename[:-4] + "_adv_preprocessed.txt")
+            text = file_object.read()
+            self.corpus_text.setPlainText(text)
+            cor_length = len(text.split(" "))
+            file_object.close()
+
+            file_object = open("../corpus-adv_preprocessed/orig_task" + self.task_combo_box.currentText() + "_adv_preprocessed.txt")
+            text = file_object.read()
+            self.wiki_text.setPlainText(text)
+            file_object.close()
+            length, lengthLCS, LCSLIST  = prototype.LCS_Sentence("../corpus-adv_preprocessed/" + filename[:-4] + "_adv_preprocessed.txt",
+                                                         "../corpus-adv_preprocessed/orig_task" + self.task_combo_box.currentText() + "_adv_preprocessed.txt", "classic")
+
+            self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
+            self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
+            Plotting.update_pieChart(self.pieChart,length,lengthLCS)
 
             neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
 
@@ -255,6 +294,8 @@ class LCS_UI(QtGui.QMainWindow):
         self.tab1_radio_toggled(self.raw_btn)
         self.tab1_radio_toggled(self.preproc_btn)
         self.tab1_radio_toggled(self.adv_preproc_btn)
+        self.tab1_radio_toggled(self.adv_preproc_sentence_btn)
+
 
     def tab2UI(self):
         view = QtGui.QTableView()
@@ -268,24 +309,27 @@ class LCS_UI(QtGui.QMainWindow):
         self.tab2.setLayout(layout)
 
     def tab3UI(self):
-    	PlotAllLCS = Plotting.plotAllLCS(self)
-    	layout = QtGui.QHBoxLayout()
-    	layout.addWidget(PlotAllLCS)
+        PlotAllLCS = Plotting.plotAllLCS(self)
+        layout = QtGui.QHBoxLayout()
+        layout.addWidget(PlotAllLCS)
 
-    	self.tab3.setLayout(layout)
+        self.tab3.setLayout(layout)
 
     def tab4UI(self):
-        PlotBayCat = []
-        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'a'))
-        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'b'))
-        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'c'))
-        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'d'))
-        PlotBayCat.append(Plotting.plotRatioOverCategory(self,'e'))
-        
         layout = QtGui.QGridLayout()
-        for i in range(0,4): layout.addWidget(PlotBayCat[i],int(i/2),int(i%2))
+
+        PlotByCat = Plotting.plotByCategory(self)
+        layout.addWidget(PlotByCat)
 
         self.tab4.setLayout(layout)
+
+    def tab5UI(self):
+        layout = QtGui.QGridLayout()
+
+        PlotByCat = Plotting.plotByCategory2(self)
+        layout.addWidget(PlotByCat)
+
+        self.tab5.setLayout(layout)
 
 def main():
     app = QtGui.QApplication(sys.argv)

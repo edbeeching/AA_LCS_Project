@@ -1,0 +1,5 @@
+d program d   ba term  algori desig techniq     optimizati problem  ofte involve minimi  maximizing. 
+furthermore,  combi solution  subproblems, d solve problems. subproblem  includ    o subsubproblem    suc cases,  soluti   subproble   affec  solution  o subproblem in   sa problem. 
+ sol subproblem   bottom- fashion, whic  basicall whe s soluti   subproble      sol  lo   f  soluti whe  subproble    onc,  wo  d  reduc computations. 
+    generalizati pa     d programming:
+firstl   ne  characteri  struct   optima solution. secondl  def  val   optima soluti recursively.,  com  optima soluti      top- me  caching,   bottom- me   table.   poin wo   construc  optima soluti   com values.

@@ -1,0 +1,6 @@
+whe  ta  inheritanc  object-orien program languages, whic   concep   inven  1967  simula,    ta     f  classe  classe  instance  whic  cal objec  in  classe  ha   defined. 
+deri classe  in  hel re exis cod  lit   modificati     classe  ta   inhe attribute  behavi   pre-exis classes,  refer   ba classe  ances classes. 
+categorizati  compute language   powerf  numbe  proces   inheritanc   suppor  representati  categorization.,   fundamenta  hel human lea    generalizati      spec entitie  ap   wide gro   belong relati   estab  cogniti proces whic involve    acqui   s   spec entity,   actua    particularities.
+ instanc   fr   generalizati  apple, orange, ma  . inheritanc     refer   generalization,  is- relationship   hierarch  classe  objects.    conside  fr   abstracti  apple, orange,. conversely,  apple  fruit,   naturall inhe   propertie comm   fruit, suc    flesh containe   se   plant.
+ module   similaritie  interface wo      lo  cod   reduc  complexit   program.         advantage  inheritance.  inheritanc     ha   view,  dual, whic describe  par  cod   unde con  sha con code,   polymorphism. 
+  o hand, inheritanc   accom   replac   m method expo  ancestor,   add  method  tho expo   ancestor.  wel  te    replac   cal overriding.

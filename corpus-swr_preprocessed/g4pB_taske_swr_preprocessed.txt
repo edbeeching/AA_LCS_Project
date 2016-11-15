@@ -1,0 +1,18 @@
+ mathematic  compute science, d program   me  sol problem  exhib  propertie  overlap subproblem  optima substructure.
+ 
+  program  d program    connecti  compute programming,  instea    te mathematica programming,  synon  optimization. programming,   sense,  fi  accep   action,  algorithm.
+optima substruct   optima solution  subproblem     f  optima solution    problem.  general,   sol  proble  optima substruct   three-ste process:
+brea  proble  smalle subproblems.
+sol  problem optimall   three-ste proces recursively.
+  optima solution  construc  optima soluti   origi problem.
+ subproblems,, sol  divid   sub-subproblems, , unti    sim ca   sol  constan time.
+    proble  overlap subproblem      sa subproblem    sol   large problems.  example,   fibonacc sequence, f3 = f1 + f2  f4 = f2 + f3  com  numbe involve com f2.   f3  f4  ne  com f5,  nai approac  com f5  e  com f2 twic.  applie whe overlap subproblem  present:  nai approac    recom optima solution  subproblem    solved.
+ orde  av,  instea sa  solution  problem  ha  solved.,   ne  sol  sa problem,   retrie  re  already-com solution.    s  won ne   solution,   thro    sa space.   cases,    com  solution  subproblem    wel ne  advance.
+d program   of:
+  overlap subproblems
+  optima substructure
+  memoization
+d program     t approaches:
+  top- approach
+  bottom- approach
+

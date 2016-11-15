@@ -1,0 +1,11 @@
+ probabilit theory,  pri  conditi probabilities
+ t rand even  rela  baye theorem.  theo is
+ofte  whe  ha observation    com posterior
+probabilities.
+ example,   observati   patien    ha certain
+symptoms,    baye theo  com  probabilit  a
+ diag  correct.
+   pri probability. pa|   conditi probabilty
+ . pb|   conditi probabilt  .  is
+ pri probability,    non-zero. baye theo  given
+ pa| = pb|apapb.

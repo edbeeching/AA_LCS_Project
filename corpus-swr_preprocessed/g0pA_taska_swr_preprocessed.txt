@@ -1,0 +1,21 @@
+inheritanc   ba concep  object-orien program where
+ ba    crea  classe  ad e detai to
+exis classes.     allo   classe  reuse
+ method  variable   exis classe   method and
+classe    specia   class. inheritanc model the
+ is-kind- relationshi  entitie  objects,  example,
+postgraduate  undergraduate   kind  student.  kind
+ relationshi   visua    structure,  studen 
+wo   m genera roo nod   postgradua and
+ undergradua wo  m specia extension   studen 
+nod   chi nodes.   relationshi studen wo be
+   superclas   clas, postgradua would
+    subclas  chi clas   postgradua 
+clas extend  studen class.
+inheritanc  occ  severa layers,   visua would
+displa  large  structure.  example,    extend
+ postgradua nod  add t e e classe  it
+called, m studen   studen    type  student
+ kind  postgradua student.  wo     msc
+studen   studen classe wo inhe method  variables
+   postgradua  studen classe .

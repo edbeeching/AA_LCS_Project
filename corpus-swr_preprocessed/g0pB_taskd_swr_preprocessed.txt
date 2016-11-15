@@ -1,0 +1,19 @@
+baye theo relate  conditi  margi probabilitie of
+t rand events.  example,  per     ha certain
+medica symptom baye theo      com the
+probability,   observation,  propo diag is
+t.
+baye theo form  relationshi   probabilitie xcof
+even  . intuitively, baye theo   f describe the
+  whic  recogniti      ha observed
+b.
+ |  =  |    pb
+pa|   conditi probabilit  .   deri   depend   spec valu,        posteri probability.
+pb|   conditi probabilit  .
+   pri probability.  doesn ta  acco   ,    prior.
+   pri  margi probability,  ac  norma  probability.
+ deri  theorem,     definiti  conditional
+probability.  combi  re-arrang  t equation  a
+,     lem cal produc r for
+probabilities. pro     , divid  sides
+  render   baye theorem.

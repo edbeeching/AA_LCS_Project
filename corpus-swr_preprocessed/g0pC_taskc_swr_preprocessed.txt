@@ -1,0 +1,4 @@
+ vec spac mode    documen  vie   ba ,   orde  lit significance.  documen   vec      dimension.  vec   constuc   frequenc  eac  dimension.  dra    approac    leng   documen   in   vector,  compensa   yo  com  co similarit   t compari documents.  wil f  differenc   t vector  do product, igno  si .
+inorde  quer  searc space,  quer       vector,  yo f  documen  vec   greates co similaritie   query.    numbe  wigh sceem whic   incopera inorde  increa  accurac   vextors.
+   drawback   approach, com  co similaritie   vec   expensi   numbe  dimension     thousands,  tack  proble yo   inver inde    serie heuristic inorde  inpro .
+ top

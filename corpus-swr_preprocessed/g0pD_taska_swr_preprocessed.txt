@@ -1,0 +1,3 @@
+inheritanc  objec orien program     f  classe  classe  ha   defined.   classes,   deri classes, inhe attribute  behavi   exis classes, whic  refer   ba classes.  lit   modification,   in  hel re exis code.   typicall accom   overrid   m method expo  ancestor,   add  method  tho expo   ancestor
+inheritanc    cal generalization,   is- relationship   hierarch  classe  objects.  fr ,  instance,   generalizati  orange, mango, apple  .   conside fr    abstracti  apple, orange,.  apple  fruit.e.,  ap is- fruit, conversel apple  naturall inhe   propertie comm   fruit, suc    flesh containe   se   plant.
+ advanta  inheritanc   module   simila interface    lo  cod reduc  complexit   program. 

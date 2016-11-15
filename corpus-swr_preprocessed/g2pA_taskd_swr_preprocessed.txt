@@ -1,0 +1,8 @@
+  probabilit theory, baye theo ofte cal baye la  re  baye relate  conditi  margi probabilitie  t rand events.   ofte   com posteri probabilitie  observations.  example,  patien   obser  ha  symptoms. baye theo     com  probabilit   propo diag  correct,   observation.
+  forma theorem, baye theo  va   comm interpretation  probability.,  pla  centra    deba   foundation  statistics: frequentis  baye interpretation disag     whic probabilitie sho  assig  applications. 
+suppo    co- scho ha 60% bo  40% girl  students.  gi studen wea trouser  skir  equa number  bo  wea trousers.  observe   rand studen   distanc    se    studen  wea trousers.    probabilit  studen   gi  correc ans   com  baye theorem.
+ even     studen obser   girl,   even     studen obser  wea trousers.  com pa|b,   ne  know:
+pb|a,   probabilit   studen wea trouser    studen   boy.     1.
+pa,   probabilit   studen   gi rega   ot.   observer   rand student,    studen ha  sa probabilit   observed,   fracti  girl   studen  40%,  probabilit equal 0.4.
+pa,   probabilit   studen   bo rega   o     complementar even.   60%,  0.6.
+pb|a,   probabilit   studen wea trouser    studen   girl.       wea skir  trousers,   0.5

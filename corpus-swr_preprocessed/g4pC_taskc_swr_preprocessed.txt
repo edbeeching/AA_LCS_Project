@@ -1,0 +1,6 @@
+ vec spac mode   documen whic    bag  word . ba      documen   vec     frequencies.  orde  ,   par  extracti step  needed. 
+ig case, e  uniq word   enti   documents. 
+elimina non-content-bea ``stopword suc  ``a, ``and, ``the,.  sam lis  stopwords.
+  document, co  numbe  occurrence   word. 
+ heuris  information-theore criteria, elimina non-content-bea ``high-frequenc  ``low-frequency. 
+   elimination, suppo uniq word remain. assig  uniq identifie     remai word,   uniq identifie     document. 

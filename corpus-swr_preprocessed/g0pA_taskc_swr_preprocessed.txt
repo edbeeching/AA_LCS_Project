@@ -1,0 +1,4 @@
+ vec spac mode  called, te vec mode   algebra mode    te documents,  wel   objec  general,  vector  identifiers.      retrieva       smar  retrieva system.
+ documen     vec   dimensi correspond   separa term.   te appear   documen   val   vec  non-zero.     calcula  values,    te weights, ha  developed.    bes  method  cal tf- weighting.
+ definiti  te depend   applicati  generall term  sing, keywords,  longe phrases.   word  chose    terms,  dimensionalit   vec   numbe  word   vocabulary, whic   numbe  distinc word occur   corpus.
+ vec spac mode  severa disadvantages. firstly, l documen   badl   ha po similarit values. secondly, searc keyword  accuratel matc documen term  substring  word  resul   false-positi match. thirdly, documen  simila conte   te vocabular wil   associated, resul   false-negati match. finally,  orde  whic  term appea   documen  los   vec spac representation. 
