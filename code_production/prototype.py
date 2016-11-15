@@ -103,34 +103,54 @@ def LCS_list(b,X,m,n,S):
         return LCS_list(b,X,m,n-1,S)
 
 
-##########################################################################################
-# Should change this part later (put together for testing purposes)
-if __name__ == "__main__":
-
-    #########################################################
-    ## Script to get LCS data on corpus w/ advanced preprocessing
-    mode = "classic"
+#This function gets the LCS and ratio of every file in the corpus
+#inputs are algorithm (only classic is implemented as of now 15/11)
+#folder = corpus-20090418, corpus-adv_preprocessed, corpus-preprocessed, or corpus-swr_preprocessed
+#whether to use sentence by sentence or not (sentence = False, True)
+#outputs are one list containing all the LCS(alphabetical order by file name)
+#and LCS ratio list (also alphabetical)
+def getLCSdata(mode, folder, sentence):
     cwd = os.getcwd()
     parent = os.path.abspath(os.path.join(cwd, os.pardir))
-    file_list = os.listdir('..\\corpus-adv_preprocessed')
+    file_list = os.listdir('..\\' + folder)
     lengths = []
     ratios = []
-  
+    file_end = ""
+    if folder == "corpus-20090418":
+        file_end = ".txt"
+    elif folder == "corpus-adv_preprocessed":
+        file_end = "_adv_preprocessed.txt"
+    elif folder == "corpus-preprocessed":
+        file_end = "_preprocessed.txt"
+    elif folder == "corpus-swr_preprocessed":
+        file_end = "_swr_preprocessed.txt"
+    if file_end == "":
+        print "Invalid folder name"
+        exit()
     for each in file_list:
         task = each[9]
-        file1 = parent + "\\corpus-adv_preprocessed\\" + each
-        file2 = parent + "\\corpus-adv_preprocessed\\orig_task" + task + "_adv_preprocessed.txt"
-        Length, LCSlength, LCSLIST = LCS_Sentence(file1,file2,mode)  ## data is for sentence by sentence
+        file1 = parent + "\\" + folder + "\\" + each
+        file2 = parent + "\\" + folder + "\\orig_task" + task + file_end
+        if sentence:
+            Length, LCSlength, LCSLIST = LCS_Sentence(file1,file2,mode)
+        else:
+            Length, LCSlength, LCSLIST = LCS(file1,file2,mode) 
         lengths.append(LCSlength)
         ratios.append(float(LCSlength) / Length)
+    return lengths[:-5], ratios[:-5]  #last 5 elements are LCS of original files vs. themselves
+    
+        
 
+    
+##########################################################################################
+# Testing
+if __name__ == "__main__":
+   
+    lengths, ratios = getLCSdata("classic","corpus-adv_preprocessed",True)
     for each in lengths:
         print each
     for each in ratios:
         print round(each,5)
-        
-
-
 
 
     

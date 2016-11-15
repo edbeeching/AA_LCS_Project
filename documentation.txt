@@ -1,4 +1,4 @@
-DOCUMENTATION
+DOCUMENTATION prototype.py
 
 function make_array(file1)
 input : filename
@@ -42,3 +42,9 @@ output: S, filled with words of LCS
 *This is the recursive function to build the LCS from the b matrix. It should
 only work for the dynammic programming algorithm, since it needs the b matrix.
 
+function getLCSmode(mode,folder,sentence)
+input: the algorithm mode (classic, recursive, branch and bound), the folder of
+the corpus that the data will be gathered for (corpus-20090418, corpus-adv_preprocessed, etc)
+and if sentence by sentence is to be used (sentence = False, True)
+output: a list of the LCS lengths (alphabetically by file name) and a list of ratios (also alphabetical)
+*This function get the LCS length and ratio for every corpus text in a specific folder
