@@ -1,0 +1,9 @@
+d program    powerf mathematica technique, ofte uti  programming,  sol optimizati problems., minimi  maximizing.
+ greed algorithm foc  ma  bes loca choic   decisi ma stage. wi  pro  correctness, suc  algori    fail.  d programming,   desig  o algori whic searc   possibilitie whic en correctnes whils s    a ha  recom lead  computati efficiency.
+d program solve problem  combi  solution  subproblems.  subproblem ,, independent. subproblem   subsubproblems,   soluti   subproble doe   affec  solution  o subproblem stem   sa problem.
+d program reduce computati   sol subproblem   bottom-.  store  soluti   subproble      solved,     lo   soluti whe  subproble  encounte subsequently. 
+ ke  d program   f  struct  optima solutions.  step requi   follows:
+genera  struct   optima solution
+recursivel def  val   optima solution
+com  optima soluti   top-  caching,  bottom-   table
+genera  optima soluti   com values

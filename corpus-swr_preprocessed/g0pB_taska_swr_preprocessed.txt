@@ -1,0 +1,17 @@
+inheritanc   ba concep  objec orien programming.  model  re  exis clas cod   classe       relationship.
+ example,  ho     build,  offic bloc     building.  ho  offic bloc wil inhe  characteristic  buildings,   ha thei o per characteristic   ho  ha  numbe  occupants,   offic bloc wil ha  numbe  offices.,  per characteristic don appl   type  buildings.
+  example,  build wo  conside  superclas    genera characteristic  o objec  inhe    ho  offic bloc   subclasse    spec type  specia  characteristic   superclass.
+ja allo objec inheritance. whe  clas inhe   class,   pub variable  method  avai   subclass.
+pub clas sha {
+ priva col colour
+ pub  setcolourcol newcolour{
+  col = newcolour
+ }
+}
+pub clas circ extend sha {
+ priva in radius
+ pub  setradiusin newradius{
+  radi = newradius
+ }
+}
+  example,  circ clas   subclas   sha class.  sha clas   pub setcol method, whic wil  avai   circ clas  o subclasse  shape.,  priva va col  def   sha clas wil   avai  direc manipulati   circ clas     inherited.  circ clas specialise  sha class, whic   setradi  avai   circ clas   subclasse  circle,   isn avai   superclas shape. 

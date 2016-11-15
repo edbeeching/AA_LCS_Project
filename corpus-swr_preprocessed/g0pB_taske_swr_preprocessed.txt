@@ -1,0 +1,6 @@
+d program   me  sol mathematica program problem  exhib  propertie  overlap subproblem  optima substructure.    muc quicke me  o m nai methods.   program  d program relate optimization, whic  comm refer   mathematica programming. richa bell originall c  te   1940  desc  me  sol problem     f  bes decision  ,   1953,    me   curren mode meaning.
+optima substruct    split  program  optima solution  subproblems,       f  optima solution    problem.  exam   com   shortes pa   goa   ver   graph., com  shortes pa   goa   adjacen vertices.,,  bes  pa  ,  demonstra  d program principle.  genera three-ste proces     sol  problem:
+brea   proble  smalle subproblems.
+recursivel   three-ste proces  com  optima pa   subproblem.
+construc  optima solution,   com optima subproblems,   origi problem.
+ proces continue recursively,    subproblem  divid   sub-subproblem , unti  sim ca      easil solvable. 

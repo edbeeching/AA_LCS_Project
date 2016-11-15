@@ -1,0 +1,4 @@
+inheritanc   concep  objec orien program   child-  sub-clas inhe characteristic   parent-  super-class.  concep     gene inheritanc   chi  inhe gene characteristic   parents.
+inheritance,   simplest, allo programmer  mode  relationshi   objec   .  instanc t classes,    undergradua studen     post-gradua studen    sa  bel   m genera clas   students.,     dog  ca  t kind  animal,   bridge  skyscraper  t type  man-mad structure.
+subclasse  sa  exte  specia thei superclasses. attribute variable  behavi function   comm  classe   includ   definiti   superclass, lea  subclas definition    attribute  behavi   uniq   class.
+inheritanc     crea  multi leve architect  classes.  suc  architect   bottom- subclasse inhe    attribute  behavi   def    top- superclasses.   sa  programme    render   lo  cod duplication.

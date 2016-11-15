@@ -1,0 +1,7 @@
+ vec spac mode  te vec mode   algebra mode   te documen   objects,  genera  vector  identifiers, suc  i terms.      filtering,  retrieval,   relevanc rankings.          smar  retrieva system.
+ documen     vector.    dimensi correspond   separa term.   te exis   document,  val   vec   equa .  co   algorithm  com  values,    te weights, ha  created.     popula scheme  tf- weighting.
+ definiti  te  dependen   application. typicall term  keywords, sing word  longe phrases. pro  word  selec    terms,  dimensionalit   vec  equa   numbe  word   vocabulary.
+
+  easies  calcula  cosin   ang   vector instea   ang   formula:
+  costheta=v1.v2||v1||||v2||
+ nul cosin val    quer  documen vec  orthog  ha  matc whic    te   quer   encounte   document.

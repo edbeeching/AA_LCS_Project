@@ -1,21 +1,21 @@
-baye theo  baye rule,  some cal baye reasoning
- baye conspirac   multinational, interdisciplinary,  shadow gro  scientis  control publication, grants, tenure,   illic traff  gra students.  bes    accep   baye conspirac   j  camp crusad  baye  hig scho  college,  graduall       inne circles. . 
-baye theorem
+bayes theorem or bayes rule, or something called bayesian reasoning
+the bayesian conspiracy is a multinational, interdisciplinary, and shadowy group of scientists that controls publication, grants, tenure, and the illicit traffic in grad students. the best way to be accepted into the bayesian conspiracy is to join the campus crusade for bayes in high school or college, and gradually work your way up to the inner circles. . 
+bayes theorem
   
-   sets. conditi probabilit require  
+let and be sets. conditional probability requires that 
  1 
- denote intersection,    
+where denotes intersection and, and also that 
  2 
 therefore, 
  3 
-now,  
+now, let 
  4 
-   even    ,  
+so is an event in and for , then 
  5 
  6 
-    writte 
+but this can be written 
  7 
- 
+so 
  
 
- pa propose   meas cal sca inver documen frequenc  whic evaluate  conditi specificit  quer term        wi ma  assumpti  te independence.    estima  searc,  searches,  com  inver i data.  ha evalua    commercia searc engine  submit querie relevan   financia investmen domain.  com favorabl  searc engine  queries.  approac  practica application  `real- scenario li   mining, h security,  keyword-drive marke researc scenarios. 
+this paper proposes a new measure called scaled inverse document frequency sidf which evaluates the conditional specificity of query terms over a subset s of d and without making any assumption about term independence. s can be estimated from search results, or searches, or computed from inverted index data. we have evaluated sidf values from commercial search engines by submitting queries relevant to the financial investment domain. results compare favorably across search engines and queries. our approach has practical applications for `real-world scenarios like in web mining, homeland security, and keyword-driven marketing research scenarios. 

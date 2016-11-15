@@ -1,8 +1,8 @@
-vec spac mode  te vec mode   algebra mode   te documen   objects,  genera  vector  identifiers,,  example, i terms.      filtering,  retrieval,   relevanc rankings.       smar  retrieva system.
- documen     vector.  dimensi correspond   separa term.   te occur   document,  val   vec  non-zero. severa    com  values,    te weights, ha  developed.    bes  scheme  tf- weigh se  example.
- definiti  te depend   application. typicall term  sing, keywords,  longe phrases.   word  chose    terms,  dimensionalit   vec   numbe  word   vocabular  numbe  distinc word occur   corpus.
- vec spac mode    limitations:
-l documen      ha po similarit    scala produc   la dimensionality
-searc keyword  precisel matc documen term  substring  resul   fal positi match
-seman sensitivit documen  simila conte   te vocabular won  associated, resul   fal negati match.
- orde  whic  term appea   documen  los   vec spac representation.
+vector space model or term vector model is an algebraic model for representing text documents and any objects, in general as vectors of identifiers, such as, for example, index terms. it is used in information filtering, information retrieval, indexing and relevancy rankings. its first use was in the smart information retrieval system.
+a document is represented as a vector. each dimension corresponds to a separate term. if a term occurs in the document, its value in the vector is non-zero. several different ways of computing these values, also known as term weights, have been developed. one of the best known schemes is tf-idf weighting see the example below.
+the definition of term depends on the application. typically terms are single words, keywords, or longer phrases. if the words are chosen to be the terms, the dimensionality of the vector is the number of words in the vocabulary the number of distinct words occurring in the corpus.
+the vector space model has the following limitations:
+long documents are poorly represented because they have poor similarity values a small scalar product and a large dimensionality
+search keywords must precisely match document terms word substrings might result in a false positive match
+semantic sensitivity documents with similar context but different term vocabulary wont be associated, resulting in a false negative match.
+the order in which the terms appear in the document is lost in the vector space representation.

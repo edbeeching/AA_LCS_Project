@@ -1,0 +1,16 @@
+ probabilit theor baye theo ofte cal baye la  rev
+ baye relate  conditi  margi probabilitie of
+t rand events.     com posteri probabilitie given
+observations.  exam  per   obser  ha certain
+symptoms. baye theo     com  probabilit  a
+propo diag  correct.
+  forma theo baye theo  va   common
+interpretation  probability.,  pla  centra  in
+ deba   foundation  statistics: frequentis and
+baye interpretation disag     which
+probabilitie sho  assig  . bayesian describe
+probabilitie  term  belief  degree  uncertainty, while
+frequentis assig probabilitie  rand even   their
+frequencie  occurrenc   subse  population  proportions
+ .  article  baye probabilit  frequentist
+probabilit disc  debate  detail.

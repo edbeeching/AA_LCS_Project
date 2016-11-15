@@ -1,0 +1,10 @@
+
+ probabilit theory, baye theo  cal baye la  re  baye compare  conditi  margi probabilitie  t rand events.   ofte   calcula posteri probabilitie  observations.  example,  patien   obser  ha  symptoms. baye theo     calcula  likeliho   propo anal  accurate,   observation. 
+  officia theorem, baye theo  va   universa interpretation  probability.,  pla  fundamenta    deba   foundation  statistics: frequentis  baye interpretation disag     whic probabilitie sho  assig  applications.
+ frequentis assig probabilitie  rand even   thei frequencie  happe   subse  population  proportion  . whils bayesian desc probabilitie  term  belief  degree  uncertainty.  article  baye probabilit  frequentis probabilit disc  debate  greate detail.
+baye theo compare  conditi  margi probabilitie  even  ,     non-vanish probability.
+ te  baye theo   conventi name:
+   previo probability.   previo   sen     ta  acco   .
+pa|   conditi probability,.    cal  subsequen probabilit    deri   depend   spec valu.
+pb|   conditi probabilit  .
+   previous.

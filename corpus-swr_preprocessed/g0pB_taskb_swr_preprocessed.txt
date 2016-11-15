@@ -1,0 +1,20 @@
+pagera p refer    concep   goog syste used
+ ra  importanc     web.  pagera  a
+ refer   importanc  val     relati  the
+res   site  ha  pagerank.
+ algori basicall work li  popularit contes    site
+ li   popula websites,     conside more
+popular.,  p doesn  appl   web   whole
+   wi  web    pr dependent
+  numbe  factors:
+* inbo link backlink     o      web li    page
+* outbo link forwa link    exte    pa link to
+* dang link       exte link  li     page
+* dee link    link     h pa  li     page
+p trie  emula  rand surfe .  algori include a
+dampe factor, whic   probabilit   rand surfe will
+ b    vi   pa -  default,   0.85. a
+variati     intenti surfe ,   importanc of
+ pa  ba   actua vi  site  users.  me is
+   goog toolbar, whic repor  actua  vi to
+google.

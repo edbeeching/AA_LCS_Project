@@ -1,0 +1,5 @@
+   inheritanc  oo refer   formati   classe    exis classes.  concep  inheritanc  basicall formula  sim  1967.
+  result,  newl crea inhe  deri classe inhe  propertie  behavi   classe  whic   derived.  origi classe   cal ba classe   refer   ances classes.
+   inheritanc   re  exis cod  lit   modification.
+ ba suppor pro  inheritanc    repre  categorizati  compute languages.  po mechani numbe   proces   crucia  h lea     generalizati  cogniti ec  cal categorization.  generalizati   knowled  spec entitie   ap   wide gro pro  belong relati   created.   o  cogniti ec        s   spec entit    particularities.
+  example    ha module  simila interfaces.  advanta  inheritanc      suc module   lo  cod whic consequentl reduce  complexit   program.

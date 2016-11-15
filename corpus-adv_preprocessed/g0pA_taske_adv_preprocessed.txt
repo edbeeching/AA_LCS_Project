@@ -1,8 +1,8 @@
-d program   algori desig techniq   optimisati problems, suc  mini  maximising. li di  conquer, d program solve problem  combi solution  sub-problems., unli di  conquer, sub-problem    independen  sub-problem   sub-sub-problem  soluti   sub-proble   affec  solution  o sub-problem   sa problem.
-   step  d programming:
-characte struct   optima solution.
-def val  optima soluti recursively.
-com optima soluti   top-  cach  bottom-   table.
-construc  optima soluti  com values.
- exam   t  proble  whic d program    is:  t sequences, x=x1,...,  y=y1,..., f  comm subsequenc  leng  maximum.
-d program reduce computati  sol sub-problem   bottom- fashi   s soluti   sub-proble      solved., lo   soluti whe  sub-proble  encounte  help reduc computation.,  ke  d program   dete  struct  optima solutions. 
+dynamic programming is an algorithm design technique used for optimisation problems, such as minimising or maximising. like divide and conquer, dynamic programming solves problems by combining solutions to sub-problems. however, unlike divide and conquer, sub-problems are not always independent as sub-problems may share sub-sub-problems but solution to one sub-problem may not affect the solutions to other sub-problems of the same problem.
+there are four steps in dynamic programming:
+characterise structure of an optimal solution.
+define value of optimal solution recursively.
+compute optimal solution values either top-down with caching or bottom-up in a table.
+construct an optimal solution from computed values.
+an example of the type of problem for which dynamic programming may be used is: given two sequences, x=x1,...,xm and y=y1,...,yn find a common subsequence whose length is maximum.
+dynamic programming reduces computation by solving sub-problems in a bottom-up fashion and by storing solution to a sub-problem the first time it is solved. also, looking up the solution when a sub-problem is encountered again helps reduce computation. however, the key in dynamic programming is to determine the structure of optimal solutions. 

@@ -1,0 +1,7 @@
+inheritanc allo program develo   objec orienta langua  re cod wi ha  replica  else wi  program.
+ achiev,  programme    generalisation  similaritie  vario aspec   program. 
+ example,  prog  exis  mode  form  transport.   glance,  ca   tra   ha muc  common.  abstractly,  wil ha  spe  whic   travelling,  direction,   curren position.
+method uti     spec hig    inheritanc hierarchy,  exam   transpor class.  exam yo  ha  me whic work    positi   tra  travel  minute  directi. likewise, yo  wan     f   sa    objec   t car. 
+inheritanc    suc  me  def   superclas   tra  ca classes,  ca  tra objec  util. 
+ tra  ca subclasse  sa  exte  transpor class,   wil ha additi characteristic whic  d  share..g. passenge capacit wo   clas va   ca  tra  ha  values,   tra  ha method   line   toi enga .
+ yo  wan  ad additi form  transport, suc   aeroplane, yo       ha  toi enga function.  yo  ha  e hierarchy,   mas transpor clas extend  transpor class. unde whic yo  ha  tra  aeroplane, whic wo inhe characteristic   s classes.

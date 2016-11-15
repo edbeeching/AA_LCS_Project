@@ -1,0 +1,5 @@
+    conside whe ta  goog  pagera algorithm,    pagera  essentiall     pa    internet.   essenc    popularit contes  webpages.
+originall searc engine  highes ke density,     ab  ke spam  implemented. instea goog   syste   ba  site li  ,.g.  m       li    hig   will. 
+ algori goog  user  ba  4 factors, tota numbe , dampe factor, pagera   sing pa   numbe  outbo links.  dampe fac    counte rand surfers, wh  b   switc  ot.  form   re- unti     conve,  f  pagerank,    calcula iteratively.
+pagera    goog  meas  popularit      numbe  0-10  assig   webpa de  thei pagerank.  allo goog  calcula  marke val   webpages.
+  sho     pagera  periodicall   3  6 months,   counte hacker influenc   pageranks.

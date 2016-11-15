@@ -1,16 +1,16 @@
- probabilit theor baye theo ofte cal baye la  rev
- baye relate  conditi  margi probabilitie of
-t rand events.     com posteri probabilitie given
-observations.  exam  per   obser  ha certain
-symptoms. baye theo     com  probabilit  a
-propo diag  correct.
-  forma theo baye theo  va   common
-interpretation  probability.,  pla  centra  in
- deba   foundation  statistics: frequentis and
-baye interpretation disag     which
-probabilitie sho  assig  . bayesian describe
-probabilitie  term  belief  degree  uncertainty, while
-frequentis assig probabilitie  rand even   their
-frequencie  occurrenc   subse  population  proportions
- .  article  baye probabilit  frequentist
-probabilit disc  debate  detail.
+in probability theory bayes theorem often called bayes law after rev
+thomas bayes relates the conditional and marginal probabilities of
+two random events. it is used to compute posterior probabilities given
+observations. for example a person may be observed to have certain
+symptoms. bayes theorem can be used to compute the probability that a
+proposed diagnosis is correct.
+as a formal theorem bayes theorem is valid in all common
+interpretations of probability. however, it plays a central role in
+the debate around the foundations of statistics: frequentist and
+bayesian interpretations disagree about the ways in which
+probabilities should be assigned to each other. bayesians describe
+probabilities in terms of beliefs and degrees of uncertainty, while
+frequentists assign probabilities to random events according to their
+frequencies of occurrence or to subsets of populations as proportions
+of the whole. the articles on bayesian probability and frequentist
+probability discuss these debates in detail.

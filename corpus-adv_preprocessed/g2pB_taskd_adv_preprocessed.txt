@@ -1,10 +1,10 @@
 
- probabilit theory, baye theo  cal baye la  re  baye compare  conditi  margi probabilitie  t rand events.   ofte   calcula posteri probabilitie  observations.  example,  patien   obser  ha  symptoms. baye theo     calcula  likeliho   propo anal  accurate,   observation. 
-  officia theorem, baye theo  va   universa interpretation  probability.,  pla  fundamenta    deba   foundation  statistics: frequentis  baye interpretation disag     whic probabilitie sho  assig  applications.
- frequentis assig probabilitie  rand even   thei frequencie  happe   subse  population  proportion  . whils bayesian desc probabilitie  term  belief  degree  uncertainty.  article  baye probabilit  frequentis probabilit disc  debate  greate detail.
-baye theo compare  conditi  margi probabilitie  even  ,     non-vanish probability.
- te  baye theo   conventi name:
-   previo probability.   previo   sen     ta  acco   .
-pa|   conditi probability,.    cal  subsequen probabilit    deri   depend   spec valu.
-pb|   conditi probabilit  .
-   previous.
+in probability theory, bayes theorem also called bayes law after rev thomas bayes compares the conditional and marginal probabilities of two random events. it is often used to calculate posterior probabilities given observations. for example, a patient may be observed to have certain symptoms. bayes theorem can be used to calculate the likelihood that a proposed analysis is accurate, given that observation. 
+as an official theorem, bayes theorem is valid in all universal interpretations of probability. however, it plays a fundamental role in the debate around the foundations of statistics: frequentist and bayesian interpretations disagree about the ways in which probabilities should be assigned in applications.
+ frequentists assign probabilities to random events according to their frequencies of happening or to subsets of populations as proportions of the whole. whilst bayesians describe probabilities in terms of beliefs and degrees of uncertainty. the articles on bayesian probability and frequentist probability discuss these debates in greater detail.
+bayes theorem compares the conditional and marginal probabilities of events a and b, where b has a non-vanishing probability.
+each term in bayes theorem has a conventional name:
+pa is the previous probability of a. it is previous in the sense that it does not take into account any information about b.
+pa|b is the conditional probability of a, given b. it is also called the subsequent probability because it is derived from or depends upon the specified value of b.
+pb|a is the conditional probability of b given a.
+pb is the previous.

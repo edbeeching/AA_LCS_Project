@@ -1,0 +1,10 @@
+ probabilit theory, baye theo ofte cal baye la  re  baye relate  conditi  margi probabilitie  t rand events.   ofte   com posteri probabilitie  observations.  example,  patien   obser  ha  symptoms. baye theo     com  probabilit   propo diag  correct,   observation. se exam 2
+  forma theorem, baye theo  va   comm interpretation  probability.,  pla  centra    deba   foundation  statistics: frequentis  baye interpretation disag     whic probabilitie sho  assig  applications. frequentis assig probabilitie  rand even   thei frequencie  occurrenc   subse  population  proportion  , whi bayesian desc probabilitie  term  belief  degree  uncertainty.  article  baye probabilit  frequentis probabilit disc  debate  greate detail.
+baye theo relate  conditi  margi probabilitie  even  ,     non-vanish probability:
+  pa| = \frac{ | a\, pa}{pb}.
+ te  baye theo   conventi name:
+  *    pri probabilit  margi probability.   pri   sen     ta  acco   .
+  * pa|   conditi probability,.    cal  posteri probabilit    deri   depend   spec valu.
+  * pb|   conditi probabilit  .
+  *    pri  margi probability,  ac   normali constant.
+intuitively, baye theo   f describe    whic  belief  obser     ha observed.

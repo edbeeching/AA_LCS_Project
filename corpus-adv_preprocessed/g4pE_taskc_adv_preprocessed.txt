@@ -1,8 +1,8 @@
- definiti  te depend   application. typicall term  sing, keywords,  longe phrases.   word  chose    terms,  dimensionalit   vec   numbe  word   vocabular  documen     vector.  dimension correspond   separa terms.   te occur   document,  val   vec  non-zero.
-relevanc ranking  documen   ke searc   calculated,   assumption  documen similaritie theory,  compa  deviati  angle   documen vec   origi quer vec   quer    sa   vec   documents.
+the definition of term depends on the application. typically terms are single words, keywords, or longer phrases. if the words are chosen to be the terms, the dimensionality of the vector is the number of words in the vocabulary a document is represented as a vector. each dimensions corresponds to a separate terms. if a term occurs in the document, its value in the vector is non-zero.
+relevancy rankings of documents in a keyword search can be calculated, using the assumptions of document similarities theory, by comparing the deviation of angles between each document vector and the original query vector where the query is represented as same kind of vector as the documents.
 limitation:
-   limitati  vec spac model.
-model ba   e  vec spac mode include:
- generali vec spac model.
- enhanc topic-ba vec spac mode [1] et  extend  vec spac mode  remo  constrain   term-vector  orthogonal.  contras   generali vec spac mode  enhanc topic-ba vec spac mode   depe  concurrence-ba similaritie  terms.  enhancemen   enhanc topic-ba vec spac mode compa    enhanc    proposa    deri term-vector   ontology. 
+there is some limitation of vector space model.
+models based on and extending the vector space model include:
+ generalized vector space model.
+ enhanced topic-based vector space model [1] etvsm  extends the vector space model by removing the constraint that the term-vectors be orthogonal. in contrast to the generalized vector space model the enhanced topic-based vector space model does not depend on concurrence-based similarities between terms. the enhancement of the enhanced topic-based vector space model compared to the not enhanced one is a proposal on how to derive term-vectors from an ontology. 
  

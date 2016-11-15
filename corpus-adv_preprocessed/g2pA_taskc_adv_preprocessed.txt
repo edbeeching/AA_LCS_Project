@@ -1,8 +1,8 @@
- vec spac mode  te vec mode   algebra    te documen   objects,  genera  vector  identifiers, suc  i terms.      filtering,  retrieval,   relevanc rankings.   applicati    smar  retrieva system.
- documen      vector.  dimensi relate    term.   te appear   document,  term val   vec  non-zero.   method  calcula  values,    te weights, ha  developed. tf- weigh      wel  schemes. se  example.
- definiti   te depend   application.   te   sing word, keyword,   longe phrase.   word  chose    terms,  dimensionalit   vec   numbe  word   vocabular  numbe  distinc word occur   corpus.
- vec spac mode   limitations:
-longe documen      documen ha po similarit     scala produc   la dimensionality
-searc keyword ha  precisel matc documen term  substring   resul   fal positi match
-seman sensitivit documen   simila context,   te vocabular won  associated, resul   fal negati match.
- orde  whic term appea   documen  los   vec spac representation.
+a vector space model or term vector model is an algebraic way of representing text documents and any objects, in general as vectors of identifiers, such as index terms. it is used in information filtering, information retrieval, indexing and relevancy rankings. its first application was in the smart information retrieval system.
+a document can be represented as a vector. every dimension relates to a different term. if a term appears in the document, the terms value in the vector is non-zero. many different methods of calculating these values, sometimes known as term weights, have been developed. tf-idf weighting is one of the most well known schemes. see below example.
+the definition of a term depends on the application. normally a term is a single word, keyword, or a longer phrase. if the words are chosen to be the terms, the dimensionality of the vector is the number of words in the vocabulary the number of distinct words occurring in the corpus.
+the vector space model has some limitations:
+longer documents are represented poorly because the documents have poor similarity values namely a small scalar product and a large dimensionality
+search keywords have to precisely match document terms word substrings could potentially result in a false positive match
+semantic sensitivity documents with a similar context, but different term vocabulary wont be associated, resulting in a false negative match.
+the order in which terms appear in the document is lost in a vector space representation.

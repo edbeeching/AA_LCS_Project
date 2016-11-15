@@ -1,0 +1,4 @@
+inheritanc  objec orien program     clas  f  classe whic ha allread  defined.  classe ha ha    behavi  attribute whic  existen   classe   inherit.  peropo  inheritanc  objec orien program   minimi  re  exis cod wi modification.
+inheritanc allo classe   categorized, simile    human catagorize.       generali d     relationshi  classes.  exam  co   generalizati  anima    pig & cheaters. defei classe  , allo   def attribute  behavi whic  comme   animal   class,  cheater wo natuarl inhear properitie comme   animals.
+ advanta  inheritanc   classe whic wo other ha alo  simila cod ,  instea shai  sa code, th reduc  complexit   program. inheritance,,    refe   polymorphi whic    piece  cod  con  sha con code.
+inheritanc   accom  overrid method   ancestor,   add  methods. 

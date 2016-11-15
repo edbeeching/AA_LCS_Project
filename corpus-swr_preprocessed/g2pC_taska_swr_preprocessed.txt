@@ -1,0 +1,4 @@
+inheritanc     f  classe instance  whic  cal objec  classe  ha   defined.   classes,   deri classes, ta   inhe attribute  behavi   pre-exis classes, whic  refer   ba classe  ances classes.   in  hel re exis cod  lit   modification.
+ advanta  inheritanc   module   simila interface    lo  code, reduc  complexit   program. inheritanc    view,  dual, cal polymorphism, whic describe  piece  cod  control  sha con code.
+inheritanc  typicall accom   overrid replac   m method expo  ancestor,   add  method  tho expo   ancestor.
+ defi  inheritanc hierarch  ha  def  restrictions,    whic  desirable. singleness:  sing inheritance,  subclas  inhe    superclass. visibility: whe clien cod  acces   object,  generall  acces    objec superclas data. static:  inheritanc hierarch   objec    instantiati whe  objec t  selec    cha  time.

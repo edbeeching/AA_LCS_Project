@@ -1,4 +1,4 @@
- vec spac mode    documen  vie   ba ,   orde  lit significance.  documen   vec      dimension.  vec   constuc   frequenc  eac  dimension.  dra    approac    leng   documen   in   vector,  compensa   yo  com  co similarit   t compari documents.  wil f  differenc   t vector  do product, igno  si .
-inorde  quer  searc space,  quer       vector,  yo f  documen  vec   greates co similaritie   query.    numbe  wigh sceem whic   incopera inorde  increa  accurac   vextors.
-   drawback   approach, com  co similaritie   vec   expensi   numbe  dimension     thousands,  tack  proble yo   inver inde    serie heuristic inorde  inpro .
- top
+the vector space model is where each document is viewed as a bag of words, where there order has little significance. each document is a vector where each word is a dimension. the vector is then constucted of the frequency of eacher word dimension. the draw back to this approach is that the length of the document as an inpact on the vector, to compensate for this you can comput the cosine similarity between your two comparism documents. this will find the difference between the two vectors the dot product, ignoreing the size of them.
+inorder to query the search space, the query can also be represented as a vector, then you find the document whos vector has the greatest cosine similarities to your query. there are a number of wighting sceems which can be incoperated inorder to increase the accuracy of the vextors.
+there are some drawbacks with this approach, computing the cosine similarities between each vector can be expensive as the number of dimensions can be in the thousands, to tackle this problem you can use inverted indexs and then a series heuristics inorder to inprove on this.
+to top

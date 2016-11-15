@@ -1,0 +1,11 @@
+
+ mathematic  compute science, d program   me  sol problems,  exhib  propertie  overlap subproblem  optima substructure.  me  muc    nai methods.
+ te  originall    1940  desc  proces  sol problem     f  bes decision  . 
+ fie     system anal  enginee    recogni   ieee
+  program  d program    connecti  compute programming,  instea    te mathematica programming,  synon  optimization.,  prog   optima   acti   produced.  instance,  finali sched  even   exhibiti   cal  program. programming,   sense,  fi  accep   action,  algorithm.
+optima substruct   optima solution  subproblem     f  optima solution    problem.  example,  shortes pa   goa   ver   gra   fo   com  shortes pa   goa   adjacen vertices,      pic  bes  path.
+ general,   sol  proble  optima substruct   three-ste process:
+brea  proble  smalle subproblems.
+sol  problem optimall   three-ste proces recursively.
+  optima solution  construc  optima soluti   origi problem.
+ subproblems,, sol  divid   sub-subproblems, , unti    sim ca   sol  constan time.

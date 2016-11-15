@@ -1,10 +1,10 @@
- probabilit theory, baye theo relate  conditi  margi probabilitie  t rand events.   ofte   com posteri probabilitie  observations.
-baye theo  expres mathematicall as:
-pa| = pb|apapb
- pa|   conditi probabilit  ,    pri probability,    pri probability,  pb|   conditi probabilit  . 
-baye theo relate  conditi  margi probabilitie  t rand even   pb,   va   comm interpretation  probability.  example,   scho  mad   35 bo  25 girls,  girl wea skir  trouser  equa number   bo  wea trousers.   studen  obser   distanc wea trousers, baye theo     dete  probabilit   studen   girl. 
-   probabilit   studen   gi whic  25. 
-pb|   probabilit   studen wea trouser    studen   girl, whic  0.5 
-   probabilit   rand studen wea trousers, whic   calcula   = pb|a + pb|a   denote  complementar event, whic  0.8. 
-  probabilit   form  0.25. 
-baye theo  ofte   com posteri probabilitie  observations,  instanc  probabilit   propo medica diag  correct,   obser symptoms. 
+in probability theory, bayes theorem relates the conditional and marginal probabilities of two random events. it is often used to compute posterior probabilities given observations.
+bayes theorem is expressed mathematically as:
+pa|b = pb|apapb
+where pa|b is the conditional probability of a given b, pa is the prior probability of a, pb is the prior probability of b, and pb|a is the conditional probability of b given a. 
+bayes theorem relates the conditional and marginal probabilities of two random events pa and pb, and is valid in all common interpretations of probability. for example, in a school in made up of 35 boys and 25 girls, the girls wear skirts of trousers in equal numbers and the boys all wear trousers. if a student is observed from a distance wearing trousers, bayes theorem can be used to determine the probability of this student being a girl. 
+pa is the probability of the student being a girl which is 25. 
+pb|a is the probability of the student wearing trousers given that the student is a girl, which is 0.5 
+pb is the probability of a random student wearing trousers, which can be calculated as pb = pb|apa + pb|apa where  denotes a complementary event, which is 0.8. 
+therefore the probability using the formula is 0.25. 
+bayes theorem is often used to compute posterior probabilities given observations, for instance the probability that a proposed medical diagnosis is correct, given certain observed symptoms. 

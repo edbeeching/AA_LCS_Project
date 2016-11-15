@@ -1,2 +1,2 @@
-pagera algori  paten  sta university.    li anal algori emplo   goog inte searc eng  assign  val   meas  importanc   elemen   hyperli   documents, suc  ,   purpo   meas  relati significanc wi  set.
-goog own exclusi licen righ   paten  sta university.  universit recei 1.8  share  goog  ret     patent. 
+pagerank algorithm is patented by stanford university. it is a link analysis algorithm employed by the google internet search engine that assigns a value used to measure the importance to each element of a hyperlinked set of documents, such as the www, with the purpose of  measuring its relative significance within the set.
+google owns exclusive license rights on the patent from stanford university. the university received 1.8 million shares in google in return for use of the patent. 

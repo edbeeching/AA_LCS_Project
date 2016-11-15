@@ -1,0 +1,4 @@
+  fie  compute science, te d program relate   st  program  break  la proble   smalle subproblems,  generall allo   fi   optima solution. whe  proble    subproblems,  themselve     smalle problems, , unti    reduc .
+   comm  d program  ma   recursion,   sa  previo   faste computati    lead  hig efficiency,  calculation    redone.  example, whe  proble  reduc  s problems,  tho   reduc,       comm subsubproblems,     calculati       resul sa  hel sol m   subproblem.
+ exam   ga  efficienc   path-fi problem.    t distinc route   net  10 nodes, tag ,    t route   comm secti,  node  ,  cos   secti sho  calcula      saved., whe      processed,  cos       ne   calculated.
+ general, d program    optimisati problems,    efficien soluti  needed. a   sor  program  usef   ai, compute graphics, compressi routines,  biomedica applications.

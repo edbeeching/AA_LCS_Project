@@ -1,5 +1,5 @@
-   inheritanc  oo refer   formati   classe    exis classes.  concep  inheritanc  basicall formula  sim  1967.
-  result,  newl crea inhe  deri classe inhe  propertie  behavi   classe  whic   derived.  origi classe   cal ba classe   refer   ances classes.
-   inheritanc   re  exis cod  lit   modification.
- ba suppor pro  inheritanc    repre  categorizati  compute languages.  po mechani numbe   proces   crucia  h lea     generalizati  cogniti ec  cal categorization.  generalizati   knowled  spec entitie   ap   wide gro pro  belong relati   created.   o  cogniti ec        s   spec entit    particularities.
-  example    ha module  simila interfaces.  advanta  inheritanc      suc module   lo  cod whic consequentl reduce  complexit   program.
+the idea of inheritance in oop refers to the formation of new classes with the already existing classes. the concept of inheritance was basically formulated for simula in 1967.
+as a result, the newly created inherited or derived classes inherit the properties and behavior of the classes from which they are derived. these original classes are either called base classes or sometimes referred to as ancestor classes.
+the idea of inheritance is to reuse the existing code with little or no modification at all.
+the basic support provided by inheritance is that it represents by categorization in computer languages. the power mechanism number of information processing that is crucial to human learning by the means of generalization and cognitive economy is called categorization. where generalization if the knowledge of specific entities and is applied to a wider group provided that belongs relation can be created. on the other hand cognitive economy is where less information needs to be stored about each specific entity except for some particularities.
+there are examples where we can have modules with similar interfaces. the advantage that inheritance provides is that it makes such modules share a lot of code which consequently reduces the complexity of the program.

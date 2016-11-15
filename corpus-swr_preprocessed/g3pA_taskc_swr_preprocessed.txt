@@ -1,0 +1,6 @@
+vec spac model,  te vec mode    ,   algebra mode   objec       te documen  vector  identifier  example, i terms.      retrieva  filtering,   relevanc rankings,       smar  retrieva system.
+ documen     vector,   dimensi corre   separa term.   te occur   document,  val wil  non-ze   vector.     com   a te weigh ha  develo    bes  scheme  tf- weighting.
+    te  def depend   application. typically, term  sing, keywords,    longe phrases.   word  chose   terms,  numbe  dimension   vec   numbe  distinc word   corpus.
+relevanc rank  documents,   ke search,   calcula    assumption  documen similaritie theory,  compa  differenc  angle   documen vec   origi quer vector,   quer    sa f vec   documents.
+generally,   easie  calcula  co   ang   vector instea   angl.  ze val   co indicate   quer  documen vec  orthog   ha  matc    quer te d  exis   documen  considered.
+however,  vec spac mode  limitations. l documen      thei po similarit    scala produc   la dimensionalit searc keyword  matc precisel  documen term  substring  resul   fal positi matc simila conte documen   te vocabular won  associated, lead   fal negati matc   orde   term appea   documen      vec spac model.

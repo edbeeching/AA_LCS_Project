@@ -1,8 +1,8 @@
- probabilit   even happe  conside  likeliho    numbe   instanc occurring,  divid  val   tota numbe  events.  equati   calculati wo lo  follows:
-probabilit  = numbe  instanc  tota numbe  events
-  o  probabilit theor   involve assig   events.  example:
-p=1: even    occur
-p=0: even     occur
-p=0.5: even occur ha   time. 
-   conditi probabilit whic   interes    variable rela  . baye theo        theo relating
-conditi probabilitie          understa   probabilit   theor  true,      piec  evidence.        variet  contexts, rang  ma biolog   developmen  baye  blocker  emai systems. 
+the probability of an event happening mean considering the likelihood of or the number of the instance occurring, and dividing this value by the total number of events. the equation for this calculation would look as follows:
+probability p = number of instance  total number of events
+on the other hand probability theory p usually involves assigning values to events. for example:
+p=1: event is certain to occur
+p=0: event is certain not to occur
+p=0.5: event occurs half of the time. 
+there is also conditional probability which is usually interested in the way variables relate to each other. bayes theorem is the name given to an important theorem relating
+conditional probabilities and it can be seen as a way of understanding how the probability that a theory is true, is affected by a new piece of evidence. it has been used in a wide variety of contexts, ranging from marine biology to the development of bayesian spam blockers for email systems. 
