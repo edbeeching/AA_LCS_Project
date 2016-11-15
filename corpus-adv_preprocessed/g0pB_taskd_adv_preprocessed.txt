@@ -13,7 +13,7 @@ pb|a is the conditional probability of b given a.
 pa is the prior probability a. it doesnt take into account any information about b, so it is prior.
 pb is the prior or marginal probability of b, and acts to normalise the probability.
 to derive the theorem, we begin with the definition of conditional
-probability. by combining and re-arranging these two equations for a
+probability. by combining and re arranging these two equations for a
 and b, we get a the lemma called product rule for
 probabilities. provided that pb is not a zero, dividing both sides
 by pb renders us with bayes theorem.

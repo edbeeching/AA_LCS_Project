@@ -1,6 +1,1 @@
- vec spac mode   documen whic    bag  word . ba      documen   vec     frequencies.  orde  ,   par  extracti step  needed. 
-ig case, e  uniq word   enti   documents. 
-elimina non-content-bea ``stopword suc  ``a, ``and, ``the,.  sam lis  stopwords.
-  document, co  numbe  occurrence   word. 
- heuris  information-theore criteria, elimina non-content-bea ``high-frequenc  ``low-frequency. 
-   elimination, suppo uniq word remain. assig  uniq identifie     remai word,   uniq identifie     document. 
+the vector space model documents represented bags .the basic idea represent document vector weighted word frequencies. order, parsing extraction steps needed. ignoring case, extract unique entire set documents. eliminate content bearing ``stopwords ``a, ``and, ``the,. sample lists stopwords. for document, count number occurrences word. using heuristic theoretic criteria, eliminate content bearing ``high frequency ``low frequency. after elimination, suppose unique remain. assign unique identifier remaining word, unique identifier document.

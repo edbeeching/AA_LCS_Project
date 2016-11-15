@@ -1,0 +1,11 @@
+after and bayes bayes bayes between conditional events in law marginal of or probabilities probability provides random relation rev the theorem theory, thomas two. calculate given is it observations posterior probabilities to used usually. a be certain example: for might observed patient show symptoms to. a bayes be certain compute could diagnosis given is observation probability right, that that the theorem to used.
+since a all bayes formal holds in interpretations is it of popular probability theorem theorem,.  
+bayes = a a a a and and are b b, bayes by conditional convention:
+pa events has in is marginal marginal named non of of or pa|b pa|bpapb
+terms prior probabilities probability probability probability:
+ relates the the theorem theorem vanishing where.  about account and any b considered does information into is it not prior take therefore.
+pa|b a, b conditional given is of probability the. b depends derived from is it it of or specified the upon value. 
+pb|a a b called conditional given is is it of posterior probability probability the the usually.
+pb a.k.a. b constant is marginal normalizing of or prior probability the the.
+obviously, about are assumptions b bayes by changed describes event eventa having in observed observing ones the the the theorem way which.
+.

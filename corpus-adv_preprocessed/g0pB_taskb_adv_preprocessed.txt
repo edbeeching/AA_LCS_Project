@@ -13,7 +13,7 @@ on a number of factors:
 * deep links  how many links that are not the home page are linked to from a particular page
 pr tries to emulate a random surfer . the algorithm includes a
 dampening factor, which is the probability that a random surfer will
-get bored and go and visit a new page - by default, this is 0.85. a
+get bored and go and visit a new page   by default, this is 0.85. a
 variation on this is the intentional surfer , where the importance of
 a page is based on the actual visits to sites by users. this method is
 used in the google toolbar, which reports back actual site visits to

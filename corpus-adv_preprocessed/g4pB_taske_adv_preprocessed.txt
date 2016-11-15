@@ -1,18 +1,18 @@
 in mathematics and computer science, dynamic programming is a method of solving problems that exhibit the properties of overlapping subproblems and optimal substructure.
  
 the word programming in dynamic programming has no particular connection to computer programming at all, and instead comes from the term mathematical programming, a synonym for optimization. programming, in this sense, means finding an acceptable plan of action, an algorithm.
-optimal substructure means that optimal solutions of subproblems can be used to find the optimal solutions of the overall problem. in general, we can solve a problem with optimal substructure using a three-step process:
+optimal substructure means that optimal solutions of subproblems can be used to find the optimal solutions of the overall problem. in general, we can solve a problem with optimal substructure using a three step process:
 break the problem into smaller subproblems.
-solve these problems optimally using this three-step process recursively.
+solve these problems optimally using this three step process recursively.
 use these optimal solutions to construct an optimal solution for the original problem.
-the subproblems are, themselves, solved by dividing them into sub-subproblems, and so on, until we reach some simple case that is solvable in constant time.
-to say that a problem has overlapping subproblems is to say that the same subproblems are used to solve many different larger problems. for example, in the fibonacci sequence, f3 = f1 + f2 and f4 = f2 + f3  computing each number involves computing f2. because both f3 and f4 are needed to compute f5, a naive approach to computing f5 may end up computing f2 twice or more. this applies whenever overlapping subproblems are present: a naive approach may waste time recomputing optimal solutions to subproblems it has already solved.
-in order to avoid this, we instead save the solutions to problems we have already solved. then, if we need to solve the same problem later, we can retrieve and reuse our already-computed solution. if we are sure we wont need a particular solution anymore, we can throw it away to save space. in some cases, we can even compute the solutions to subproblems we know that well need in advance.
+the subproblems are, themselves, solved by dividing them into sub subproblems, and so on, until we reach some simple case that is solvable in constant time.
+to say that a problem has overlapping subproblems is to say that the same subproblems are used to solve many different larger problems. for example, in the fibonacci sequence, f3 = f1   f2 and f4 = f2   f3  computing each number involves computing f2. because both f3 and f4 are needed to compute f5, a naive approach to computing f5 may end up computing f2 twice or more. this applies whenever overlapping subproblems are present: a naive approach may waste time recomputing optimal solutions to subproblems it has already solved.
+in order to avoid this, we instead save the solutions to problems we have already solved. then, if we need to solve the same problem later, we can retrieve and reuse our already computed solution. if we are sure we wont need a particular solution anymore, we can throw it away to save space. in some cases, we can even compute the solutions to subproblems we know that well need in advance.
 dynamic programming makes use of:
   overlapping subproblems
   optimal substructure
   memoization
 dynamic programming usually takes one of two approaches:
-  top-down approach
-  bottom-up approach
+  top down approach
+  bottom up approach
 

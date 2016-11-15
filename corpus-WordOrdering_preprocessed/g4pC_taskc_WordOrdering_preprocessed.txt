@@ -1,0 +1,7 @@
+ are are as bags documents model of represented space the the vector which words.a as basic certain document each frequencies idea is of represent the to vector weighted word. and are do extraction following in needed order parsing so, steps the to. 
+ignoring all case, documents entire extract from of set the unique words. 
+eliminate ``a, ``and, ``stopwords ``the, as bearing content etc non such. for lists of sample stopwords.
+for count document, each each number occurrences of of the word. 
+using ``high ``low and bearing content criteria, eliminate frequency frequency heuristic information non or theoretic words. 
+after above elimination, remain suppose the unique words. a a and and and assign between between document each each identifier identifier remaining to to unique unique word,. 
+.

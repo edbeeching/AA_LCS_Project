@@ -1,9 +1,1 @@
-d program    powerf mathematica technique, ofte uti  programming,  sol optimizati problems., minimi  maximizing.
- greed algorithm foc  ma  bes loca choic   decisi ma stage. wi  pro  correctness, suc  algori    fail.  d programming,   desig  o algori whic searc   possibilitie whic en correctnes whils s    a ha  recom lead  computati efficiency.
-d program solve problem  combi  solution  subproblems.  subproblem ,, independent. subproblem   subsubproblems,   soluti   subproble doe   affec  solution  o subproblem stem   sa problem.
-d program reduce computati   sol subproblem   bottom-.  store  soluti   subproble      solved,     lo   soluti whe  subproble  encounte subsequently. 
- ke  d program   f  struct  optima solutions.  step requi   follows:
-genera  struct   optima solution
-recursivel def  val   optima solution
-com  optima soluti   top-  caching,  bottom-   table
-genera  optima soluti   com values
+dynamic programming powerful mathematical technique, utilised programming, solving optimization problems., minimizing maximizing. greedy algorithms focus making best local choice decision making stage. proof correctness, algorithm fail. dynamic programming, design algorithm searches possibilities ensures correctness whilst storing avoid recomputed leading computational efficiency. dynamic programming solves problems combining solutions subproblems. subproblems,, independent. subproblems share subsubproblems, solution subproblem doesn affect solutions subproblems stemming problem. dynamic programming reduces computation time solving subproblems bottom. stores solution subproblem time solved, meaning solution subproblem encountered subsequently. the key dynamic programming find structure optimal solutions. steps required follows: generalise structure optimal solution recursively define optimal solution compute optimal solution values top caching, bottom table generate optimal solution computed values

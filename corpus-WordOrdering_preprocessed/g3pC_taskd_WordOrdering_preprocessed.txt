@@ -1,0 +1,11 @@
+and are bayes by conditional events in prior probabilities
+of probability random related the theorem theory, two. and compute have is
+often observations posterior
+probabilities the theorem to used we when wish.
+for a a
+suggested an bayes can certain
+symptoms, compute correct diagnosis example, given have is is observation patient probability seen that that the theorem to to use we.
+pa a is of prior probability the. a b conditional given is pa|b probabilty
+of the. a b conditional given is of pb|a probabilty the. and b, be is
+the must non of pb prior probability zero. = bayes given
+by is pa|b pb|apapb theorem..

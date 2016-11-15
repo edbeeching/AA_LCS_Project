@@ -1,9 +1,9 @@
 using the vector space model for information retrieval models all pages
-and queries as high-dimensional sparse vectors. each item in the vector
+and queries as high dimensional sparse vectors. each item in the vector
 represents a different keyword.
 the similiarity betweeen two pages or a query and a page can be computed
 using the dot product formula to find the cosine between them. this
-represents the angle between them, but in n-dimensional space. results
-will range from -1 to 1, with 1 being a close match. normally the vectors
+represents the angle between them, but in n dimensional space. results
+will range from  1 to 1, with 1 being a close match. normally the vectors
 will not have any negative values, so results will always be greater than
 or equal to 0. the cosine is computed using: cos a = |a||b|a.b

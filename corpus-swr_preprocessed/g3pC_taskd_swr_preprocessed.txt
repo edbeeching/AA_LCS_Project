@@ -1,11 +1,1 @@
- probabilit theory,  pri  conditi probabilities
- t rand even  rela  baye theorem.  theo is
-ofte  whe  ha observation    com posterior
-probabilities.
- example,   observati   patien    ha certain
-symptoms,    baye theo  com  probabilit  a
- diag  correct.
-   pri probability. pa|   conditi probabilty
- . pb|   conditi probabilt  .  is
- pri probability,    non-zero. baye theo  given
- pa| = pb|apapb.
+in probability theory, prior conditional probabilities of random events bayes theorem. theorem is often observations compute posterior probabilities. for example, observation patient certain symptoms, bayes theorem compute probability a suggested diagnosis correct. pa prior probability. pa|b conditional probabilty of. pb|a conditional probabilty. pb is the prior probability,. bayes theorem given by pa|b = pb|apapb.

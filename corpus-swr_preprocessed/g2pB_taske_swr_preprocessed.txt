@@ -1,11 +1,1 @@
-
- mathematic  compute science, d program   me  sol problems,  exhib  propertie  overlap subproblem  optima substructure.  me  muc    nai methods.
- te  originall    1940  desc  proces  sol problem     f  bes decision  . 
- fie     system anal  enginee    recogni   ieee
-  program  d program    connecti  compute programming,  instea    te mathematica programming,  synon  optimization.,  prog   optima   acti   produced.  instance,  finali sched  even   exhibiti   cal  program. programming,   sense,  fi  accep   action,  algorithm.
-optima substruct   optima solution  subproblem     f  optima solution    problem.  example,  shortes pa   goa   ver   gra   fo   com  shortes pa   goa   adjacen vertices,      pic  bes  path.
- general,   sol  proble  optima substruct   three-ste process:
-brea  proble  smalle subproblems.
-sol  problem optimall   three-ste proces recursively.
-  optima solution  construc  optima soluti   origi problem.
- subproblems,, sol  divid   sub-subproblems, , unti    sim ca   sol  constan time.
+in mathematics computer science, dynamic programming method solving problems, exhibit properties overlapping subproblems optimal substructure. method takes time naive methods. the term originally 1940s describe process solving problems find best decisions. the field founded systems analysis engineering topic recognized ieee the word programming dynamic programming connection computer programming, term mathematical programming, synonym optimization., program optimal plan action produced. instance, finalized schedule events exhibition called program. programming, sense, finding acceptable plan action, algorithm. optimal substructure optimal solutions subproblems find optimal solutions problem. example, shortest path goal vertex graph computing shortest path goal adjacent vertices, pick best path. in general, solve problem optimal substructure three step process: break problem smaller subproblems. solve problems optimally three step process recursively. use optimal solutions construct optimal solution original problem. the subproblems,, solved dividing subproblems,, reach simple case solvable constant time.

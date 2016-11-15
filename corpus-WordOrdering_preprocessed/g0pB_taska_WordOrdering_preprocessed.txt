@@ -1,0 +1,18 @@
+a basic concept in inheritance is object oriented programming.  a class classes code existing in is it kind models new of of relationship reuse the the.
+for a a a an block building building example, house is is kind kind of of office similarly,.  a a a also an and block block both buildings, but certain characteristics characteristics from have have have house house inherit may number number occupants, of of office office offices own personal their whereas will will. all apply buildings characteristics dont however, of personal these to types.   
+in and and and are are be block both building characteristics characteristics considered contains example, for general house inherit it objects of office other specialise specific subclasses superclass superclass the the the the the they this to types would.
+java allows inheritance object. all and another are available class class, from inherits methods one public subclass the the to variables when.  
+public = = a circle circle class class class class color colour colour
+ example, extends int is newcolour
+ newcolour{
+ newradius
+ newradius{
+ of private private public public radius radius
+ setcolourcolor setradiusint shape shape shape subclass the the this void void {
+ {
+ }
+}
+in }
+}
+public. a and available be circle class class method, of other provides public setcolour shape shape subclasses the the to which will. as available be because by circle class class colour defined direct for however, in inherited is it manipulation not not private shape the the the variable will. all and available available but circle circle circle, class class class, is isnt it means of setradius shape shape specialises subclasses superclass that the the the the to to which. 
+.

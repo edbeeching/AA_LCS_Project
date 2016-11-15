@@ -1,10 +1,1 @@
-
- probabilit theory, baye theo  cal baye la  re  baye compare  conditi  margi probabilitie  t rand events.   ofte   calcula posteri probabilitie  observations.  example,  patien   obser  ha  symptoms. baye theo     calcula  likeliho   propo anal  accurate,   observation. 
-  officia theorem, baye theo  va   universa interpretation  probability.,  pla  fundamenta    deba   foundation  statistics: frequentis  baye interpretation disag     whic probabilitie sho  assig  applications.
- frequentis assig probabilitie  rand even   thei frequencie  happe   subse  population  proportion  . whils bayesian desc probabilitie  term  belief  degree  uncertainty.  article  baye probabilit  frequentis probabilit disc  debate  greate detail.
-baye theo compare  conditi  margi probabilitie  even  ,     non-vanish probability.
- te  baye theo   conventi name:
-   previo probability.   previo   sen     ta  acco   .
-pa|   conditi probability,.    cal  subsequen probabilit    deri   depend   spec valu.
-pb|   conditi probabilit  .
-   previous.
+in probability theory, bayes theorem called bayes law rev thomas bayes compares conditional marginal probabilities random events. calculate posterior probabilities observations. example, patient observed symptoms. bayes theorem calculate likelihood proposed analysis accurate, observation. as official theorem, bayes theorem valid universal interpretations probability., plays fundamental role debate foundations statistics: frequentist bayesian interpretations disagree ways probabilities assigned applications. frequentists assign probabilities random events frequencies happening subsets populations proportions. whilst bayesians describe probabilities terms beliefs degrees uncertainty. articles bayesian probability frequentist probability discuss debates greater detail. bayes theorem compares conditional marginal probabilities events, vanishing probability. each term bayes theorem conventional name: pa previous probability. previous sense account. pa|b conditional probability,. called subsequent probability derived depends. pb|a conditional probability. pb previous.

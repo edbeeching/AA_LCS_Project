@@ -1,0 +1,9 @@
+all as dimensional for high information model models pages
+and queries retrieval space sparse the using vector vectors. a different each in item keyword the vector
+represents.
+the a a and be betweeen between can computed
+using cosine dot find formula or page pages product query similiarity the the them to two. angle between but dimensional in n space the them, this
+represents.  1 1 1, a being close from match range results
+will to with. 0 always any be equal greater have negative normally not results so than
+or the to values, vectors
+will will. = a computed cos cosine is the using: |a||b|a.b.

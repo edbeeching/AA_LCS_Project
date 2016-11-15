@@ -1,0 +1,7 @@
+a and dynamic exhibit for is mathematical method of optimal overlapping problems programming programming properties solving subproblems substructure that the. a is method methods more much naive other quicker than this. as commonly dynamic in is mathematical optimization, programming programming programming referred relates the to which word. 1940s 1953, a after and another, bellman best by coined current decisions describe find for he his in meaning method method modern needs one one originally problems refined richard solving term the the the the to to to where.
+optimal be by can find into means of of optimal optimal overall problem programming solutions solutions splitting subproblems, substructure that the the the then these to used. a a a computing example from goal graph in is of one path shortest the the to vertex. adjacent all compute first, from goal path shortest the the to vertices. be best can demonstrating dynamic found, overall path principle programming the the then, thereby this, using. a be can different general problem problem:
+break process smaller solve step subproblems the this three to up used.
+recursively compute in optimal path process step subproblem the the this three to use.
+construct an computed for optimal optimal original problem solution, subproblems, the the using.
+this a and by case continues dividing easily forth, into is is one over process reached recursively, simple so solvable sub subproblems subproblems that the them until working. 
+.

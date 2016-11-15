@@ -1,13 +1,1 @@
- object-orien programming, inheritanc     f  classes
-instance  whic  cal objec  classe  ha already
- defined.
-inheritanc    cal generalization,   is-a
-relationship   hierarch  classe  objects. for
-instance,  fr   generalizati  apple, orange, mango
- .   conside fr    abstracti  apple,
-orange,. conversely,  apple  fruit.e.,  ap is-a
-fruit, apple  naturall inhe   propertie comm  all
-ruit, suc    flesh containe   se   plant.
-inheritanc  typicall accom   overrid replacing
-  m method expo  ancestor,   add  method to
-tho expo   ancestor.
+in object oriented programming, inheritance form classes instances called objects classes already been defined. inheritance called generalization, a relationships represent hierarchy classes objects. for instance, fruit generalization apple, orange, mango and. consider fruit abstraction apple, orange,. conversely, apples fruit.e., apple a fruit, apples naturally inherit properties common all ruit, fleshy container seed plant. inheritance typically accomplished overriding replacing one methods exposed ancestor, adding methods to those exposed ancestor.

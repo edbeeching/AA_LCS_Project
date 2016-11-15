@@ -1,10 +1,1 @@
- probabilit theory, baye theo relate  conditi  margi probabilitie  t rand events.   ofte   com posteri probabilitie  observations.
-baye theo  expres mathematicall as:
-pa| = pb|apapb
- pa|   conditi probabilit  ,    pri probability,    pri probability,  pb|   conditi probabilit  . 
-baye theo relate  conditi  margi probabilitie  t rand even   pb,   va   comm interpretation  probability.  example,   scho  mad   35 bo  25 girls,  girl wea skir  trouser  equa number   bo  wea trousers.   studen  obser   distanc wea trousers, baye theo     dete  probabilit   studen   girl. 
-   probabilit   studen   gi whic  25. 
-pb|   probabilit   studen wea trouser    studen   girl, whic  0.5 
-   probabilit   rand studen wea trousers, whic   calcula   = pb|a + pb|a   denote  complementar event, whic  0.8. 
-  probabilit   form  0.25. 
-baye theo  ofte   com posteri probabilitie  observations,  instanc  probabilit   propo medica diag  correct,   obser symptoms. 
+in probability theory, bayes theorem relates conditional marginal probabilities random events. compute posterior probabilities observations. bayes theorem expressed mathematically as: pa|b = pb|apapb where pa|b conditional probability, pa prior probability, pb prior probability, pb|a conditional probability. bayes theorem relates conditional marginal probabilities random events pa pb, valid common interpretations probability. example, school 35 boys 25 girls, girls wear skirts trousers equal numbers boys wear trousers. student observed distance wearing trousers, bayes theorem determine probability student girl. pa probability student girl 25. pb|a probability student wearing trousers student girl, 0.5 pb probability random student wearing trousers, calculated pb = pb|apa pb|apa denotes complementary event, 0.8. therefore probability formula 0.25. bayes theorem compute posterior probabilities observations, instance probability proposed medical diagnosis correct, observed symptoms.

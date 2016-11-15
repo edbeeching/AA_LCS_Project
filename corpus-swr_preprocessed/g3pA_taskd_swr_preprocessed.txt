@@ -1,10 +1,1 @@
- probabilit theory, baye theo ofte cal baye la  re  baye relate  conditi  margi probabilitie  t rand events.   ofte   com posteri probabilitie  observation  example,  patien   obser  ha  symptoms. baye theo     com  probabilit   propo diag  correct,   observation.
-  forma theorem, baye theo  va   comm interpretation  probability.,  pla  centra    deba   foundation  statistic frequentis  baye interpretation disag     whic probabilitie sho  assig  applications. frequentis assig probabilitie  rand even   thei frequencie  occurrenc   subse  population  proportion  , whi bayesian desc probabilitie  term  belief  degree  uncertainty.  article  baye probabilit  frequentis probabilit disc  debate  greate detail.
-baye theo relate  conditi  margi probabilitie  even  ,     non-vanish probability:
-  pa| =  |     pb.
- te  baye theo   conventi name:
-   pri probabilit  margi probability.   pri   sen     ta  acco   .
- pa|   conditi probability,.    cal  posteri probabilit    deri   depend   spec valu.
-pb|   conditi probabilit  .
-   pri  margi probability,  ac   normali constant.
-intuitively, baye theo   f describe    whic  belief  obser     ha observed.
+in probability theory, bayes theorem called bayes law rev thomas bayes relates conditional marginal probabilities random events. compute posterior probabilities observations example, patient observed symptoms. bayes theorem compute probability proposed diagnosis correct, observation. as formal theorem, bayes theorem valid common interpretations probability., plays central role debate foundations statistics frequentist bayesian interpretations disagree ways probabilities assigned applications. frequentists assign probabilities random events frequencies occurrence subsets populations proportions, bayesians describe probabilities terms beliefs degrees uncertainty. articles bayesian probability frequentist probability discuss debates greater detail. bayes theorem relates conditional marginal probabilities events, vanishing probability: pa|b = pb | pa pb. each term bayes theorem conventional name: pa prior probability marginal probability. prior sense account. pa|b conditional probability,. called posterior probability derived depends. pb|a conditional probability. pb prior marginal probability, acts normalizing constant. intuitively, bayes theorem form describes beliefs observing updated observed.
