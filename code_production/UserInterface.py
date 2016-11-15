@@ -91,6 +91,8 @@ class LCS_UI(QtGui.QMainWindow):
         self.preproc_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.preproc_btn))
         self.adv_preproc_btn = QtGui.QRadioButton("Adv PreProc")
         self.adv_preproc_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.adv_preproc_btn))
+        self.adv_preproc_sentence_btn = QtGui.QRadioButton("Adv PreProc And Sentence")
+        self.adv_preproc_sentence_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.adv_preproc_sentence_btn))
 
         h1_layout.addWidget(task_label)
         h1_layout.addWidget(self.task_combo_box)
@@ -99,6 +101,7 @@ class LCS_UI(QtGui.QMainWindow):
         h1_layout.addWidget(self.raw_btn)
         h1_layout.addWidget(self.preproc_btn)
         h1_layout.addWidget(self.adv_preproc_btn)
+        h1_layout.addWidget(self.adv_preproc_sentence_btn)
         h1_layout.addStretch()
 
 
@@ -165,6 +168,7 @@ class LCS_UI(QtGui.QMainWindow):
         self.tab1_radio_toggled(self.raw_btn)
         self.tab1_radio_toggled(self.preproc_btn)
         self.tab1_radio_toggled(self.adv_preproc_btn)
+        self.tab1_radio_toggled(self.adv_preproc_sentence_btn)
 
     def tab1_text_combo_activated(self, text):
         self.statusBar().showMessage("Task: " + text + " selected.")
@@ -183,6 +187,9 @@ class LCS_UI(QtGui.QMainWindow):
         if button.text() == "Adv PreProc" and button.isChecked():
             self.change_text("adv proc")
             self.statusBar().showMessage("Displaying Advanced Preprocessed Text")
+        if button.text() == "Adv PreProc And Sentence" and button.isChecked():
+            self.change_text("adv proc sentence")
+            self.statusBar().showMessage("Displaying Advanced Preprocessed Text with LCS sentence algorithm")
 
     def change_text(self, text_type):
         if text_type == "raw":
@@ -257,6 +264,28 @@ class LCS_UI(QtGui.QMainWindow):
 
             self.substring.setPlainText("\n".join(neatly))
             return
+        if text_type == "adv proc sentence":
+            filename = self.text_combo_box.currentText()
+            file_object = open("../corpus-adv_preprocessed/" + filename[:-4] + "_adv_preprocessed.txt")
+            text = file_object.read()
+            self.corpus_text.setPlainText(text)
+            cor_length = len(text.split(" "))
+            file_object.close()
+
+            file_object = open("../corpus-adv_preprocessed/orig_task" + self.task_combo_box.currentText() + "_adv_preprocessed.txt")
+            text = file_object.read()
+            self.wiki_text.setPlainText(text)
+            file_object.close()
+            length, lengthLCS, LCSLIST  = prototype.LCS_Sentence("../corpus-adv_preprocessed/" + filename[:-4] + "_adv_preprocessed.txt",
+                                                         "../corpus-adv_preprocessed/orig_task" + self.task_combo_box.currentText() + "_adv_preprocessed.txt", "classic")
+
+            self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
+            self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
+
+            neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
+
+            self.substring.setPlainText("\n".join(neatly))
+            return
 
     def tab1_neatly_slider_change_value(self, value):
         self.neatly_text.setText(str(value))
@@ -276,11 +305,11 @@ class LCS_UI(QtGui.QMainWindow):
         self.tab2.setLayout(layout)
 
     def tab3UI(self):
-    	PlotAllLCS = Plotting.plotAllLCS(self)
-    	layout = QtGui.QHBoxLayout()
-    	layout.addWidget(PlotAllLCS)
+        PlotAllLCS = Plotting.plotAllLCS(self)
+        layout = QtGui.QHBoxLayout()
+        layout.addWidget(PlotAllLCS)
 
-    	self.tab3.setLayout(layout)
+        self.tab3.setLayout(layout)
 
     def tab4UI(self):
         layout = QtGui.QGridLayout()
