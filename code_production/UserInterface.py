@@ -175,6 +175,7 @@ class LCS_UI(QtGui.QMainWindow):
         self.tab1_radio_toggled(self.raw_btn)
         self.tab1_radio_toggled(self.preproc_btn)
         self.tab1_radio_toggled(self.adv_preproc_btn)
+        self.tab1_radio_toggled(self.adv_preproc_sentence_btn)
 
     def tab1_radio_toggled(self, button):
         if button.text() == "Raw" and button.isChecked():
@@ -281,6 +282,7 @@ class LCS_UI(QtGui.QMainWindow):
 
             self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
             self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
+            Plotting.update_pieChart(self.pieChart,length,lengthLCS)
 
             neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
 
@@ -292,6 +294,8 @@ class LCS_UI(QtGui.QMainWindow):
         self.tab1_radio_toggled(self.raw_btn)
         self.tab1_radio_toggled(self.preproc_btn)
         self.tab1_radio_toggled(self.adv_preproc_btn)
+        self.tab1_radio_toggled(self.adv_preproc_sentence_btn)
+
 
     def tab2UI(self):
         view = QtGui.QTableView()
