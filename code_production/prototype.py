@@ -124,6 +124,8 @@ def getLCSdata(mode, folder, sentence):
         file_end = "_preprocessed.txt"
     elif folder == "corpus-swr_preprocessed":
         file_end = "_swr_preprocessed.txt"
+    elif folder == "corpus-WordOrdering_preprocessed":
+        file_end = "_WordOrdering_preprocessed.txt"
     if file_end == "":
         print "Invalid folder name"
         exit()
