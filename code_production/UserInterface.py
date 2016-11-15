@@ -85,6 +85,26 @@ class LCS_UI(QtGui.QMainWindow):
             if "taska" in file and not "orig" in file:
                 self.text_combo_box.addItem(file)
 
+        process_label = QtGui.QLabel("Processing:")
+        self.process_combo_box = QtGui.QComboBox()
+        self.process_combo_box.activated[str].connect(self.tab1_process_combo_activated)
+
+        Corpus_list = os.listdir('../')
+
+        self.process_combo_box.addItem("Raw")
+        for folder in Corpus_list:
+            if folder.find("corpus") !=-1 and folder.find('20090418') ==-1:
+                process_name = folder.replace("corpus-",'')
+                process_name = process_name.replace("_",' ')
+                process_name = process_name.replace("preprocessed",'preprocessing')
+                if os.path.isdir("../"+folder):
+                    self.process_combo_box.addItem(process_name)
+
+        algo_label = QtGui.QLabel("Algorithm:")
+        self.text_algo_box = QtGui.QComboBox()
+        self.text_algo_box.activated[str].connect(self.tab1_algo_combo_activated)
+
+
         self.raw_btn = QtGui.QRadioButton("Raw")
         self.raw_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.raw_btn))
         self.preproc_btn = QtGui.QRadioButton("PreProc")
@@ -98,6 +118,9 @@ class LCS_UI(QtGui.QMainWindow):
         h1_layout.addWidget(self.task_combo_box)
         h1_layout.addWidget(text_label)
         h1_layout.addWidget(self.text_combo_box)
+        h1_layout.addWidget(self.process_combo_box)
+        #h1_layout.addWidget(self.algo_combo_box)
+
         h1_layout.addWidget(self.raw_btn)
         h1_layout.addWidget(self.preproc_btn)
         h1_layout.addWidget(self.adv_preproc_btn)
@@ -176,6 +199,13 @@ class LCS_UI(QtGui.QMainWindow):
         self.tab1_radio_toggled(self.preproc_btn)
         self.tab1_radio_toggled(self.adv_preproc_btn)
         self.tab1_radio_toggled(self.adv_preproc_sentence_btn)
+
+    def tab1_process_combo_activated(self, text):
+
+        return
+
+    def tab1_algo_combo_activated(self, text):
+        return
 
     def tab1_radio_toggled(self, button):
         if button.text() == "Raw" and button.isChecked():
