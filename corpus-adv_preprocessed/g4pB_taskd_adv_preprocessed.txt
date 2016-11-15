@@ -1,10 +1,10 @@
-In probability theory, Bayes theorem or Bayes law after Rev Thomas Bayes provides relation between the conditional and marginal probabilities of two random events. It is usually used to calculate posterior probabilities given observations. For example: a patient might be observed to show certain symptoms. Bayes theorem could be used to compute the probability that a certain diagnosis is right, given that observation.
-Since it is a formal theorem, Bayes theorem holds in all popular interpretations of probability. 
-Bayes theorem relates the conditional and marginal probabilities of events a and b, where b has a non-vanishing probability:
-  Pa|b = Pa|bPaPb
-Terms in Bayes theorem are named by a convention:
-PA is the prior probability or marginal probability of A. It does not take into account any information about B and therefore is considered “prior”.
-PA|B is the conditional probability of A, given B. It it is derived from or depends upon the specified value of B. Usually it is called the posterior probability 
-PB|A is the conditional probability of B given A.
-PB a.k.a. the normalizing constant is the prior or marginal probability of B.
-Obviously, Bayes theorem describes the way in which ones assumptions about observing the eventa are changed by having observed the event b.
+ probabilit theory, baye theo  baye la  re  baye  relati   conditi  margi probabilitie  t rand events.      calcula posteri probabilitie  observations.  example:  patien   obser    symptoms. baye theo     com  probabilit    diag ,   observation.
+    forma theorem, baye theo hold   popula interpretation  probability. 
+baye theo relate  conditi  margi probabilitie  even  ,     non-vanish probability:
+  pa| = pa|bpapb
+term  baye theo     convention:
+   pri probabilit  margi probability.    ta  acco        conside pri .
+pa|   conditi probability,.    deri   depend   spec valu.    cal  posteri probabilit 
+pb|   conditi probabilit  .
+pb.k.a.  normali constan   pri  margi probability.
+obviously, baye theo describe    whic  assumption  obser  even  cha  ha obser  event.

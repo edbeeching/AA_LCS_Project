@@ -1,11 +1,11 @@
-In probability theory, the prior and conditional probabilities
-of two random events are related by Bayes theorem. The theorem is
-often used when we have observations and wish to compute posterior
+ probabilit theory,  pri  conditi probabilities
+ t rand even  rela  baye theorem.  theo is
+ofte  whe  ha observation    com posterior
 probabilities.
-For example, given an observation that a patient is seen to have certain
-symptoms, we can use Bayes theorem to compute the probability that a
-suggested diagnosis is correct.
-PA is the prior probability of A. PA|B is the conditional probabilty
-of A given B. PB|A is the conditional probabilty of B given A. PB is
-the prior probability of B, and must be non-zero. Bayes theorem is given
-by PA|B = PB|APAPB.
+ example,   observati   patien    ha certain
+symptoms,    baye theo  com  probabilit  a
+ diag  correct.
+   pri probability. pa|   conditi probabilty
+ . pb|   conditi probabilt  .  is
+ pri probability,    non-zero. baye theo  given
+ pa| = pb|apapb.

@@ -1,9 +1,9 @@
-Dynamic Programming is a very powerful mathematical technique, often utilised in programming, for solving optimization problems. Normally, minimizing or maximizing.
-Greedy algorithms focus on making the best local choice at each decision making stage. Without a proof of correctness, such an algorithm is likely to fail. With Dynamic Programming, we can design our own algorithm which searches for all possibilities which ensures correctness whilst storing the results to avoid having to recomputed leading to computational efficiency.
-Dynamic Programming solves problems by combining the solutions of subproblems. These subproblems are not, however, independent. Subproblems can share subsubproblems, but the solution to one subproblem doesnt necessarily affect the solutions to other subproblems stemming from the same problem.
-Dynamic Programming reduces computation time by solving subproblems in a bottom-up way. It stores the solution to a subproblem the first time it is solved, meaning that it can look up the solution when that subproblem is encountered subsequently. 
-The key to Dynamic Programming is to find the structure of optimal solutions. The steps required are as follows:
-1.	Generalise the structure of an optimal solution
-2.	Recursively define the value of an optimal solution
-3.	Compute the optimal solution values either top-down with caching, or bottom-up using a table
-4.	Generate the optimal solution of these computed values
+d program    powerf mathematica technique, ofte uti  programming,  sol optimizati problems., minimi  maximizing.
+ greed algorithm foc  ma  bes loca choic   decisi ma stage. wi  pro  correctness, suc  algori    fail.  d programming,   desig  o algori whic searc   possibilitie whic en correctnes whils s    a ha  recom lead  computati efficiency.
+d program solve problem  combi  solution  subproblems.  subproblem ,, independent. subproblem   subsubproblems,   soluti   subproble doe   affec  solution  o subproblem stem   sa problem.
+d program reduce computati   sol subproblem   bottom-.  store  soluti   subproble      solved,     lo   soluti whe  subproble  encounte subsequently. 
+ ke  d program   f  struct  optima solutions.  step requi   follows:
+genera  struct   optima solution
+recursivel def  val   optima solution
+com  optima soluti   top-  caching,  bottom-   table
+genera  optima soluti   com values

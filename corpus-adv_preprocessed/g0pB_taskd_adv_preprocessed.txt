@@ -1,19 +1,19 @@
-Bayes theorem relates the conditional and marginal probabilities of
-two random events. For example, a person may be seen to have certain
-medical symptoms Bayes theorem can then be used to compute the
-probability that, given that observation, the proposed diagnosis is
-the right one.
-Bayes theorem forms a relationship between the probabilities xcof
-events A and B. Intuitively, Bayes theorem in this form describes the
-way in which ones recognition of A are updated by having observed
-B.
-PA | B = PB | A PA  PB
-PA|B is the conditional probability of A given B. It is derived from or depends upon the specified value of B, therefore it is also known as the posterior probability.
-PB|A is the conditional probability of B given A.
-PA is the prior probability A. It doesnt take into account any information about B, so it is prior.
-PB is the prior or marginal probability of B, and acts to normalise the probability.
-To derive the theorem, we begin with the definition of conditional
-probability. By combining and re-arranging these two equations for A
-and B, we get a the lemma called product rule for
-probabilities. Provided that PB is not a zero, dividing both sides
-by PB renders us with Bayes theorem.
+baye theo relate  conditi  margi probabilitie of
+t rand events.  example,  per     ha certain
+medica symptom baye theo      com the
+probability,   observation,  propo diag is
+t.
+baye theo form  relationshi   probabilitie xcof
+even  . intuitively, baye theo   f describe the
+  whic  recogniti      ha observed
+b.
+ |  =  |    pb
+pa|   conditi probabilit  .   deri   depend   spec valu,        posteri probability.
+pb|   conditi probabilit  .
+   pri probability.  doesn ta  acco   ,    prior.
+   pri  margi probability,  ac  norma  probability.
+ deri  theorem,     definiti  conditional
+probability.  combi  re-arrang  t equation  a
+,     lem cal produc r for
+probabilities. pro     , divid  sides
+  render   baye theorem.

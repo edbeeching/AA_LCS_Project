@@ -1,17 +1,17 @@
-Inheritance is a basic concept in object oriented programming. It models the reuse of existing class code in new classes – the is a kind of relationship.
-For example, a house is a kind of building similarly, an office block is a kind of building. Both house and office block will inherit certain characteristics from buildings, but also have their own personal characteristics – a house may have a number of occupants, whereas an office block will have a number of offices. However, these personal characteristics dont apply to all types of buildings.
-In this example, the building would be considered the superclass – it contains general characteristics for other objects to inherit – and the house and office block are both subclasses – they are specific types and specialise the characteristics of the superclass.
-Java allows object inheritance. When one class inherits from another class, all the public variables and methods are available to the subclass.
-public class Shape {
- private Color colour
- public void setColourColor newColour{
-  colour = newColour
+inheritanc   ba concep  objec orien programming.  model  re  exis clas cod   classe       relationship.
+ example,  ho     build,  offic bloc     building.  ho  offic bloc wil inhe  characteristic  buildings,   ha thei o per characteristic   ho  ha  numbe  occupants,   offic bloc wil ha  numbe  offices.,  per characteristic don appl   type  buildings.
+  example,  build wo  conside  superclas    genera characteristic  o objec  inhe    ho  offic bloc   subclasse    spec type  specia  characteristic   superclass.
+ja allo objec inheritance. whe  clas inhe   class,   pub variable  method  avai   subclass.
+pub clas sha {
+ priva col colour
+ pub  setcolourcol newcolour{
+  col = newcolour
  }
 }
-public class Circle extends Shape {
- private int radius
- public void setRadiusint newRadius{
-  radius = newRadius
+pub clas circ extend sha {
+ priva in radius
+ pub  setradiusin newradius{
+  radi = newradius
  }
 }
-In this example, the Circle class is a subclass of the Shape class. The Shape class provides a public setColour method, which will be available to the Circle class and other subclasses of Shape. However, the private variable colour as defined in the Shape class will not be available for direct manipulation by the Circle class because it is not inherited. The Circle class specialises the Shape class, which means that setRadius is available to the Circle class and all subclasses of Circle, but it isnt available to the superclass Shape. 
+  example,  circ clas   subclas   sha class.  sha clas   pub setcol method, whic wil  avai   circ clas  o subclasse  shape.,  priva va col  def   sha clas wil   avai  direc manipulati   circ clas     inherited.  circ clas specialise  sha class, whic   setradi  avai   circ clas   subclasse  circle,   isn avai   superclas shape. 
