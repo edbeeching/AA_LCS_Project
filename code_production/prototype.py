@@ -115,22 +115,9 @@ def getLCSdata(mode, folder, sentence):
     file_list = os.listdir('..\\' + folder)
     lengths = []
     ratios = []
-    file_end = ""
-    if folder == "corpus-20090418":
-        file_end = ".txt"
-    elif folder == "corpus-adv_preprocessed":
-        file_end = "_adv_preprocessed.txt"
-    elif folder == "corpus-preprocessed":
-        file_end = "_preprocessed.txt"
-    elif folder == "corpus-swr_preprocessed":
-        file_end = "_swr_preprocessed.txt"
-    elif folder == "corpus-WordOrdering_preprocessed":
-        file_end = "_WordOrdering_preprocessed.txt"
-    if file_end == "":
-        print "Invalid folder name"
-        exit()
     for each in file_list:
         task = each[9]
+        file_end = each[10:]
         file1 = parent + "\\" + folder + "\\" + each
         file2 = parent + "\\" + folder + "\\orig_task" + task + file_end
         if sentence:
@@ -148,7 +135,7 @@ def getLCSdata(mode, folder, sentence):
 # Testing
 if __name__ == "__main__":
    
-    lengths, ratios = getLCSdata("classic","corpus-adv_preprocessed",True)
+    lengths, ratios = getLCSdata("classic","corpus-WordOrdering_preprocessed",False)
     for each in lengths:
         print each
     for each in ratios:
