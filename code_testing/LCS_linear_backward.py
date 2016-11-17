@@ -32,13 +32,13 @@ def LCS_linear_space_backward(file1,file2):
         for j in range(length_Y-2,-1,-1):
             if (i==length_X-2 and j==length_Y-2):
                 c[1,j] = 1
-                print ("Passage 1")
+                #print ("Passage 1")
             elif (i<length_X-2 and j<length_Y-2 and X[i+1]==Y[j+1]):
                 c[1,j] = c[1,j+1]+1
-                print ("Passage 2")
+                #print ("Passage 2")
             else:
                 c[1,j] = max(c[0,j],c[1,j+1])
-                print ("Passage 3")
+                #print ("Passage 3")
         for j in range(0,length_Y):
             c[0,j] = c[1,j]               
                 
@@ -66,7 +66,7 @@ cwd = os.getcwd()
 file1 = cwd + "\\" + file1
 file2 = cwd + "\\" + file2
 
-mode = input("Please enter which LCS algorithm to use (classic, linear-space, or recursive): ")
+mode = raw_input("Please enter which LCS algorithm to use (classic, linear-space, or recursive): ")
 
 c, b, length = LCS(file1,file2,mode)
 print ("The longest common subsequence is " + str(length))
