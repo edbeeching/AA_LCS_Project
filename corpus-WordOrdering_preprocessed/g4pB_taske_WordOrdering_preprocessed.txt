@@ -1,0 +1,19 @@
+a and and computer dynamic exhibit in is mathematics method of of optimal overlapping problems programming properties science, solving subproblems substructure that the.
+ 
+the a all, and at comes computer connection dynamic for from has in instead mathematical no optimization particular programming programming programming programming, synonym term the to word. acceptable action, algorithm an an finding in means of plan programming, sense, this.
+optimal be can find means of of optimal optimal overall problem solutions solutions subproblems substructure that the the to used. a a can general, in into optimal problem problem process:
+break smaller solve step subproblems substructure the three using we with.
+solve optimally problems process recursively step these this three using.
+use an construct for optimal optimal original problem solution solutions the these to.
+the and are, by case constant dividing in into is on, reach simple so solvable solved some sub subproblems subproblems, that them themselves, time until we.
+to a are different has is larger many overlapping problem problems same say say solve subproblems subproblems that that the to to used.      = = and computing computing each example, f1 f2 f2 f2 f3 f3 f4 fibonacci for in involves number sequence, the. a and approach are because both compute computing computing end f2 f3 f4 f5 f5, may more naive needed or to to twice up. a already applies approach are has it may naive optimal overlapping present: recomputing solutions solved subproblems subproblems this time to waste whenever.
+in already avoid have instead order problems save solutions solved the this, to to we we. already and can computed if later, need our problem retrieve reuse same solution solve the then, to we we. a anymore, are away can if it need particular save solution space sure throw to we we we wont. advance can cases, compute even in in know need solutions some subproblems that the to we we well.     
+dynamic approach
+ approach
+
+ approaches:
+ bottom down makes memoization
+dynamic of of:
+ one optimal overlapping programming programming subproblems
+ substructure
+ takes top two up use usually.

@@ -1,0 +1,9 @@
+application definition depends of on term the the. are keywords, longer or phrases single terms typically words,. a a are as be chosen dimensionality document if in is is number of of represented terms, the the the the the the to vector vector vocabulary words words. a corresponds dimensions each separate terms to. a document, if in in is its non occurs term the the value vector zero.
+relevancy a and angles as as assumptions be between by calculated, can comparing deviation document document documents documents each in is keyword kind of of of of original query query rankings represented same search similarities the the the the the theory, using vector vector vector where.
+limitation:
+there is limitation model of some space vector.
+models and based extending generalized include:
+ model model on space space the vector vector. 
+ [1] based be by constraint enhanced etvsm extends model model orthogonal removing space space term that the the the topic vector vector vectors. based based between concurrence contrast depend does enhanced generalized in model model not on similarities space space terms the the to topic vector vector. a an based compared derive enhanced enhanced enhancement from how is model not of on one ontology proposal space term the the the to to topic vector vectors. 
+ 
+.

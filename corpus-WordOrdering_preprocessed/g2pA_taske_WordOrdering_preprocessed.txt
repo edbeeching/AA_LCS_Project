@@ -1,0 +1,10 @@
+a dynamic for in is mathematical often optimization powerful problems programming programming, solving technique, utilised very. maximizing minimizing normally, or.
+ algorithms at best choice decision each focus greedy local making making on stage the. a algorithm an correctness, fail is likely of proof such to without. algorithm all avoid can computational correctness design dynamic efficiency ensures for having leading our own possibilities programming, recomputed results searches storing the to to to we which which whilst with.
+dynamic by combining of problems programming solutions solves subproblems the. are however, independent not, subproblems these. affect but can doesn from necessarily one other problem same share solution solutions stemming subproblem subproblems subproblems subsubproblems, t the the the to to.
+dynamic a bottom by computation in programming reduces solving subproblems time up way. a can encountered first is is it it it look meaning solution solution solved, stores subproblem subproblem subsequently that that the the the time to up when. 
+the dynamic find is key of optimal programming solutions structure the to to. a an an are as bottom caching, computed define down either follows:
+generalise of of of optimal optimal optimal optimal or required solution solution solution
+compute solution
+recursively steps structure table
+generate the the the the the these top up using value values values
+ with.

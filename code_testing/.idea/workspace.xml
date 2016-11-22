@@ -2,13 +2,288 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="801abd12-a82f-44f9-aee2-f57024d56752" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime_comparisons.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zeb_unused_code.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backwards.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bible_daily.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pA_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pA_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pA_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pA_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pA_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pB_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pB_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pB_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pB_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pB_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pC_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pC_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pC_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pC_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pC_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pD_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pD_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pD_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pD_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pD_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pE_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pE_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pE_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pE_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g0pE_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pA_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pA_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pA_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pA_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pA_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pB_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pB_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pB_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pB_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pB_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pD_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pD_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pD_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pD_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g1pD_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pA_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pA_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pA_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pA_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pA_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pB_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pB_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pB_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pB_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pB_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pC_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pC_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pC_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pC_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pC_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pE_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pE_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pE_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pE_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g2pE_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pA_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pA_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pA_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pA_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pA_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pB_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pB_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pB_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pB_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pB_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pC_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pC_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pC_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pC_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g3pC_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pB_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pB_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pB_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pB_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pB_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pC_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pC_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pC_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pC_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pC_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pD_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pD_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pD_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pD_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pD_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pE_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pE_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pE_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pE_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/g4pE_taske_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/orig_taska_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/orig_taskb_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/orig_taskc_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/orig_taskd_WordOrdering_preprocessed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../corpus-WordOrdering_preprocessed/orig_taske_WordOrdering_preprocessed.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-final09.xls" afterPath="$PROJECT_DIR$/../corpus-final09.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../code_production/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../code_production/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../README.md" afterPath="$PROJECT_DIR$/../README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../code_production/UserInterface.py" afterPath="$PROJECT_DIR$/../code_production/UserInterface.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../code_production/dummy_file.txt" afterPath="$PROJECT_DIR$/../code_production/dummy_file.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../code_production/prototype.py" afterPath="$PROJECT_DIR$/../code_production/prototype.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/branch_and_bound.py" afterPath="$PROJECT_DIR$/branch_and_bound.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log.txt" afterPath="$PROJECT_DIR$/log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LCS_linear.py" afterPath="$PROJECT_DIR$/LCS_linear.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LCS_linear_backward.py" afterPath="$PROJECT_DIR$/LCS_linear_backward.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pA_taska_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pA_taska_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pA_taskb_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pA_taskb_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pA_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pA_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pA_taskd_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pA_taskd_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pA_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pA_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pB_taskb_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pB_taskb_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pB_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pB_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pB_taskd_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pB_taskd_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pB_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pB_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pD_taska_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pD_taska_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pD_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pD_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pD_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pD_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pE_taska_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g0pE_taska_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pA_taskb_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pA_taskb_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pA_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pA_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pA_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pA_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pB_taska_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pB_taska_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pB_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pB_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pB_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pB_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pD_taska_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pD_taska_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pD_taskb_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pD_taskb_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pD_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pD_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pD_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g1pD_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pA_taskb_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pA_taskb_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pA_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pA_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pA_taskd_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pA_taskd_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pA_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pA_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pB_taska_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pB_taska_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pB_taskb_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pB_taskb_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pB_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pB_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pB_taskd_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pB_taskd_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pB_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pB_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pC_taska_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pC_taska_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pC_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pC_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pC_taskd_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pC_taskd_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pC_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pC_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pE_taska_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pE_taska_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pE_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g2pE_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pA_taska_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pA_taska_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pA_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pA_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pA_taskd_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pA_taskd_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pA_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pA_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pB_taska_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pB_taska_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pB_taskb_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pB_taskb_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pB_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pB_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pB_taskd_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pB_taskd_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pC_taska_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pC_taska_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pC_taskb_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pC_taskb_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pC_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pC_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pC_taskd_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g3pC_taskd_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pB_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pB_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pB_taskd_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pB_taskd_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pB_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pB_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pC_taska_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pC_taska_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pC_taskb_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pC_taskb_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pC_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pC_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pC_taskd_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pC_taskd_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pC_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pC_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pD_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pD_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pD_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pD_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pE_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pE_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pE_taskd_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pE_taskd_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pE_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/g4pE_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/orig_taska_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/orig_taska_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/orig_taskb_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/orig_taskb_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/orig_taskc_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/orig_taskc_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/orig_taskd_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/orig_taskd_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-adv_preprocessed/orig_taske_adv_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-adv_preprocessed/orig_taske_adv_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pA_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pA_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pA_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pA_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pA_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pA_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pA_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pA_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pA_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pA_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pB_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pB_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pB_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pB_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pB_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pB_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pB_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pB_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pB_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pB_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pC_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pC_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pC_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pC_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pC_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pC_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pC_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pC_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pC_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pC_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pD_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pD_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pD_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pD_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pD_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pD_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pD_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pD_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pD_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pD_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pE_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pE_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pE_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pE_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pE_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pE_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pE_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pE_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pE_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g0pE_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pA_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pA_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pA_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pA_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pA_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pA_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pA_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pA_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pA_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pA_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pB_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pB_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pB_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pB_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pB_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pB_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pB_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pB_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pB_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pB_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pD_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pD_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pD_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pD_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pD_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pD_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pD_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pD_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pD_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g1pD_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pA_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pA_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pA_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pA_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pA_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pA_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pA_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pA_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pA_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pA_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pB_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pB_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pB_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pB_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pB_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pB_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pB_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pB_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pB_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pB_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pC_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pC_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pC_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pC_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pC_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pC_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pC_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pC_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pC_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pC_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pE_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pE_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pE_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pE_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pE_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pE_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pE_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pE_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pE_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g2pE_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pA_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pA_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pA_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pA_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pA_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pA_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pA_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pA_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pA_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pA_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pB_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pB_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pB_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pB_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pB_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pB_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pB_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pB_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pB_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pB_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pC_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pC_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pC_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pC_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pC_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pC_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pC_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pC_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pC_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g3pC_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pB_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pB_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pB_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pB_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pB_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pB_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pB_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pB_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pB_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pB_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pC_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pC_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pC_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pC_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pC_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pC_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pC_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pC_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pC_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pC_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pD_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pD_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pD_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pD_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pD_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pD_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pD_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pD_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pD_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pD_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pE_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pE_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pE_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pE_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pE_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pE_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pE_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pE_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pE_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/g4pE_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/orig_taska_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/orig_taska_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/orig_taskb_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/orig_taskb_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/orig_taskc_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/orig_taskc_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/orig_taskd_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/orig_taskd_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../corpus-swr_preprocessed/orig_taske_swr_preprocessed.txt" afterPath="$PROJECT_DIR$/../corpus-swr_preprocessed/orig_taske_swr_preprocessed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../documentation.txt" afterPath="$PROJECT_DIR$/../documentation.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../text_preprocessing/text_preprocessing.py" afterPath="$PROJECT_DIR$/../text_preprocessing/text_preprocessing.py" />
     </list>
     <ignored path="code_testing.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,8 +310,8 @@
       <file leaf-file-name="recursive.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recursive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="550">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -47,8 +322,8 @@
       <file leaf-file-name="runtime_comparisons.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/runtime_comparisons.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+            <state relative-caret-position="576">
+              <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -465,11 +740,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479055912891</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added comments">
+      <created>1479804441627</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1479804441627</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="-9" width="1840" height="1098" extended-state="6" />
+    <frame x="89" y="-9" width="1840" height="1098" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -869,8 +1151,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recursive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="550">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -879,8 +1161,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/runtime_comparisons.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        <state relative-caret-position="576">
+          <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>

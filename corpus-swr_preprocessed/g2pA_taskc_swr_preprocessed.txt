@@ -1,8 +1,1 @@
- vec spac mode  te vec mode   algebra    te documen   objects,  genera  vector  identifiers, suc  i terms.      filtering,  retrieval,   relevanc rankings.   applicati    smar  retrieva system.
- documen      vector.  dimensi relate    term.   te appear   document,  term val   vec  non-zero.   method  calcula  values,    te weights, ha  developed. tf- weigh      wel  schemes. se  example.
- definiti   te depend   application.   te   sing word, keyword,   longe phrase.   word  chose    terms,  dimensionalit   vec   numbe  word   vocabular  numbe  distinc word occur   corpus.
- vec spac mode   limitations:
-longe documen      documen ha po similarit     scala produc   la dimensionality
-searc keyword ha  precisel matc documen term  substring   resul   fal positi match
-seman sensitivit documen   simila context,   te vocabular won  associated, resul   fal negati match.
- orde  whic term appea   documen  los   vec spac representation.
+a vector space model term vector model algebraic representing text documents objects, general vectors identifiers, terms. filtering, retrieval, indexing relevancy rankings. application smart retrieval system. a document represented vector. dimension relates term. term appears document, terms vector. methods calculating values, term weights, developed. tf idf weighting well schemes. example. the definition term depends application. term single word, keyword, longer phrase. chosen terms, dimensionality vector number vocabulary number distinct occurring corpus. the vector space model limitations: longer documents represented documents poor similarity values small scalar product large dimensionality search keywords precisely match document terms word substrings result false positive match semantic sensitivity documents context, term vocabulary associated, false negative match. the order terms appear document lost vector space representation.

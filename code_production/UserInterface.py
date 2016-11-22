@@ -85,23 +85,49 @@ class LCS_UI(QtGui.QMainWindow):
             if "taska" in file and not "orig" in file:
                 self.text_combo_box.addItem(file)
 
-        self.raw_btn = QtGui.QRadioButton("Raw")
-        self.raw_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.raw_btn))
-        self.preproc_btn = QtGui.QRadioButton("PreProc")
-        self.preproc_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.preproc_btn))
-        self.adv_preproc_btn = QtGui.QRadioButton("Adv PreProc")
-        self.adv_preproc_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.adv_preproc_btn))
-        self.adv_preproc_sentence_btn = QtGui.QRadioButton("Adv PreProc And Sentence")
-        self.adv_preproc_sentence_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.adv_preproc_sentence_btn))
+        process_label = QtGui.QLabel("Processing:")
+        self.process_combo_box = QtGui.QComboBox()
+        self.process_combo_box.activated[str].connect(self.tab1_process_combo_activated)
+
+        Corpus_list = os.listdir('../')
+
+        self.process_combo_box.addItem("Raw")
+        for folder in Corpus_list:
+            if folder.find("corpus") !=-1 and folder.find('20090418') ==-1:
+                process_name = folder.replace("corpus-",'')
+                process_name = process_name.replace("_",' ')
+                process_name = process_name.replace("preprocessed",'preprocessing')
+                if os.path.isdir("../"+folder):
+                    self.process_combo_box.addItem(process_name)
+
+
+        algo_label = QtGui.QLabel("Algorithm:")
+        self.algo_combo_box = QtGui.QComboBox()
+        self.algo_combo_box.activated[str].connect(self.tab1_algo_combo_activated)
+        self.algo_combo_box.addItem("LCS")
+        self.algo_combo_box.addItem("LCS-Sentence")
+
+
+        # self.raw_btn = QtGui.QRadioButton("Raw")
+        # self.raw_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.raw_btn))
+        # self.preproc_btn = QtGui.QRadioButton("PreProc")
+        # self.preproc_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.preproc_btn))
+        # self.adv_preproc_btn = QtGui.QRadioButton("Adv PreProc")
+        # self.adv_preproc_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.adv_preproc_btn))
+        # self.adv_preproc_sentence_btn = QtGui.QRadioButton("Adv PreProc And Sentence")
+        # self.adv_preproc_sentence_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.adv_preproc_sentence_btn))
 
         h1_layout.addWidget(task_label)
         h1_layout.addWidget(self.task_combo_box)
         h1_layout.addWidget(text_label)
         h1_layout.addWidget(self.text_combo_box)
-        h1_layout.addWidget(self.raw_btn)
-        h1_layout.addWidget(self.preproc_btn)
-        h1_layout.addWidget(self.adv_preproc_btn)
-        h1_layout.addWidget(self.adv_preproc_sentence_btn)
+        h1_layout.addWidget(self.process_combo_box)
+        h1_layout.addWidget(self.algo_combo_box)
+
+        # h1_layout.addWidget(self.raw_btn)
+        # h1_layout.addWidget(self.preproc_btn)
+        # h1_layout.addWidget(self.adv_preproc_btn)
+        # h1_layout.addWidget(self.adv_preproc_sentence_btn)
         h1_layout.addStretch()
 
 
@@ -150,7 +176,7 @@ class LCS_UI(QtGui.QMainWindow):
         # v_layout.addLayout(h1_layout)
 
          # v_layout.addStretch()
-        self.raw_btn.setChecked(True)
+        self.update_text()
         self.tab1.setLayout(h_layout)
 
     def tab1_task_combo_activated(self, text):
@@ -165,136 +191,71 @@ class LCS_UI(QtGui.QMainWindow):
 
         self.text_combo_box.setCurrentIndex(index)
 
-        self.tab1_radio_toggled(self.raw_btn)
-        self.tab1_radio_toggled(self.preproc_btn)
-        self.tab1_radio_toggled(self.adv_preproc_btn)
-        self.tab1_radio_toggled(self.adv_preproc_sentence_btn)
+        self.update_text()
 
     def tab1_text_combo_activated(self, text):
         self.statusBar().showMessage("Task: " + text + " selected.")
-        self.tab1_radio_toggled(self.raw_btn)
-        self.tab1_radio_toggled(self.preproc_btn)
-        self.tab1_radio_toggled(self.adv_preproc_btn)
-        self.tab1_radio_toggled(self.adv_preproc_sentence_btn)
+        self.update_text()
 
-    def tab1_radio_toggled(self, button):
-        if button.text() == "Raw" and button.isChecked():
-            self.change_text("raw")
-            self.statusBar().showMessage("Displaying Raw Text")
+    def tab1_process_combo_activated(self, text):
+        self.update_text()
 
-        if button.text() == "PreProc" and button.isChecked():
-            self.change_text("proc")
-            self.statusBar().showMessage("Displaying PreProcessed Text")
-        if button.text() == "Adv PreProc" and button.isChecked():
-            self.change_text("adv proc")
-            self.statusBar().showMessage("Displaying Advanced Preprocessed Text")
-        if button.text() == "Adv PreProc And Sentence" and button.isChecked():
-            self.change_text("adv proc sentence")
-            self.statusBar().showMessage("Displaying Advanced Preprocessed Text with LCS sentence algorithm")
+    def tab1_algo_combo_activated(self, text):
+        self.update_text()
 
-    def change_text(self, text_type):
-        if text_type == "raw":
-            filename = self.text_combo_box.currentText()
-            file_object = open("../corpus-20090418/" + filename)
-            text = file_object.read()
-            self.corpus_text.setPlainText(text)
-            cor_length = len(text.split(" "))
-            file_object.close()
+    def get_process_folder(self,text):
+        if text=='Raw' :
+            return "corpus-20090418"
+        path = text.replace('preprocessing','preprocessed')
+        path = path.replace(' ','_')
+        path = 'corpus-'+path
+        return path
+    def get_current_process_suffix(self):
+        path = self.get_process_folder(self.process_combo_box.currentText())
+        file_suffix = path.replace("corpus-", "_") + ".txt"
+        if path == "corpus-20090418":
+            file_suffix = ".txt"
+        return file_suffix
 
-            file_object = open("../corpus-20090418/orig_task" + self.task_combo_box.currentText() + ".txt")
-            text = file_object.read()
-            self.wiki_text.setPlainText(text)
-            file_object.close()
-            length, lengthLCS, LCSLIST  = prototype.LCS("../corpus-preprocessed/" + filename[:-4] + "_preprocessed.txt",
-                                                         "../corpus-20090418/orig_task" + self.task_combo_box.currentText()+ ".txt", "classic")
-            self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
-            self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
-            Plotting.update_pieChart(self.pieChart,length,lengthLCS)
-            self.pieChartCanvas.draw()
+    def update_text(self):
+        path = self.get_process_folder(self.process_combo_box.currentText())
+        algo = self.algo_combo_box.currentText()
+        file_suffix = self.get_current_process_suffix()
+        filename = self.text_combo_box.currentText()
+        filename = filename.replace('.txt',file_suffix)
+        file_object = open("../" + path + "/" + filename)
 
-            neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
+        text = file_object.read()
+        self.corpus_text.setPlainText(text)
+        cor_length = len(text.split(" "))
+        file_object.close()
 
-            self.substring.setPlainText("\n".join(neatly))
-            return
+        file_object = open("../" + path + "/orig_task" + self.task_combo_box.currentText() + file_suffix)
+        text = file_object.read()
+        self.wiki_text.setPlainText(text)
+        file_object.close()
 
-        if text_type == "proc":
-            filename = self.text_combo_box.currentText()
-            file_object = open("../corpus-preprocessed/" + filename[:-4] + "_preprocessed.txt")
-            text = file_object.read()
-            self.corpus_text.setPlainText(text)
-            cor_length = len(text.split(" "))
-            file_object.close()
+        if algo == "LCS":
+            length, lengthLCS, LCSLIST = prototype.LCS("../" + path + "/" + filename,
+                                                       "../" + path + "/orig_task" + self.task_combo_box.currentText() + file_suffix,
+                                                       "classic")
+        if algo == "LCS-Sentence":
+            length, lengthLCS, LCSLIST = prototype.LCS_Sentence("../" + path + "/" + filename,
+                                                                "../" + path + "/orig_task" + self.task_combo_box.currentText() + file_suffix,
+                                                                "classic")
+        self.corpus_length_label.setText("Corpus Length: " + str(cor_length))
+        self.substring_length_label.setText("LCS Length: " + str(len(LCSLIST)))
+        Plotting.update_pieChart(self.pieChart, length, lengthLCS)
+        self.pieChartCanvas.draw()
 
-            file_object = open("../corpus-preprocessed/orig_task" + self.task_combo_box.currentText() + "_preprocessed.txt")
-            text = file_object.read()
-            self.wiki_text.setPlainText(text)
-            file_object.close()
-            length, lengthLCS, LCSLIST  = prototype.LCS("../corpus-preprocessed/" + filename[:-4] + "_preprocessed.txt",
-                                                         "../corpus-preprocessed/orig_task" + self.task_combo_box.currentText() + "_preprocessed.txt", "classic")
+        neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
 
-            self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
-            self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
-            Plotting.update_pieChart(self.pieChart,length,lengthLCS)
-
-            neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
-
-            self.substring.setPlainText("\n".join(neatly))
-            return
-
-        if text_type == "adv proc":
-            filename = self.text_combo_box.currentText()
-            file_object = open("../corpus-adv_preprocessed/" + filename[:-4] + "_adv_preprocessed.txt")
-            text = file_object.read()
-            self.corpus_text.setPlainText(text)
-            cor_length = len(text.split(" "))
-            file_object.close()
-
-            file_object = open("../corpus-adv_preprocessed/orig_task" + self.task_combo_box.currentText() + "_adv_preprocessed.txt")
-            text = file_object.read()
-            self.wiki_text.setPlainText(text)
-            file_object.close()
-            length, lengthLCS, LCSLIST  = prototype.LCS("../corpus-adv_preprocessed/" + filename[:-4] + "_adv_preprocessed.txt",
-                                                         "../corpus-adv_preprocessed/orig_task" + self.task_combo_box.currentText() + "_adv_preprocessed.txt", "classic")
-            
-
-            self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
-            self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
-            Plotting.update_pieChart(self.pieChart,length,lengthLCS)
-
-            neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
-
-            self.substring.setPlainText("\n".join(neatly))
-            return
-        if text_type == "adv proc sentence":
-            filename = self.text_combo_box.currentText()
-            file_object = open("../corpus-adv_preprocessed/" + filename[:-4] + "_adv_preprocessed.txt")
-            text = file_object.read()
-            self.corpus_text.setPlainText(text)
-            cor_length = len(text.split(" "))
-            file_object.close()
-
-            file_object = open("../corpus-adv_preprocessed/orig_task" + self.task_combo_box.currentText() + "_adv_preprocessed.txt")
-            text = file_object.read()
-            self.wiki_text.setPlainText(text)
-            file_object.close()
-            length, lengthLCS, LCSLIST  = prototype.LCS_Sentence("../corpus-adv_preprocessed/" + filename[:-4] + "_adv_preprocessed.txt",
-                                                         "../corpus-adv_preprocessed/orig_task" + self.task_combo_box.currentText() + "_adv_preprocessed.txt", "classic")
-
-            self.corpus_length_label.setText("Corpus Length: "+ str(cor_length))
-            self.substring_length_label.setText("LCS Length: "+ str(len(LCSLIST)))
-            Plotting.update_pieChart(self.pieChart,length,lengthLCS)
-
-            neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
-
-            self.substring.setPlainText("\n".join(neatly))
-            return
+        self.substring.setPlainText("\n".join(neatly))
+        return
 
     def tab1_neatly_slider_change_value(self, value):
         self.neatly_text.setText(str(value))
-        self.tab1_radio_toggled(self.raw_btn)
-        self.tab1_radio_toggled(self.preproc_btn)
-        self.tab1_radio_toggled(self.adv_preproc_btn)
-        self.tab1_radio_toggled(self.adv_preproc_sentence_btn)
+        self.update_text()
 
 
     def tab2UI(self):

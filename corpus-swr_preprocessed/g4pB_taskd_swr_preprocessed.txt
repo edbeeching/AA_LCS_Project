@@ -1,10 +1,1 @@
- probabilit theory, baye theo  baye la  re  baye  relati   conditi  margi probabilitie  t rand events.      calcula posteri probabilitie  observations.  example:  patien   obser    symptoms. baye theo     com  probabilit    diag ,   observation.
-    forma theorem, baye theo hold   popula interpretation  probability. 
-baye theo relate  conditi  margi probabilitie  even  ,     non-vanish probability:
-  pa| = pa|bpapb
-term  baye theo     convention:
-   pri probabilit  margi probability.    ta  acco        conside pri .
-pa|   conditi probability,.    deri   depend   spec valu.    cal  posteri probabilit 
-pb|   conditi probabilit  .
-pb.k.a.  normali constan   pri  margi probability.
-obviously, baye theo describe    whic  assumption  obser  even  cha  ha obser  event.
+in probability theory, bayes theorem bayes law rev thomas bayes relation conditional marginal probabilities random events. calculate posterior probabilities observations. example: patient observed symptoms. bayes theorem compute probability diagnosis, observation. since formal theorem, bayes theorem holds popular interpretations probability. bayes theorem relates conditional marginal probabilities events, vanishing probability: pa|b = pa|bpapb terms bayes theorem named convention: pa prior probability marginal probability. account considered prior . pa|b conditional probability,. it derived depends. called posterior probability pb|a conditional probability. pb.k.a. normalizing constant prior marginal probability. obviously, bayes theorem describes assumptions observing eventa changed observed event.

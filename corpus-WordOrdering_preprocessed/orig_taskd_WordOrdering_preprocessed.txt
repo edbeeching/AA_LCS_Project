@@ -1,0 +1,11 @@
+after and bayes bayes bayes called conditional events in law marginal of often probabilities probability random relates rev the theorem theory, thomas two. compute given is it observations often posterior probabilities to used. a be certain example, for have may observed patient symptoms to. a bayes be can compute correct, diagnosis given is observation probability proposed that that the theorem to used. 2
+as a all bayes common example formal in interpretations is of probability see theorem theorem, valid. a about and applications around assigned bayesian be central debate disagree foundations frequentist however, in in in interpretations it of plays probabilities role should statistics: the the the ways which. according and as assign bayesians beliefs degrees describe events frequencies frequentists in occurrence of of of of of or populations probabilities probabilities proportions random subsets terms the their to to to uncertainty while whole,. and articles bayesian debates detail discuss frequentist greater in on probability probability the these. 
+bayes = \frac{pb a a a\, and and b b, conditional events has marginal non of pa|b pa}{pb} probabilities probability:
+ relates the theorem vanishing where |. 
+each * a a bayes conventional has in is marginal name:
+ of or pa prior probability probability term the theorem. about account any b does in information into is it it not prior sense take that the. 
+ * a, b conditional given is of pa|b probability the. also b because called depends derived from is is it it of or posterior probability specified the the upon value. 
+ * a b conditional given is of pb|a probability the. 
+ * a acts and as b, constant is marginal normalizing of or pb prior probability the.
+intuitively, a about are b bayes beliefs by describes form having in in observed observing ones the theorem this updated way which.
+.

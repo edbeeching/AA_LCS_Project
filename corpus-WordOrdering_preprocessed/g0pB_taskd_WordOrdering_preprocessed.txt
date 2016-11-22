@@ -1,0 +1,20 @@
+and bayes conditional events marginal of
+two probabilities random relates the theorem. a bayes be be can certain
+medical compute diagnosis example, for given have is
+the may observation, one person proposed right seen symptoms that that, the the
+probability then theorem to to used.
+bayes a a and b between forms probabilities relationship the theorem xcof
+events. a are bayes by describes form having in in intuitively, observed
+b of ones recognition the
+way theorem this updated which. 
+pa = a a b b conditional given is of pa pb pb
+pa|b probability the | |. also as b, depends derived from is is it it known of or posterior probability specified the the therefore upon value.
+pb|a a b conditional given is of probability the.
+pa a is prior probability the. about account any b, doesnt information into is it it prior so take.
+pb acts and b, is marginal normalise of or prior probability probability the the to.
+to begin conditional
+probability definition derive of the the theorem, we with. a a
+and and arranging b, by called combining equations for for
+probabilities get lemma product re rule the these two we. a bayes both dividing is not pb pb provided renders sides
+by that theorem us with zero,.
+.

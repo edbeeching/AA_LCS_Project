@@ -1,0 +1,9 @@
+algorithm an as design dynamic for is maximising minimising optimisation or problems, programming such technique used. and by combining conquer, divide dynamic like problems problems programming solutions solves sub to. affect always and are as but conquer, divide however, independent may may not not of one other problem problem problems problems problems problems same share solution solutions sub sub sub sub sub sub the the to to unlike.
+there an are dynamic four in of optimal programming:
+characterise solution steps structure.
+define of optimal recursively solution value.
+compute a bottom caching down either in optimal or solution table top up values with.
+construct an computed from optimal solution values.
+an be dynamic example for given is: may of of problem programming sequences, the two type used which x=x1,...,xm and y=y1,...,yn a common find is length maximum subsequence whose.
+dynamic a a and bottom by by computation fashion first in is it problem problems programming reduces solution solved solving storing sub sub the time to up. a again also, computation encountered helps is looking problem reduce solution sub the up when. determine dynamic however, in is key of optimal programming solutions structure the the to. 
+.

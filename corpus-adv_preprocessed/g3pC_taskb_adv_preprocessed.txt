@@ -4,7 +4,7 @@ the internet will generally link to at least one other, by modelling this
 link structure as a graph, we can build up a symbolic representation of
 the world wide web.
 as the basic level, the nodes with the highest degrees can be considered
-the most popular and by inference the most important - which can be used
+the most popular and by inference the most important   which can be used
 to rank the pages when returning search results.
 expanding on this theory, we can then say that the links from an important
 pages are themselves more important. using this idea we can adjust the
@@ -13,5 +13,5 @@ are considered more relevant.
 the actual google pagerank algorithm is much more complex than this, but
 follows the same underlying principles. it incorporates some more advanced
 reasoning to avoid website creators exploiting their knowledge of the algorithm
-to artificially increase their pagerank through use of web-rings and other
+to artificially increase their pagerank through use of web rings and other
 similar reciprocal hyperlinking schemes.

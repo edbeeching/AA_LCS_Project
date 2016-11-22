@@ -1,4 +1,4 @@
-in the vector space model vsm, documents take the form of bags of words - a standard information retrieval approach which represents documents as in a mathematical bag structure, recording what terms are present and how often they occur. 
+in the vector space model vsm, documents take the form of bags of words   a standard information retrieval approach which represents documents as in a mathematical bag structure, recording what terms are present and how often they occur. 
 the vector space model is used in information retrieval to determine how similar documents are to one another, and how similar documents are to a search query. 
 in a collection of documents, each document can be viewed as a vector of n values the terms in the document, where each term is an axis. queries can also be represented as vectors on this vector space model, and so deciding which document matches the query the closest becomes a matter of selecting the document vector which is nearest to the query vector. 
 the query vector is compared to each document vector in turn using a vector similarity measure, which is the cosine of the angle between the query vector and the document vector. 

@@ -1,9 +1,9 @@
-inheritance is a basic concept of object-oriented programming where
+inheritance is a basic concept of object oriented programming where
 the basic idea is to create new classes that add extra detail to
 existing classes. this is done by allowing the new classes to reuse
 the methods and variables of the existing classes and new methods and
 classes are added to specialise the new class. inheritance models the
- is-kind-of relationship between entities or objects, for example,
+ is kind of relationship between entities or objects, for example,
 postgraduates and undergraduates are both kinds of student. this kind
 of relationship can be visualised as a tree structure, where student 
 would be the more general root node and both postgraduate and
