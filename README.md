@@ -8,8 +8,8 @@ To do list: (please add stuff!)
 - [X] LCS Classic - Backwards (COMPLETE BY JEREMIE 16/11/16)
 - [X] LCS Linear space - Forwards (COMPLETE BY JEREMIE 16/11/16)
 - [X] LCS Linear Space - Backwards (COMPLETE BY JEREMIE 16/11/16)
-- [ ] LCS Recursive
-- [X] LCS B & B (we have not learnt this yet but if anyone knows this approach?)
+- [X] LCS Recursive (COMPLETE BY ED 21/11/16)
+- [X] LCS B & B (COMPLETE BY ED 17/11/2016)
 - [X] Printing neatly (there are several techniques so this task may expand) (PART1 COMPLETE by ED 20/10/2016)
 - [ ] Run Time and space complexity tests and analysis
 - [ ] Comparisons on the corpus
