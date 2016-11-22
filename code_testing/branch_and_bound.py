@@ -58,21 +58,24 @@ def branch_n_bound(words1, words2):
     solution_index = -1
     tracker_index = -1
 
+    # Potential solutions are stored in a LIFO queue to be searched depth first
+    # Solutions are defined in a list as follows:
+    # [starting_solution, solution_index, tracker_index, best, left/right of tree]
     lifo_queue = Queue.LifoQueue()
     lifo_queue.put([starting_solution, solution_index, tracker_index, best, 1])
 
     best = max(best - 1, 0)
-    logfile = open('log.txt', 'w')
-    logfile.write("estimate of best is " + str(best) + "\n")
-    logfile.write("max length is " + str(max_lcs_length) + "\n")
-    logfile.write("--------------------------------" + "\n")
+    # logfile = open('log.txt', 'w')
+    # logfile.write("estimate of best is " + str(best) + "\n")
+    # logfile.write("max length is " + str(max_lcs_length) + "\n")
+    # logfile.write("--------------------------------" + "\n")
 
     while not lifo_queue.empty():
         node = lifo_queue.get()
-        if node[3] > best:
-            logfile.write(str(_get_solution(words1, words2, node[0])) + str(node) + "\n")
-        else:
-            logfile.write(" CUT " + str(_get_solution(words1, words2, node[0])) + str(node) + " CUT\n")
+        # if node[3] > best:
+        #     logfile.write(str(_get_solution(words1, words2, node[0])) + str(node) + "\n")
+        # else:
+        #     logfile.write(" CUT " + str(_get_solution(words1, words2, node[0])) + str(node) + " CUT\n")
 
         if node[3] > best and node[1] < max_lcs_length - 1:
             node1, node2 = _explore(node, words1, words2)
@@ -87,14 +90,14 @@ def branch_n_bound(words1, words2):
                 if node2[3] > best:
                     lifo_queue.put(node2)
         else:
-            if node[1] == (max_lcs_length - 1):
-                print("at end of tree")
+            # if node[1] == (max_lcs_length - 1):
+            #     # print("at end of tree")
             if node[3] > best and node[1] == (max_lcs_length - 1):
-                print("New Best found", node)
-                logfile.write("--------------------------------" + "\n")
+                # print("New Best found", node)
+                # logfile.write("--------------------------------" + "\n")
                 best = node[3]
                 best_solution = node[0]
-    logfile.close()
+    # logfile.close()
     return _get_solution(words1, words2, best_solution)
 
 
