@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Nov 24 11:14:33 2016
+
+@author: jerem
+"""
+
 
 import os
 import numpy
@@ -101,7 +108,35 @@ def get_max_index(c, g, X, word):
                    
     return index
     
-def LCS_linear_space_backward(X,Y):
+def LCSclassic_backward(file1,file2):#This is the LCS classic in Backward
+    X = make_array(file1)
+    Y = make_array(file2)
+    length_X = len(X)
+    length_Y = len(Y)
+    print (length_X)
+    
+    b = numpy.empty((length_X,length_Y), dtype = "str")
+    c = numpy.empty((length_X,length_Y), dtype = "int")
+    
+    for i in range(length_X-2,-1,-1):
+        c[length_X-1,0]= 0
+        for j in range(length_Y-2,-1,-1):
+            if (i==length_X-2 and j==length_Y-2):
+                c[i,j] = 1
+                b[i,j] = "d"    #for diagonal
+            elif (i<length_X-2 and j<length_Y-2 and X[i+1]==Y[j+1]):
+                c[i,j] = c[i+1,j+1]+1
+                b[i,j] = "u"    #for up
+            else:
+                c[i,j] = max(c[i+1,j],c[i,j+1])
+                b[i,j] = "l"    #for up
+    length = c[0,0]
+    #LCS_List = LCS_list(b,X,length_X-1,length_Y-1,[])
+    return c, b, length #, LCS_List
+
+    
+def LCS_linear_space_backward(X,Y): #This is the backward LCS in linear space which allow 
+#to perform a LCS in a smaller space and time. Matrix of [2,length_Y]
     length_X = len(X)
     length_Y = len(Y)
     
@@ -121,7 +156,8 @@ def LCS_linear_space_backward(X,Y):
     length = c[1,0]
     return length, column
 
-def LCS_linear_space(X,Y):
+def LCS_linear_space(X,Y): #This is the regular LCS in linear space which allow 
+#to perform a LCS in a smaller space and time. Matrix of [2,length_Y]
     length_X = len(X)
     length_Y = len(Y)
     c = numpy.zeros((2,length_Y), dtype = "int")
@@ -225,12 +261,3 @@ if __name__ == "__main__":
         print each
     for each in ratios:
         print round(each,5)
-
-
-
-
-
-
-
-
-
