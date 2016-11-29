@@ -4,8 +4,9 @@ Created on Thu Nov 24 11:14:33 2016
 
 @author: jerem
 """
-
-
+import random
+import string
+import time
 import os
 import numpy
 import re
@@ -73,16 +74,16 @@ def LCSclassic(X,Y):
 def LCS_DivideConquer(X,Y):
     length_X = len(X)
     length_Y = len(Y)
-    if ((length_X - 1)*(length_Y-1) == 0):
+    if ((length_X - 1)*(length_Y-1) == 0): #if one of the texts is empty
         return []    
-    elif (length_X - 1 <= 2) or (length_Y - 1 <= 2):
+    elif (length_X - 1 <= 2) or (length_Y - 1 <= 2): 
         LCS = LCSclassic(X,Y)
         return LCS
     else:
         breakpoint = int(math.floor(length_Y / 2))
         length, c = LCS_linear_space(X, Y[0:breakpoint+1])
         Y2 = Y[breakpoint:]
-        Y2.insert(0," ")
+        Y2.insert(0," ") #lining indices up for algorithm
         length2, g  = LCS_linear_space_backward(X,Y2)
         q = get_max_index(c, g, X, Y[breakpoint])
         X2 = X[q+1:]
@@ -201,7 +202,7 @@ def LCS_Sentence(file1,file2, mode):
         if mode == "classic":
             LCS_List = LCSclassic(sentence, Y)
         elif mode == "DC":
-            LCS_List = LCSLIST = LCS_DivideConquer(sentence,Y)
+            LCS_List = LCS_DivideConquer(sentence,Y)
         totalLength = totalLength + len(sentence) - 1
         totalLCSlength = totalLCSlength + len(LCS_List)
         for word in LCS_List:
@@ -225,7 +226,7 @@ def LCS_list(b,X,m,n,S):
 
 
 #This function gets the LCS and ratio of every file in the corpus
-#inputs are algorithm (only classic is implemented as of now 15/11)
+#inputs are algorithm (mode)
 #folder = corpus-20090418, corpus-adv_preprocessed, corpus-preprocessed, or corpus-swr_preprocessed
 #whether to use sentence by sentence or not (sentence = False, True)
 #outputs are one list containing all the LCS(alphabetical order by file name)
@@ -250,14 +251,55 @@ def getLCSdata(mode, folder, sentence):
     return lengths[:-5], ratios[:-5]  #last 5 elements are LCS of original files vs. themselves
     
         
+def generate_random_list(length):
 
+    words = [None]*length
+    for i in range(length):
+        words[i] = (random.choice(string.ascii_uppercase))
+
+    return words
     
 ##########################################################################################
 # Testing
 if __name__ == "__main__":
    
-    lengths, ratios = getLCSdata("classic","corpus-preprocessed",False)
-    for each in lengths:
-        print each
-    for each in ratios:
-        print round(each,5)
+##    lengths, ratios = getLCSdata("classic","corpus-preprocessed",False)
+##    for each in lengths:
+##        print each
+##    for each in ratios:
+##        print round(each,5)
+   
+    print("Runtime comparisons")
+    time_dict_rec = {}
+    for i in range(0, 9):
+        time_dict_rec[i] = 0
+        for _ in range(0, 40):
+            list1 = generate_random_list(int(math.pow(2, i+1)))
+            list1.insert(0," ")
+            list2 = generate_random_list(int(math.pow(2, i+1)))
+            list2.insert(0," ")
+            start = time.time()
+            lcs = LCS_DivideConquer(list1, list2)
+            time_dict_rec[i] += time.time() - start
+
+    for i in range(0, 9):
+        print time_dict_rec.get(i) / 40
+
+    time_dict = {}
+    for i in range(0, 9):
+        time_dict[i] = 0
+        for _ in range(0, 40):
+            list1 = generate_random_list(int(math.pow(2, i+1)))
+            list1.insert(0," ")
+            list2 = generate_random_list(int(math.pow(2, i+1)))
+            list2.insert(0," ")
+            start = time.time()
+            lcs = LCSclassic(list1, list2)
+            time_dict[i] += time.time() - start
+    for i in range(0, 9):
+        print time_dict.get(i) / 40
+    
+
+
+
+    
