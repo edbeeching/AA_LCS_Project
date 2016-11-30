@@ -3,12 +3,12 @@ from PyQt4 import QtGui, QtCore
 
 import sys, os
 import prototype
-import PrintingNeatly
-import PandasModel
+import printing_neatly
+import pandas_model
 import pandas as pd
 
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
-import Plotting
+import plotting
 
 
 class LCS_UI(QtGui.QMainWindow):
@@ -139,6 +139,8 @@ class LCS_UI(QtGui.QMainWindow):
         self.neatly_slider.setValue(20)
         self.neatly_slider.valueChanged[int].connect(self.tab1_neatly_slider_change_value)
         self.neatly_text = QtGui.QLabel(str(self.neatly_slider.value()))
+        # Create an empty sting which hold the LCS text, so i cna be changed dynamically with printing neatly
+        self.neatly_string_list = []
 
         h2_layout.addWidget(QtGui.QLabel("Printing neatly"))
         h2_layout.addWidget(self.neatly_slider)
@@ -148,6 +150,13 @@ class LCS_UI(QtGui.QMainWindow):
         self.corpus_text = QtGui.QTextEdit()
         self.wiki_text = QtGui.QTextEdit()
         self.substring = QtGui.QTextEdit()
+        # set text to read only
+        self.corpus_text.setReadOnly(True)
+        self.wiki_text.setReadOnly(True)
+        self.substring.setReadOnly(True)
+        # set the corpus text to HTML formatting so we can make the LCS bold
+
+
 
         v1_layout = QtGui.QVBoxLayout()
         v2_layout = QtGui.QVBoxLayout()
@@ -161,7 +170,7 @@ class LCS_UI(QtGui.QMainWindow):
 
         self.corpus_length_label = QtGui.QLabel("Corpus length")
         self.substring_length_label  = QtGui.QLabel("LCS Length")
-        self.pieChart = Plotting.init_pieChart()
+        self.pieChart = plotting.init_pieChart()
         self.pieChartCanvas = FigureCanvas(self.pieChart)
         self.pieChartCanvas.draw()
 
@@ -210,12 +219,31 @@ class LCS_UI(QtGui.QMainWindow):
         path = path.replace(' ','_')
         path = 'corpus-'+path
         return path
+
     def get_current_process_suffix(self):
         path = self.get_process_folder(self.process_combo_box.currentText())
         file_suffix = path.replace("corpus-", "_") + ".txt"
         if path == "corpus-20090418":
             file_suffix = ".txt"
         return file_suffix
+
+    def get_bold_text(self, lcs_text, corpus_text):
+        def same_as(word1, word2):
+            word1 = word1.replace(".", "")
+            word1 = word1.replace(",", "")
+            word2 = word2.replace(".", "")
+            word2 = word2.replace(",", "")
+            return word1 == word2
+
+        index = 0
+        bold_text = []
+        for word in corpus_text.split():
+            if index < len(lcs_text) and same_as(word, lcs_text[index]):
+                bold_text.append("<b>" + word + "</b>")
+                index += 1
+            else:
+                bold_text.append(word)
+        return " ".join(bold_text)
 
     def update_text(self):
         path = self.get_process_folder(self.process_combo_box.currentText())
@@ -225,9 +253,10 @@ class LCS_UI(QtGui.QMainWindow):
         filename = filename.replace('.txt',file_suffix)
         file_object = open("../" + path + "/" + filename)
 
-        text = file_object.read()
-        self.corpus_text.setPlainText(text)
-        cor_length = len(text.split(" "))
+        corpus_text = file_object.read()
+        #self.corpus_text.setPlainText(text)
+        # self.corpus_text.setHtml(corpus_text)
+        cor_length = len(corpus_text.split(" "))
         file_object.close()
 
         file_object = open("../" + path + "/orig_task" + self.task_combo_box.currentText() + file_suffix)
@@ -243,26 +272,31 @@ class LCS_UI(QtGui.QMainWindow):
             length, lengthLCS, LCSLIST = prototype.LCS_Sentence("../" + path + "/" + filename,
                                                                 "../" + path + "/orig_task" + self.task_combo_box.currentText() + file_suffix,
                                                                 "classic")
+        bold_corpus_text = self.get_bold_text(LCSLIST, corpus_text)
+        self.corpus_text.setHtml(bold_corpus_text)
+
         self.corpus_length_label.setText("Corpus Length: " + str(cor_length))
         self.substring_length_label.setText("LCS Length: " + str(len(LCSLIST)))
-        Plotting.update_pieChart(self.pieChart, length, lengthLCS)
+        plotting.update_pieChart(self.pieChart, length, lengthLCS)
         self.pieChartCanvas.draw()
-
-        neatly = PrintingNeatly.print_neatly_greedy(LCSLIST, self.neatly_slider.value())
+        self.neatly_string_list = LCSLIST
+        neatly = printing_neatly.print_neatly_dynamic(self.neatly_string_list, self.neatly_slider.value())
 
         self.substring.setPlainText("\n".join(neatly))
         return
 
     def tab1_neatly_slider_change_value(self, value):
         self.neatly_text.setText(str(value))
-        self.update_text()
+        neatly = printing_neatly.print_neatly_dynamic(self.neatly_string_list, self.neatly_slider.value())
+        self.substring.setPlainText("\n".join(neatly))
+        #self.update_text()
 
 
     def tab2UI(self):
         view = QtGui.QTableView()
         xl = pd.ExcelFile("../corpus-final09.xls")
         df = xl.parse("File list")
-        model = PandasModel.PandasModel2(df, self)
+        model = pandas_model.PandasModel2(df, self)
         view.setModel(model)
         layout = QtGui.QHBoxLayout()
         layout.addWidget(view)
@@ -270,7 +304,7 @@ class LCS_UI(QtGui.QMainWindow):
         self.tab2.setLayout(layout)
 
     def tab3UI(self):
-        PlotAllLCS = Plotting.plotAllLCS(self)
+        PlotAllLCS = plotting.plotAllLCS(self)
         layout = QtGui.QHBoxLayout()
         layout.addWidget(PlotAllLCS)
 
@@ -279,7 +313,7 @@ class LCS_UI(QtGui.QMainWindow):
     def tab4UI(self):
         layout = QtGui.QGridLayout()
 
-        PlotByCat = Plotting.plotByCategory(self)
+        PlotByCat = plotting.plotByCategory(self)
         layout.addWidget(PlotByCat)
 
         self.tab4.setLayout(layout)
@@ -287,7 +321,7 @@ class LCS_UI(QtGui.QMainWindow):
     def tab5UI(self):
         layout = QtGui.QGridLayout()
 
-        PlotByCat = Plotting.plotByCategory2(self)
+        PlotByCat = plotting.plotByCategory2(self)
         layout.addWidget(PlotByCat)
 
         self.tab5.setLayout(layout)

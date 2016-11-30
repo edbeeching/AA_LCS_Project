@@ -2,12 +2,12 @@
 
 
 from PyQt4 import QtGui, QtCore
-import PandasModel
+import pandas_model
 import pandas as pd
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib.pyplot as plot
 import numpy as np
-import Statistics as stats
+import statistics as stats
 
 
 

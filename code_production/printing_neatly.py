@@ -4,7 +4,7 @@ import numpy
 import sys
 
 
-def compute_extras(i, j, list_of_strings, lines_per_row):
+def _compute_extras(i, j, list_of_strings, lines_per_row):
 
     total = lines_per_row
     for string in list_of_strings[i:j+1]:
@@ -13,14 +13,14 @@ def compute_extras(i, j, list_of_strings, lines_per_row):
     return total
 
 
-def compute_extras_dynamic(i, j, list_of_strings, lines_per_row, extrass):
+def _compute_extras_dynamic(i, j, list_of_strings, lines_per_row, extrass):
     if i == j:
         return lines_per_row - len(list_of_strings[j])
     else:
         return extrass[i, j-1] - len(list_of_strings[j]) - 1
 
 
-def compute_line_cost(i, j, extras, n):
+def _compute_line_cost(i, j, extras, n):
 
     if extras[i, j] < 0:
         # return sys.maxint This overflows in some cases, so better to use something smaller
@@ -30,7 +30,7 @@ def compute_line_cost(i, j, extras, n):
     return extras[i, j]**3
 
 
-def compute_cost(j, costs, line_cost):
+def _compute_cost(j, costs, line_cost):
     if j is 0:
         return line_cost[0,0], 0
 
@@ -77,7 +77,7 @@ def print_neatly_dynamic(list_of_strings, lines_per_row):
     extras = numpy.zeros((n, n), dtype="int32")
     for i in range(0, n):
         for j in range(i, min(n, i + lines_per_row/2)):
-            extras[i, j] = compute_extras_dynamic(i, j, list_of_strings, lines_per_row, extras)
+            extras[i, j] = _compute_extras_dynamic(i, j, list_of_strings, lines_per_row, extras)
             # extras[i, j] = compute_extras(i, j, listOfStrings, numberOfLinesPerRow)
 
     # Computation of line costs
@@ -85,13 +85,13 @@ def print_neatly_dynamic(list_of_strings, lines_per_row):
     line_cost[:] = 10000000
     for i in range(0, n):
         for j in range(i, min(n, i + lines_per_row / 2)):
-            line_cost[i, j] = compute_line_cost(i, j, extras, n)
+            line_cost[i, j] = _compute_line_cost(i, j, extras, n)
 
     # Computation of best costs
     costs = numpy.zeros(n, dtype="int32")
     para = numpy.zeros(n, dtype="int32")
     for j in range(0,n):
-        costs[j], para[j] = compute_cost(j, costs, line_cost)
+        costs[j], para[j] = _compute_cost(j, costs, line_cost)
 
     # The word key contains the a map of which strings are on which row
     word_key = [len(list_of_strings)]

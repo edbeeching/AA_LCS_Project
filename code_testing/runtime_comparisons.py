@@ -2,8 +2,8 @@ from __future__ import print_function
 import random
 import string
 import time
-import recursive
-import branch_and_bound
+import lcs_recursive
+import lcs_branch_and_bound
 
 def generate_random_list(length):
 
@@ -27,13 +27,14 @@ if __name__ == '__main__':
             list1 = generate_random_list(i)
             list2 = generate_random_list(i)
             start = time.time()
-            lcs = recursive.lcs_recursive(list1, list2)
+            lcs = lcs_recursive.lcs_recursive(list1, list2)
             time_dict_rec[i] += time.time() - start
 
     for i in range(0, 14):
         print(i, time_dict_rec.get(i))
 
     time_dict = {}
+    print("-----------------------")
     for i in range(0, 40):
         time_dict[i] = 0
         for _ in range(0, 40):
@@ -41,7 +42,7 @@ if __name__ == '__main__':
             list1 = generate_random_list(i)
             list2 = generate_random_list(i)
             start = time.time()
-            branch_and_bound.branch_n_bound(list1, list2)
+            lcs_branch_and_bound.branch_n_bound(list1, list2)
             time_dict[i] += time.time() - start
     for i in range(0, 40):
-        print(i,time_dict.get(i))
+        print(i, time_dict.get(i))
