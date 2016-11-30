@@ -8,10 +8,16 @@ import pandas_model
 import pandas as pd
 
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
+import resource
+import time
+
 import plotting
 
 
+memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+
 class LCS_UI(QtGui.QMainWindow):
+
     def __init__(self, parent=None):
         super(LCS_UI, self).__init__(parent)
         self.setGeometry(200, 200, 1200, 800)
@@ -45,6 +51,8 @@ class LCS_UI(QtGui.QMainWindow):
 
         self.setWindowTitle("Plagiarism Detector")
         self.statusBar().showMessage('Ready')
+
+
 
 
 
@@ -170,12 +178,16 @@ class LCS_UI(QtGui.QMainWindow):
 
         self.corpus_length_label = QtGui.QLabel("Corpus length")
         self.substring_length_label  = QtGui.QLabel("LCS Length")
+        self.plagiarism_score_label  = QtGui.QLabel("Running Time")
+        self.running_time_label  = QtGui.QLabel("Running Time")
         self.pieChart = plotting.init_pieChart()
         self.pieChartCanvas = FigureCanvas(self.pieChart)
         self.pieChartCanvas.draw()
 
         v2_layout.addWidget(self.corpus_length_label)
         v2_layout.addWidget(self.substring_length_label)
+        v2_layout.addWidget(self.plagiarism_score_label)
+        v2_layout.addWidget(self.running_time_label)
         v2_layout.addWidget(self.pieChartCanvas)
         v2_layout.addStretch(stretch=1)
 
@@ -245,6 +257,35 @@ class LCS_UI(QtGui.QMainWindow):
                 bold_text.append(word)
         return " ".join(bold_text)
 
+    def score(self, lcs_text, corpus_text):
+        def same_as(word1, word2):
+            word1 = word1.replace(".", "")
+            word1 = word1.replace(",", "")
+            word2 = word2.replace(".", "")
+            word2 = word2.replace(",", "")
+            return word1 == word2
+
+        index = 0
+        add = False
+        score = 0
+        side_by_side = 1
+        for word in corpus_text.split():
+
+            if index < len(lcs_text) and same_as(word, lcs_text[index]):
+                # bold_text.append("<b>" + word + "</b>")
+                index += 1
+                if (add == False):
+                    add = True
+                    side_by_side = 1
+                else:
+                    side_by_side += 1
+            else:
+                if (add == True):
+                    add = False
+                    score += (side_by_side * side_by_side)
+                # bold_text.append(word)
+        return score
+
     def update_text(self):
         path = self.get_process_folder(self.process_combo_box.currentText())
         algo = self.algo_combo_box.currentText()
@@ -264,6 +305,8 @@ class LCS_UI(QtGui.QMainWindow):
         self.wiki_text.setPlainText(text)
         file_object.close()
 
+        running_time_start = time.time()
+
         if algo == "LCS":
             length, lengthLCS, LCSLIST = prototype.LCS("../" + path + "/" + filename,
                                                        "../" + path + "/orig_task" + self.task_combo_box.currentText() + file_suffix,
@@ -272,11 +315,20 @@ class LCS_UI(QtGui.QMainWindow):
             length, lengthLCS, LCSLIST = prototype.LCS_Sentence("../" + path + "/" + filename,
                                                                 "../" + path + "/orig_task" + self.task_combo_box.currentText() + file_suffix,
                                                                 "classic")
+        running_time_end = time.time()
+        
+        running_time = int((running_time_end - running_time_start) * 1000)
+        memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+        # memory_usage = new_memory_usage
+        # print("MEM = " + str(memory_usage))
+
         bold_corpus_text = self.get_bold_text(LCSLIST, corpus_text)
         self.corpus_text.setHtml(bold_corpus_text)
 
         self.corpus_length_label.setText("Corpus Length: " + str(cor_length))
         self.substring_length_label.setText("LCS Length: " + str(len(LCSLIST)))
+        self.plagiarism_score_label.setText("Plagiarism Score: " + str(self.score(LCSLIST,corpus_text)))
+        self.running_time_label.setText("Running Time:" + str(running_time) + "ms")
         plotting.update_pieChart(self.pieChart, length, lengthLCS)
         self.pieChartCanvas.draw()
         self.neatly_string_list = LCSLIST

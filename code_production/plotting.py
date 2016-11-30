@@ -162,7 +162,7 @@ def plotByCategory2(self):
 
 	# selectNon = df.loc[df['Category'] == 'non']
 	
-	categories = ['non','light','heavy','cut']
+	categories = ['non','heavy','light','cut']
 	colors = ['y.','g.','b.','r.']
 
 	ax = figure.add_subplot(111)
@@ -185,7 +185,7 @@ def plotByCategory2(self):
 	ax.legend(handles,categories,loc='lower right')
 
 	ax.yaxis.grid()
-	ax.xaxis.set_ticklabels(['','non','light','heavy','cut',''])
+	ax.xaxis.set_ticklabels(['','non','heavy','light','cut',''])
 
 	canvas.draw()
 	return canvas
