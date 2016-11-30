@@ -254,7 +254,7 @@ class LCS_UI(QtGui.QMainWindow):
         file_object = open("../" + path + "/" + filename)
 
         corpus_text = file_object.read()
-        #self.corpus_text.setPlainText(text)
+        # self.corpus_text.setPlainText(text)
         # self.corpus_text.setHtml(corpus_text)
         cor_length = len(corpus_text.split(" "))
         file_object.close()

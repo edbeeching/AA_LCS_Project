@@ -1,11 +1,10 @@
 from __future__ import print_function
-
+from nltk.corpus import stopwords
 import lcs_recursive
 import lcs_branch_and_bound
 import random
 import string
 import time
-import prototype
 
 def generate_random_list(length):
 
@@ -17,16 +16,21 @@ def generate_random_list(length):
 
 
 if __name__ == '__main__':
-    words1 = generate_random_list(10)
-    words2 = generate_random_list(12)
-    print(words1)
-    print(words2)
-    #words1 = ['C', 'Z', 'G', 'G', 'G', 'G', 'V', 'W', 'K', 'K']
-    #words2 = ['J', 'H', 'C', 'A', 'C', 'N', 'V', 'T', 'F', 'T', 'N', 'Z']
-    lcs_rec = lcs_recursive.lcs_recursive(words1, words2)
-    lcs_bnb = lcs_branch_and_bound.branch_n_bound(words1, words2)
-    lcs_dyn = prototype.LCSclassic([" "]+words1, [" "]+words2)
 
-    print(lcs_rec, len(lcs_rec))
-    print(lcs_bnb, len(lcs_bnb))
-    print(lcs_dyn, len(lcs_dyn))
+
+    words = stopwords.words("english")
+    print(words)
+
+    # words1 = generate_random_list(10)
+    # words2 = generate_random_list(12)
+    # print(words1)
+    # print(words2)
+    # #words1 = ['C', 'Z', 'G', 'G', 'G', 'G', 'V', 'W', 'K', 'K']
+    # #words2 = ['J', 'H', 'C', 'A', 'C', 'N', 'V', 'T', 'F', 'T', 'N', 'Z']
+    # lcs_rec = lcs_recursive.lcs_recursive(words1, words2)
+    # lcs_bnb = lcs_branch_and_bound.branch_n_bound(words1, words2)
+    # lcs_dyn = prototype.LCSclassic([" "]+words1, [" "]+words2)
+    #
+    # print(lcs_rec, len(lcs_rec))
+    # print(lcs_bnb, len(lcs_bnb))
+    # print(lcs_dyn, len(lcs_dyn))
