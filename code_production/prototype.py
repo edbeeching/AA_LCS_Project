@@ -21,6 +21,14 @@ def make_array(file1):
         X.append(word)
     return X
 
+def make_array_nostopwords(file1, stopwords):
+    X = []
+    X.append(" ")     # to make indexing correct for algorthm (algorithm assumes base-1 indexing, Python is base-2
+    file1 = open(file1)
+    for word in file1.read().split():
+        if (not(word in stopwords)):
+            X.append(word)
+    return X
 
 #takes file as input, outputs list of lists (sentences)
 def make_sentence_array(file1):
@@ -95,7 +103,8 @@ def LCS_DivideConquer(X,Y):
         LCSL = LCS_DivideConquer(X,Y)
         LCSR = LCS_DivideConquer(X2,Y2)
         return LCSL + LCSR
-                                                  
+
+#function to return optimal index for splitting during divide and conquer                             
 def get_max_index(c, g, X, word):
     max = 0
     index = 0
@@ -191,6 +200,20 @@ def LCS(file1,file2,mode):
         LCSLIST = LCS_DivideConquer(X,Y)
     return length, len(LCSLIST), LCSLIST
 
+#driver for LCS without stop words
+def LCS_nostops(file1,file2,mode):
+    cwd = os.getcwd()
+    parent = os.path.abspath(os.path.join(cwd, os.pardir))
+    stops = make_array(parent + "\\text_preprocessing\\LongListStopWords.txt")
+    X = make_array_nostopwords(file1, stops)
+    Y = make_array_nostopwords(file2, stops)
+    length = len(X) - 1
+    if mode == "classic":
+        LCSLIST = LCSclassic(X,Y)
+    elif mode == "DC":
+        LCSLIST = LCS_DivideConquer(X,Y)
+    return length, len(LCSLIST), LCSLIST
+
 #Driver for Sentence by sentence LCS
 def LCS_Sentence(file1,file2, mode):
     X = make_sentence_array(file1)
@@ -245,7 +268,7 @@ def getLCSdata(mode, folder, sentence):
         if sentence:
             Length, LCSlength, LCSLIST = LCS_Sentence(file1,file2,mode)
         else:
-            Length, LCSlength, LCSLIST = LCS(file1,file2,mode) 
+            Length, LCSlength, LCSLIST = LCS_nostops(file1,file2,mode) 
         lengths.append(LCSlength)
         ratios.append(float(LCSlength) / Length)
     return lengths[:-5], ratios[:-5]  #last 5 elements are LCS of original files vs. themselves
@@ -262,43 +285,43 @@ def generate_random_list(length):
 ##########################################################################################
 # Testing
 if __name__ == "__main__":
-   
-##    lengths, ratios = getLCSdata("classic","corpus-preprocessed",False)
-##    for each in lengths:
-##        print each
-##    for each in ratios:
-##        print round(each,5)
-   
-    print("Runtime comparisons")
-    time_dict_rec = {}
-    for i in range(0, 9):
-        time_dict_rec[i] = 0
-        for _ in range(0, 40):
-            list1 = generate_random_list(int(math.pow(2, i+1)))
-            list1.insert(0," ")
-            list2 = generate_random_list(int(math.pow(2, i+1)))
-            list2.insert(0," ")
-            start = time.time()
-            lcs = LCS_DivideConquer(list1, list2)
-            time_dict_rec[i] += time.time() - start
 
-    for i in range(0, 9):
-        print time_dict_rec.get(i) / 40
-
-    time_dict = {}
-    for i in range(0, 9):
-        time_dict[i] = 0
-        for _ in range(0, 40):
-            list1 = generate_random_list(int(math.pow(2, i+1)))
-            list1.insert(0," ")
-            list2 = generate_random_list(int(math.pow(2, i+1)))
-            list2.insert(0," ")
-            start = time.time()
-            lcs = LCSclassic(list1, list2)
-            time_dict[i] += time.time() - start
-    for i in range(0, 9):
-        print time_dict.get(i) / 40
-    
+    lengths, ratios = getLCSdata("classic","corpus-WordOrdering_preprocessed",False)
+    for each in lengths:
+        print each
+    for each in ratios:
+        print round(each,5)
+##   
+##    print("Runtime comparisons")
+##    time_dict_rec = {}
+##    for i in range(0, 9):
+##        time_dict_rec[i] = 0
+##        for _ in range(0, 40):
+##            list1 = generate_random_list(int(math.pow(2, i+1)))
+##            list1.insert(0," ")
+##            list2 = generate_random_list(int(math.pow(2, i+1)))
+##            list2.insert(0," ")
+##            start = time.time()
+##            lcs = LCS_DivideConquer(list1, list2)
+##            time_dict_rec[i] += time.time() - start
+##
+##    for i in range(0, 9):
+##        print time_dict_rec.get(i) / 40
+##
+##    time_dict = {}
+##    for i in range(0, 9):
+##        time_dict[i] = 0
+##        for _ in range(0, 40):
+##            list1 = generate_random_list(int(math.pow(2, i+1)))
+##            list1.insert(0," ")
+##            list2 = generate_random_list(int(math.pow(2, i+1)))
+##            list2.insert(0," ")
+##            start = time.time()
+##            lcs = LCSclassic(list1, list2)
+##            time_dict[i] += time.time() - start
+##    for i in range(0, 9):
+##        print time_dict.get(i) / 40
+##    
 
 
 

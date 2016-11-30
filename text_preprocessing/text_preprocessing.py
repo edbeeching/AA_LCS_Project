@@ -2,17 +2,22 @@
 import os
 import platform
 import re
+
+#Read a file
 def read_file(path):
     file_object = open(path)
     file_string = file_object.read()
     file_object.close()
     return file_string
 
+#Write in a file
 def write_file(file, path):
     file_object = open(path, 'w')
     file_object.write(file)
     file_object.close()
     return
+
+#modification of String return a basic preprocess string
 def preprocessing_file(file):
     file = file.replace('‘', '\'')
     file = file.replace('’', '\'')
@@ -23,6 +28,8 @@ def preprocessing_file(file):
 
     preprocessed_file = file
     return preprocessed_file
+
+#String modification, return an advanced preprocess string
 def adv_preprocessing_file(file):
 
     # removing enumerated lists:
@@ -53,6 +60,7 @@ def adv_preprocessing_file(file):
     preprocessed_file =file
     return preprocessed_file
 
+#String modification, return an advanced preprocessed string without any stop words list on a file
 def swr_preprocessing_file(file):
     file = adv_preprocessing_file(file)
     StopWords = read_file("./LongListStopWords.txt").split()
@@ -64,6 +72,7 @@ def swr_preprocessing_file(file):
     file=' '.join(file.split())
     return file
 
+#Stringmodification return an advanced preprocessed string Alphabetically ordered sentence by sentence
 def WO_preprocessing_file(file):
     file = adv_preprocessing_file(file)
     Sentence_List= file.split('.')
@@ -75,6 +84,7 @@ def WO_preprocessing_file(file):
         file_Sorted += sorted_setence+'.'
     return file_Sorted
 
+# wrinting the preprocessed string in a new folder and file with an preprocess algo
 def wrinting_preprocessed_file(filepath):
     filepath = os.path.join(filepath)
     file = read_file(filepath)
@@ -88,6 +98,7 @@ def wrinting_preprocessed_file(filepath):
     write_file(preprocessing_file(file), filepath_preprocessed)
     return
 
+# wrinting the preprocessed string in a new folder and file with an preprocess algo
 def wrinting_adv_preprocessed_file(filepath):
     filepath = os.path.join(filepath)
     file = read_file(filepath)
@@ -101,6 +112,7 @@ def wrinting_adv_preprocessed_file(filepath):
     write_file(adv_preprocessing_file(file), filepath_preprocessed)
     return
 
+# wrinting the preprocessed string in a new folder and file with an preprocess algo
 def wrinting_swr_preprocessed_file(filepath):
     filepath = os.path.join(filepath)
     file = read_file(filepath)
@@ -114,6 +126,7 @@ def wrinting_swr_preprocessed_file(filepath):
     write_file(swr_preprocessing_file(file), filepath_preprocessed)
     return
 
+# wrinting the preprocessed string in a new folder and file with an preprocess algo
 def wrinting_word_ordering_preprocessed_file(filepath):
     filepath = os.path.join(filepath)
     file = read_file(filepath)
