@@ -268,7 +268,7 @@ def getLCSdata(mode, folder, sentence):
         if sentence:
             Length, LCSlength, LCSLIST = LCS_Sentence(file1,file2,mode)
         else:
-            Length, LCSlength, LCSLIST = LCS_nostops(file1,file2,mode) 
+            Length, LCSlength, LCSLIST = LCS(file1,file2,mode) 
         lengths.append(LCSlength)
         ratios.append(float(LCSlength) / Length)
     return lengths[:-5], ratios[:-5]  #last 5 elements are LCS of original files vs. themselves
@@ -285,8 +285,15 @@ def generate_random_list(length):
 ##########################################################################################
 # Testing
 if __name__ == "__main__":
+##    cwd = os.getcwd()
+##    parent = os.path.abspath(os.path.join(cwd, os.pardir))
+##    file1 = parent + "\\corpus-adv_preprocessed\\g4pD_taskb_adv_preprocessed.txt"
+##    file2 = parent + "\\corpus-adv_preprocessed\\orig_taskb_adv_preprocessed.txt"
+##    Length, LCSlength, LCSLIST = LCS_Sentence(file1,file2,"classic")
+##    print LCSlength
+##    print float(LCSlength) / Length
 
-    lengths, ratios = getLCSdata("classic","corpus-WordOrdering_preprocessed",False)
+    lengths, ratios = getLCSdata("classic","corpus-preprocessed",False)
     for each in lengths:
         print each
     for each in ratios:
