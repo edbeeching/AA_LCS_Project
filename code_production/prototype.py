@@ -123,7 +123,6 @@ def LCSclassic_backward(file1,file2):#This is the LCS classic in Backward
     Y = make_array(file2)
     length_X = len(X)
     length_Y = len(Y)
-    print (length_X)
     
     b = numpy.empty((length_X,length_Y), dtype = "str")
     c = numpy.empty((length_X,length_Y), dtype = "int")
