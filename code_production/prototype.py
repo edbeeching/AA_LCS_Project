@@ -177,7 +177,7 @@ def LCS_linear_space(X,Y): #This is the regular LCS in linear space which allow
         for j in range(1,length_Y):
             if (X[i]==Y[j]):
                 c[1,j] = c[0,j-1] + 1
-            elif (c[1,j-1]<c[0,j]):
+            elif (c[1,j-1]<=c[0,j]):
                 c[1,j] = c[0,j]
             else:
                 c[1,j] = c[1,j-1]
@@ -292,7 +292,7 @@ if __name__ == "__main__":
 ##    print LCSlength
 ##    print float(LCSlength) / Length
 
-    lengths, ratios = getLCSdata("classic","corpus-preprocessed",False)
+    lengths, ratios = getLCSdata("DC","corpus-preprocessed",False)
     for each in lengths:
         print each
     for each in ratios:
