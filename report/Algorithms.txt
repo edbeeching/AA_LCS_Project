@@ -21,7 +21,7 @@ LCS-Length Algorithm(input: X,Y):
 6. for j in 0..n
 7. 	c[0,j] = 0
 8. for i in1..m
-9. 	for j in 1..n
+9. 		for j in 1..n
 10. 		if xi == yj
 11. 			c[i,j] = c[i-1,j-1] + 1
 12. 			b[i,j] = “d”  #for diagonal
@@ -52,11 +52,11 @@ LCS_LSF (input: X,Y):
 3. c[1..2,1..n]
 4. col = []  	#for use in divide and conquer alg (see next section)
 5. for i in 1..m
-6. 	c[1,0] = 0
-7. 	for j in 1..n
-8. 		if xi == yj
-9. 			c[1,j] = c[0,j-1] + 1
-10. 		else if c[1,j-1] >c[0,j]
+6. 		c[1,0] = 0
+7. 		for j in 1..n
+8. 			if xi == yj
+9. 				c[1,j] = c[0,j-1] + 1
+10. 		else if c[1,j-1] > c[0,j]
 11. 			c[1,j] = c[1,j-1]
 12. 		else
 13. 			c[1,j] = c[0,j]
@@ -72,10 +72,10 @@ LCS_LSB(input: X,Y):
 3. c[1..2,1..n]
 4. col = []   	#for use in divide and conquer alg (see next section)
 5. for i in m-1..0
-6. 	for j in n-1..0
-7. 		if X[i+1]==Y[j+1]
-8. 			c[1,j] = c[0,j+1]+1
-9. 		else if c[1,j+1]>c[0,j]
+6. 		for j in n-1..0
+7. 			if X[i+1]==Y[j+1]
+8. 				c[1,j] = c[0,j+1]+1
+9. 			else if c[1,j+1]>c[0,j]
 10. 			c[1,j] = c[1,j+1]
 11. 		else 
 12. 			c[1,j] = c[0,j]
@@ -84,19 +84,48 @@ LCS_LSB(input: X,Y):
 15. return c[1,0], col  #return length of LCS, column
 
 LCS Divide and Conquer:  The following algorithm uses the LCS linear space forward and backward algorithms to compute the LCS of two input spaces in linear space, with the functionality to return the actual LCS (not just the length).
-
-LCS_DC(input: X,Y):
+The algorithm is based on the following 2 properties:
+1. The size of the LCS that passes through entry (i,j) is sum of the LCS from (0,0) to (i,j) (denoted c[i,j])and the LCS from (i,j) to (m,n) (denoted g[i,j])
+2. Let k be any number from 0 to n, let q be the number that maximizes c[q,k] + g[q,k]. There is an optimal solution to the LCS problem (from 0,0 to m,n) that passes through q,k
+Combining these properties and the linear space algorithms presented above, we can formulate a divide and conquer algorithm that requires linear space.
+LCS_DC(input: X,Y): 
 1. m = X.length
 2. n = Y.length
 3. if m*n == 0
-4. 	return []  	#if one of the texts is empty, return an empty LCS
+4. 		return []  	#if one of the texts is empty, return an empty LCS
 5. elseif m <= 2 or n <= 2    
-6. 	return LCS_DyProg(X,Y)   #if one of the texts is small, can do normal Dynamic Prog 
+6. 		return LCS_DyProg(X,Y)   #if one of the texts is small, can do normal Dynamic Prog 
 7. else
-8. 	breakpt = floor(n / 2)
-9. 	length, c = LCS_LSF(X, Y[0:breakpt])
+8. 		breakpt = floor(n / 2)
+9. 		length, c = LCS_LSF(X, Y[0:breakpt])
 10. 	length2, c2 = LCSLSB(X, Y[breakpt:n])
 11. 	q = maxindex(c, c2)    	#q is the index that maximizes (c[q] + c2[q])
 12. 	LCSL = LCS_DC(X[0..q],Y[0..breakpt])
 13. 	LCSR = LCS_DC(X[q+1,m],Y[breakpt+1,n])
 14. 	return LCSL + LCSR   	#return concatenation of sub LCS
+
+LCS Recursive: The recursive algorithm for finding the LCS is a depth first search through the search space, enumerating all possible solutions and returning the largest LCS found.
+LCS_Recursive(input: X, Y):
+1. m = X.length
+2. n = Y.length
+3. if X[m] == Y[n]
+4. 		return LCS_Recursive(X[0:m-1], Y[0:n-1])
+5. else
+6. 		LCS1 = LCS_Recursive(X[0:m-1], Y[0:n])
+7.		LCS2 = LCS_Recursive(X[0:m], Y[0:n-1])
+8. 		if LCS1.length > LCS2.length	
+9. 			return LCS1
+10.		else
+11. 		return LCS2
+
+LCS Branch and Bound: 
+
+
+
+
+
+
+
+Printing Neatly
+
+
