@@ -122,10 +122,59 @@ LCS Branch and Bound:
 
 
 
-
-
-
-
 Printing Neatly
+Greedy Solution: The greedy solution simply prints as many words as possible on a line before going to the next. The solution it gives is not guarenteed to be optimal.
+PN_Greedy(input: X (list of words to be printed), L (number of spaces per line)):
+1. lines = []
+2. currentLine = []
+3. currentLineSpace = 0
+4. for i in X
+5. 		if currentLineSpace + (X[i].length + 1) =< L
+6.			currentLineSpace += X[i].length + 1   #update space taken on current line (1 for space between words)
+7. 			currentLine += " " + X[i]
+8. 		else
+9. 			lines.append(currentLine)
+10.			currentLineSpace = X[i].length
+11.			currentLine = X[i]
+12. lines.append(currentLine)
+13. return lines
+
+Dynamic Programming: The dynamic programming approach computes an optimal solution in polynomial time. 
+First, we define extras[i,j] to be the number of extra spaces on a line containing words i through j. Using this, we can compute the cost of a line containing the same words:
+1. lc[i,j] = infinity 			if extras[i,j] < 0   (if words do not fit on the line)
+2. lc[i,j] = 0    				if j = n and extras[i,j] >= 0   (if it is the last line and the words fit)
+3. lc[i,j] = (extras[i,j])^3 	otherwise
+Using this, we can compute the optimal arrangement (minimal cost) of words 1..j = c[j] :
+1. c[j] = 0 								if j = 0
+2. c[j] = min(1<=i<=j)(c[i-1] + lc[i,j])   	if j>0
+
+PN_DP(input: X, L)
+1. Compute extras[i, j] 1 = i, j = n
+2. Compute lc[i, j] 1 = i, j = n
+3. c[0] = 0
+4. for j in 1..n
+5. 		c[j] = min(1<=i<=j)(c[i-1] + lc[i,j]) 
+6. 		p[j] = k s.t. min(1<=i<=j)(c[i-1] + lc[i,j]) = c[k-1] + lc[k,j]    #store where the cuts are
+7. return p
+
+Recursive: The recursive solution iterates through all the possible sequences and returns the optimal score and solution.
+PN_Recursive(input: X, L):
+1. result = []  	#where the lines will be stored
+2. max_words = the maximum number of words that can fit on current line (what the greedy solution would return)
+3. if max_words >= X.length
+4. 		return 0, X[0:X.length]  	#base case: where all words inputed will fit on current line
+5. best_score = infinity
+6. for i in 1..max_words
+7. 		subscore = 0        	#current line space taken
+8. 		for j in 0..i-1
+9. 			subscore += X[j].length + 1	#add current word and space
+10. 	subscore -= 1  					#remove last space
+11. 	subscore = (L - subscore )^3 	#compute cost of space left over
+12.		score, res = PN_Recursive(X[i:n], L)
+13. 	if score + subscore < best_score
+14. 		result.append(X[0..i])
+15.			result += res
+16. return best_score, result
+
 
 
