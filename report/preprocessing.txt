@@ -29,7 +29,7 @@ The stop words are listed in a file. Examples of stop words include "furthermore
 
 Below is the same example sentence from above after stop word removal:
 
-kind of relationship visualised tree structure, student would general root node postgraduate and undergraduate specialised extensions student node child nodes
+kind relationship visualised tree structure, student would general root node postgraduate and undergraduate specialised extensions student node child nodes
 
 
 Word Ordering

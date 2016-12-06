@@ -1,0 +1,44 @@
+TIME COMPLEXITIES
+
+Theoretical
+
+LCS Dynamic Programming
+The dynamic programing algorithm for finding the length of the LCS requires O(mn) time, where m and n are the lengths (number of words) of the two input texts.
+This can be observed from the algorithm itself, as there is a for loop from 1 to n nested inside a for loop from 1 to m.
+The recursive algorithm used to build the solution from the b matrix requires O(m+n) time. Each run of the algorithm takes constant time, and each recursive call to the algorithm decreases at least one of the lengths by one.
+Combining these two results gives a time complexity of O(mn) to compute the length and build the LCS.
+
+LCS Linear Space (Forwards and Backwards)
+The linear space versions of the dynamic programming algorithm do the same computations, with an added step at copying the row of the matrix after each row iteration. As a result, the asymptotic time complexity remains O(mn).
+
+LCS Divide and Conquer
+Let T(m,n) denote the run time of the algorithm. At each call of the algorithm, it performs two O(mn) calls to the space-efficient algorithm. 
+Then it makes two recursive calls on strings of size q and n/2, and m - q and n/2, respectively. Then, for constant c, we have:
+	T(m,n) =< cmn + T(q,n/2) + T(m-q,n/2)
+	T(m,2) =< cm
+	T(2,n) =< cn
+If we assume m = n and q = n/2, then we have:
+	T(m,n) =< 2T(n/2) + cn^2
+From the master theorem, we have a = 2, b = 2, f(n) = n^2, and logb(a) = 1.
+Then, since f(n) is bigOmega(n^c) where c=2>logb(a)=1, and the regularity condition holds, since 2(n^2/4) =< kn^2 with k = 1/2, then it follows that T(m,n) = bigTheta(f(n)) = bigTheta(n^2)
+So, when m=n, the run time is bigTheta(n^2). We can assume that when m != n, T(m,n) =< kmn, and prove it by induction:
+Assume T(m',n') =< km'n' for m'<m and n'<n:
+	
+	T(m, n) =< cmn + T(q,n/2) + T(m-q,n/2)
+		=< cmn + kq(n/2) + k(m-q)(n/2)  by induction hypothesis
+		=  cmn + kq(n/2) + km(n/2) - kn(n/2)
+		=  (c+k/2)mn.
+So, if c = k/2, then the proof works. Thus, the LCS divide and conquer has a time complexity of O(mn)
+
+Recursive
+The recursion for the recursive solution is as follows:
+	T(m,n)  = T(n,m-1) + T(n-1,m) + c
+		= (T(n,m-2) + T(n-1,m-1) + T(n-1,m-1) + T(n-2,m)) + c'
+		>= 2T(n-1,m-1)
+Therefore the algorithm is exponential, since it is O(2^(min(n,m)))
+
+Branch and Bound
+In the worst case, the branch and bound solution take the same time as the recursive. Thus, it is exponential. However, in practice, it is faster (see runtimes)
+
+Printing Neatly Dynamic Programming
+
