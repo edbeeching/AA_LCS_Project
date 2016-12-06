@@ -78,6 +78,20 @@ def LCSclassic(X,Y):
     LCS_List = LCS_list(b,X,m-1,n-1,[])
     return LCS_List
 
+#uses b array to construct actual LCS list
+#X is first text, m is length of X, n is length of Y (second text), S is list of LCS (empty at first function call)
+def LCS_list(b,X,m,n,S):
+    if ((m == 0)or(n==0)):
+        return S
+    if (b[m,n] == "d"):
+        S = LCS_list(b,X,m-1,n-1,S)
+        S.append(X[m])
+        return S
+    elif (b[m,n] == "u"):
+        return LCS_list(b,X,m-1,n,S)
+    else:
+        return LCS_list(b,X,m,n-1,S)
+
 #Divide and conquer with space efficiency
 def LCS_DivideConquer(X,Y):
     length_X = len(X)
@@ -232,21 +246,6 @@ def LCS_Sentence(file1,file2, mode):
     return totalLength, totalLCSlength, totalLCS
 
 
-#uses b array to construct actual LCS list
-#X is first text, m is length of X, n is length of Y (second text), S is list of LCS (empty at first function call)
-def LCS_list(b,X,m,n,S):
-    if ((m == 0)or(n==0)):
-        return S
-    if (b[m,n] == "d"):
-        S = LCS_list(b,X,m-1,n-1,S)
-        S.append(X[m])
-        return S
-    elif (b[m,n] == "u"):
-        return LCS_list(b,X,m-1,n,S)
-    else:
-        return LCS_list(b,X,m,n-1,S)
-
-
 #This function gets the LCS and ratio of every file in the corpus
 #inputs are algorithm (mode)
 #folder = corpus-20090418, corpus-adv_preprocessed, corpus-preprocessed, or corpus-swr_preprocessed
@@ -284,13 +283,6 @@ def generate_random_list(length):
 ##########################################################################################
 # Testing
 if __name__ == "__main__":
-##    cwd = os.getcwd()
-##    parent = os.path.abspath(os.path.join(cwd, os.pardir))
-##    file1 = parent + "\\corpus-adv_preprocessed\\g4pD_taskb_adv_preprocessed.txt"
-##    file2 = parent + "\\corpus-adv_preprocessed\\orig_taskb_adv_preprocessed.txt"
-##    Length, LCSlength, LCSLIST = LCS_Sentence(file1,file2,"classic")
-##    print LCSlength
-##    print float(LCSlength) / Length
 
     lengths, ratios = getLCSdata("DC","corpus-preprocessed",False)
     for each in lengths:
