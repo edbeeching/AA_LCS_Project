@@ -8,13 +8,13 @@ import pandas_model
 import pandas as pd
 
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
-import resource
+#import resource
 import time
 
 import plotting
 
 
-memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+#memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
 
 class LCS_UI(QtGui.QMainWindow):
 
@@ -318,7 +318,7 @@ class LCS_UI(QtGui.QMainWindow):
         running_time_end = time.time()
         
         running_time = int((running_time_end - running_time_start) * 1000)
-        memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+        #memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
         # memory_usage = new_memory_usage
         # print("MEM = " + str(memory_usage))
 

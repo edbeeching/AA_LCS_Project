@@ -1,7 +1,10 @@
 
 from __future__ import print_function
 import numpy
+from operator import itemgetter
 import sys
+import random
+import string
 
 
 def _compute_extras(i, j, list_of_strings, lines_per_row):
@@ -116,15 +119,163 @@ def print_neatly_dynamic(list_of_strings, lines_per_row):
     output.append(line_string[:-1])
     return output
 
+def find_num_words(list_of_strings, lines_per_row):
+    #print("Find num words",list_of_strings)
+    counter = 0
+    index = 0
+    while(index < len(list_of_strings)):
+        counter += len(list_of_strings[index])
+        if counter > lines_per_row:
+            counter -= len(list_of_strings[index])
+            break
+        counter += 1
+        index += 1
+    return index
+
+def print_neatly_recursive(list_of_strings, lines_per_row):
+    result = []
+    # Find max number of words for this row
+    max_words_per_row = find_num_words(list_of_strings, lines_per_row)
+    if max_words_per_row >= len(list_of_strings):
+        return 0, [" ".join(list_of_strings)]
+    # Iterate though options to find the best score
+    best_score = 1000000000
+    for i in range(1, max_words_per_row+1):
+        subscore = 0
+        for x in range(0, i):
+            subscore += len(list_of_strings[x])
+            subscore += 1
+
+        subscore -= 1
+        subscore = lines_per_row - subscore
+        subscore = subscore * subscore * subscore
+
+        score, res = print_neatly_recursive(list_of_strings[i:], lines_per_row)
+        if score + subscore < best_score:
+            result = [" ".join(list_of_strings[0:i])] + res
+            best_score = score + subscore
+
+    return best_score, result
+
+def print_neatly_branch_and_bound(list_of_strings, lines_per_row, current_score, best_score):
+    bound_threshold = 40
+
+    result = []
+    #print(list_of_strings,lines_per_row, current_score, best_score)
+    max_words_per_row = find_num_words(list_of_strings, lines_per_row)
+    if max_words_per_row >= len(list_of_strings):
+        if current_score < best_score:
+            best_score = current_score
+        return 0, [" ".join(list_of_strings)]
+
+    bound_list = []
+
+    for i in range(max_words_per_row, 0, -1):
+        subscore = 0
+        for x in range(0, i):
+            subscore += len(list_of_strings[x])
+            subscore += 1
+        subscore -= 1
+        subscore = lines_per_row - subscore
+        subscore = (subscore ** 3)
+
+        bound = get_greedy_bound(list_of_strings[i:], lines_per_row)
+
+        if current_score + bound + subscore < best_score + bound_threshold:
+            #print("adding bound", [i, current_score +bound + subscore, subscore])
+            bound_list.append([i, current_score +bound + subscore, subscore])
+    #print("-------------------------------------")
+    best = 1000000000
+    best_i = -1
+    #print("rec")
+    for i, bound, subscore in sorted(bound_list, key=itemgetter(2)):
+        if bound < best_score + bound_threshold:
+            score, res = print_neatly_branch_and_bound(list_of_strings[i:], lines_per_row, current_score + subscore, best_score)
+
+            if score <= best_score:
+                result = res
+                best = score + subscore
+                best_i = i
+    #print("best is ",best, [" ".join(list_of_strings[:best_i])] + result)
+    return best, [" ".join(list_of_strings[:best_i])] + result
+
+def get_greedy_bound(list_of_strings, lines_per_row):
+    total_score = 0
+    subscore = 0
+    for line in print_neatly_greedy(list_of_strings, lines_per_row):
+        subscore = lines_per_row - len(line)
+        total_score += (subscore ** 3)
+
+    return total_score - (subscore ** 3)
+
+def generate_random_word(min_word_length, max_word_length):
+    word_length = random.randint(min_word_length, max_word_length)
+    word = ""
+
+    for i in range(word_length):
+        word += random.choice(string.ascii_uppercase)
+    return word
+
+def generate_random_word_list(num_words, min_word_length, max_word_length):
+
+    word_list = []
+    for i in range(num_words):
+        word_list.append(generate_random_word(min_word_length, max_word_length))
+
+    return word_list
+
+
 
 if __name__ == '__main__':
     # run the following if this is the main program
     # There are a few test strings that can be compared.
 
-    test_file = open('../corpus-20090418/orig_taska.txt')
-    testString3 = []
-    for word in test_file.read().split():
-        testString3.append(word)
-    line = print_neatly_dynamic(testString3, 30)
-    print(line)
-    # Add way to include paragraphs in printing neatly
+    # print(generate_random_word_list(10,2,10))
+    words = generate_random_word_list(10, 2, 10)
+    words = ['TKSGHVLAJ', 'PK', 'XKEBDCKHHU', 'LWSU', 'MVZWQBD', 'CLJW', 'WRKAHNBZV', 'FKKHGDO']
+    print(words)
+    print("---------------------------------------------------")
+    line_length = 15
+    print("Recursive", print_neatly_recursive(words, line_length))
+
+    greedy_estimate = get_greedy_bound(words, line_length)
+
+    print("bnb", greedy_estimate)
+    print("Branch and bound", print_neatly_branch_and_bound(words, line_length, 0, greedy_estimate + 1))
+
+    print("Dynamic", print_neatly_dynamic(words, line_length))
+
+
+
+    print("---------------------------------------------------")
+    line_length = 15
+    words = ["This", "is", "a", "test", "of", "strings"]
+    #words = ["of", "strings"]
+    print(find_num_words(["of", "strings"], line_length))
+    print("Recursive", print_neatly_recursive(words, line_length))
+    print("Dynamic", print_neatly_dynamic(words, line_length))
+
+    print("Greedy", print_neatly_greedy(words, line_length))
+
+    greedy_estimate = get_greedy_bound(words, line_length)
+    greedy_estimate -1
+    print("bnb", greedy_estimate)
+    print("Branch and bound", print_neatly_branch_and_bound(words, line_length, 0, greedy_estimate+1))
+
+    print("Sorting test")
+    list1 = []
+    list1.append([1, 120])
+    list1.append([2, 70])
+    list1.append([3, 40])
+    list1.append([4, 10])
+    list1.append([5, 20])
+
+    print(list1)
+    print(sorted(list1, key=itemgetter(0)))
+    print(sorted(list1,  key=itemgetter(1)))
+
+
+
+
+
+
