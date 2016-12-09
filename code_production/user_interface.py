@@ -8,13 +8,13 @@ import pandas_model
 import pandas as pd
 
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
-#import resource
+import resource
 import time
 
 import plotting
 
 
-#memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
 
 class LCS_UI(QtGui.QMainWindow):
 
@@ -150,9 +150,15 @@ class LCS_UI(QtGui.QMainWindow):
         # Create an empty sting which hold the LCS text, so i cna be changed dynamically with printing neatly
         self.neatly_string_list = []
 
-        h2_layout.addWidget(QtGui.QLabel("Printing neatly"))
-        h2_layout.addWidget(self.neatly_slider)
-        h2_layout.addWidget(self.neatly_text)
+        self.neatly_algo_combo_box = QtGui.QComboBox()
+        self.neatly_algo_combo_box.activated[str].connect(self.tab1_neatly_algo_change)
+        self.neatly_algo_combo_box.addItem("Dynamic")
+        self.neatly_algo_combo_box.addItem("Greedy")
+
+        h2_layout.addWidget(QtGui.QLabel("Printing neatly"),stretch=0)
+        h2_layout.addWidget(self.neatly_slider,stretch=0)
+        h2_layout.addWidget(self.neatly_algo_combo_box)
+        h2_layout.addWidget(self.neatly_text,stretch=1)
         h2_layout.addStretch()
 
         self.corpus_text = QtGui.QTextEdit()
@@ -168,13 +174,15 @@ class LCS_UI(QtGui.QMainWindow):
 
         v1_layout = QtGui.QVBoxLayout()
         v2_layout = QtGui.QVBoxLayout()
+        v2h_layout = QtGui.QHBoxLayout()
+        synth_layout = QtGui.QVBoxLayout()
 
         v1_layout.addLayout(h1_layout)
         v1_layout.addWidget(self.corpus_text)
         v1_layout.addWidget(self.wiki_text)
 
         v2_layout.addLayout(h2_layout)
-        v2_layout.addWidget(self.substring, stretch=2)
+        v2_layout.addWidget(self.substring,stretch=3)
 
         self.corpus_length_label = QtGui.QLabel("Corpus length")
         self.substring_length_label  = QtGui.QLabel("LCS Length")
@@ -184,15 +192,20 @@ class LCS_UI(QtGui.QMainWindow):
         self.pieChartCanvas = FigureCanvas(self.pieChart)
         self.pieChartCanvas.draw()
 
-        v2_layout.addWidget(self.corpus_length_label)
-        v2_layout.addWidget(self.substring_length_label)
-        v2_layout.addWidget(self.plagiarism_score_label)
-        v2_layout.addWidget(self.running_time_label)
-        v2_layout.addWidget(self.pieChartCanvas)
-        v2_layout.addStretch(stretch=1)
+        synth_layout.addWidget(self.corpus_length_label)
+        synth_layout.addWidget(self.substring_length_label)
+        synth_layout.addWidget(self.plagiarism_score_label)
+        synth_layout.addWidget(self.running_time_label)
+        # synth_layout.addWidget(self.pieChartCanvas)
+        # v2_layout.addStretch(stretch=1)
 
-        h_layout.addLayout(v1_layout, stretch=2)
-        h_layout.addLayout(v2_layout, stretch=1)
+        v2h_layout.addLayout(synth_layout)
+        v2h_layout.addWidget(self.pieChartCanvas)
+
+        v2_layout.addLayout(v2h_layout,stretch=1)
+
+        h_layout.addLayout(v1_layout)
+        h_layout.addLayout(v2_layout)
 
         # v_layout.addLayout(h1_layout)
 
@@ -318,17 +331,17 @@ class LCS_UI(QtGui.QMainWindow):
         running_time_end = time.time()
         
         running_time = int((running_time_end - running_time_start) * 1000)
-        #memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+        memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
         # memory_usage = new_memory_usage
         # print("MEM = " + str(memory_usage))
 
         bold_corpus_text = self.get_bold_text(LCSLIST, corpus_text)
         self.corpus_text.setHtml(bold_corpus_text)
 
-        self.corpus_length_label.setText("Corpus Length: " + str(cor_length))
-        self.substring_length_label.setText("LCS Length: " + str(len(LCSLIST)))
-        self.plagiarism_score_label.setText("Plagiarism Score: " + str(self.score(LCSLIST,corpus_text)))
-        self.running_time_label.setText("Running Time:" + str(running_time) + "ms")
+        self.corpus_length_label.setText("Corpus Length:\n" + str(cor_length))
+        self.substring_length_label.setText("LCS Length:\n" + str(len(LCSLIST)))
+        self.plagiarism_score_label.setText("Plagiarism Score:\n" + str(self.score(LCSLIST,corpus_text)))
+        self.running_time_label.setText("Running Time:\n" + str(running_time) + "ms")
         plotting.update_pieChart(self.pieChart, length, lengthLCS)
         self.pieChartCanvas.draw()
         self.neatly_string_list = LCSLIST
@@ -337,9 +350,21 @@ class LCS_UI(QtGui.QMainWindow):
         self.substring.setPlainText("\n".join(neatly))
         return
 
+    def tab1_neatly_algo_change(self):
+    	algo = self.neatly_algo_combo_box.currentText()
+    	if algo == "Dynamic":
+        	neatly = printing_neatly.print_neatly_dynamic(self.neatly_string_list, self.neatly_slider.value())
+        else:
+        	neatly = printing_neatly.print_neatly_greedy(self.neatly_string_list, self.neatly_slider.value())
+        self.substring.setPlainText("\n".join(neatly))
+
     def tab1_neatly_slider_change_value(self, value):
         self.neatly_text.setText(str(value))
-        neatly = printing_neatly.print_neatly_dynamic(self.neatly_string_list, self.neatly_slider.value())
+    	algo = self.neatly_algo_combo_box.currentText()
+    	if algo == "Dynamic":
+        	neatly = printing_neatly.print_neatly_dynamic(self.neatly_string_list, self.neatly_slider.value())
+        else:
+        	neatly = printing_neatly.print_neatly_greedy(self.neatly_string_list, self.neatly_slider.value())
         self.substring.setPlainText("\n".join(neatly))
         #self.update_text()
 
