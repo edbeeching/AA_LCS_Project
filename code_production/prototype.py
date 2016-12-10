@@ -23,7 +23,7 @@ def make_array(file1):
 
 def make_array_nostopwords(file1, stopwords):
     X = []
-    X.append(" ")     # to make indexing correct for algorthm (algorithm assumes base-1 indexing, Python is base-2
+    X.append(" ")     # to make indexing correct for algorithm (algorithm assumes base-1 indexing, Python is base-0
     file1 = open(file1)
     for word in file1.read().split():
         if (not(word in stopwords)):
@@ -34,19 +34,29 @@ def make_array_nostopwords(file1, stopwords):
 def make_sentence_array(file1):
     sentences = []
     file1 = open(file1)
+    fin_sent = False        #boolean for special case of acronyms (ex: "i.e." or "N.B.A.")
     for sentence in filter(None, re.split("[,.]+", file1.read())):
-        new_sent = []
-        new_sent.append(" ")     # to make indexing correct for algorthm (algorithm assumes base-1 indexing, Python is base-2
-        for word in sentence.split():
-            new_sent.append(word)
-        sentences.append(new_sent)
+        if (len(sentence) == 1):    #if in the middle of an acronym
+            sentences[len(sentences)-1].append(sentence)
+            fin_sent = True
+        else:
+            if fin_sent:            #if last period was an acronym and not the end of a sentence
+                for word in sentence.split():
+                    sentences[len(sentences)-1].append(word)
+            else:
+                new_sent = []
+                new_sent.append(" ")     # to make indexing correct for algorithm (algorithm assumes base-1 indexing, Python is base-0
+                for word in sentence.split():
+                    new_sent.append(word)
+                sentences.append(new_sent)
+            fin_sent = False
     return sentences
 
 #takes file as input, outputs list of words stripped of all punctuation 
 #for use in sentence by sentence LCS
 def make_compsentence_array(file1):
     words = []
-    words.append(" ")       # to make indexing correct for algorthm (algorithm assumes base-1 indexing, Python is base-2
+    words.append(" ")       # to make indexing correct for algorithm (algorithm assumes base-1 indexing, Python is base-0
     file1 = open(file1)
     for sentence in filter(None, re.split("[,.]+", file1.read())):
         for word in sentence.split():
@@ -283,8 +293,13 @@ def generate_random_list(length):
 ##########################################################################################
 # Testing
 if __name__ == "__main__":
+##    cwd = os.getcwd()
+##    file1 = cwd + "\\dummy_file.txt"
+##    sentences = make_sentence_array(file1)
+##    for sentence in sentences:
+##        print sentence
 
-    lengths, ratios = getLCSdata("DC","corpus-preprocessed",False)
+    lengths, ratios = getLCSdata("classic","corpus-adv_preprocessed",True)
     for each in lengths:
         print each
     for each in ratios:
