@@ -41,7 +41,10 @@ def update_pieChart(figure,length,lengthLCS):
 	ax.axis('equal')
 	patches, texts = ax.pie(sizes, colors=colors, startangle=90)
 	ax.legend(patches, labels, loc="best")
-
+	if (plagiarismPercentage > .7):
+		figure.suptitle('This text is probably plagiarized (>70%)',fontsize=14,color='red')
+	else:
+		figure.suptitle('This text is probably not plagiarized (<70%)',fontsize=14,color='green')
 
 
 
