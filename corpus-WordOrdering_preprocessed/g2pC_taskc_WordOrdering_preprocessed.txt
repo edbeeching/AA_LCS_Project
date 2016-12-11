@@ -1,0 +1,6 @@
+  a a and approach are as bag bags documents documents form how in in information mathematical model occur of of often present recording represents retrieval space standard structure, take terms the the they vector vsm, what which words. 
+the a and another, are are determine documents documents how how in information is model one query retrieval search similar similar space to to to used vector. 
+in a a an as axis be can collection document document, documents, each each in is n of of term terms the the values vector viewed where. a also and as be becomes can closest deciding document document is matches matter model, nearest of on queries query query represented selecting so space the the the the this to vector vector vector vectors which which. 
+the a and angle between compared cosine document document each in is is measure, of query query similarity the the the the to turn using vector vector vector vector vector which. 
+this and by by by calculated dividing document document dot equation is modulus modulus multiplied of of of product query query the the the the the the the vector vector vector vector. account and denominator differences effect has in into length length normalising of of takes the the the the the vector,. be closest considered cosine document document highest is matching query returns score similarity the the the to to whichever. 
+.

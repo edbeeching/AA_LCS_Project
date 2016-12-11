@@ -1,8 +1,1 @@
-d program   algori desig techniq   optimisati problems, suc  mini  maximising. li di  conquer, d program solve problem  combi solution  sub-problems., unli di  conquer, sub-problem    independen  sub-problem   sub-sub-problem  soluti   sub-proble   affec  solution  o sub-problem   sa problem.
-   step  d programming:
-characte struct   optima solution.
-def val  optima soluti recursively.
-com optima soluti   top-  cach  bottom-   table.
-construc  optima soluti  com values.
- exam   t  proble  whic d program    is:  t sequences, x=x1,...,  y=y1,..., f  comm subsequenc  leng  maximum.
-d program reduce computati  sol sub-problem   bottom- fashi   s soluti   sub-proble      solved., lo   soluti whe  sub-proble  encounte  help reduc computation.,  ke  d program   dete  struct  optima solutions. 
+dynamic programming algorithm design technique optimisation problems, minimising maximising. divide conquer, dynamic programming solves problems combining solutions problems., divide conquer, problems independent problems share sub problems solution problem affect solutions problems problem. there steps dynamic programming: characterise structure optimal solution. define optimal solution recursively. compute optimal solution values top caching bottom table. construct optimal solution computed values. an example type problem dynamic programming is: sequences, x=x1,...,xm y=y1,...,yn find common subsequence length maximum. dynamic programming reduces computation solving problems bottom fashion storing solution problem time solved., solution problem encountered helps reduce computation., key dynamic programming determine structure optimal solutions.

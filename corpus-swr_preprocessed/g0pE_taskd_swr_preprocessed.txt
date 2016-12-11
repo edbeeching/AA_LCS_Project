@@ -1,1 +1,1 @@
-baye theo    theo rela conditi probabilities,  allo   calcula proba|  probb|a. baye theo      sa   ga vas amo  statistica evidence.  ma theor  proba| = probb| * p probb,    probwin|ra  earlier,   f  probabilit   ra   da  harr   race.
+bayes theorem theorem relating conditional probabilities, allows calculate proba|b probb|a. bayes theorem save gathering vast amounts statistical evidence. main theory proba|b = probb|a * proba probb, probwin|rain earlier, find probability rained day harry won race.

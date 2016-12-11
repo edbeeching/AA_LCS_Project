@@ -1,6 +1,6 @@
 in probability theory, bayes theorem or bayes law after rev thomas bayes provides relation between the conditional and marginal probabilities of two random events. it is usually used to calculate posterior probabilities given observations. for example: a patient might be observed to show certain symptoms. bayes theorem could be used to compute the probability that a certain diagnosis is right, given that observation.
 since it is a formal theorem, bayes theorem holds in all popular interpretations of probability. 
-bayes theorem relates the conditional and marginal probabilities of events a and b, where b has a non-vanishing probability:
+bayes theorem relates the conditional and marginal probabilities of events a and b, where b has a non vanishing probability:
   pa|b = pa|bpapb
 terms in bayes theorem are named by a convention:
 pa is the prior probability or marginal probability of a. it does not take into account any information about b and therefore is considered prior .

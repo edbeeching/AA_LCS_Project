@@ -18,7 +18,7 @@ def make_array(file1):
     return X
 
     
-def LCS_linear_space(file1,file2):
+def LCS_linear_space_backward(file1,file2):#This is the LCS classic in Backward
     X = make_array(file1)
     Y = make_array(file2)
     length_X = len(X)
@@ -26,30 +26,28 @@ def LCS_linear_space(file1,file2):
     
     b = numpy.empty((length_X,length_Y), dtype = "str")
     c = numpy.empty((length_X,length_Y), dtype = "int")
-
-    for i in range(1,length_X):
-        c[i,0]= 0
-        for j in range(1,length_X):
-            if (X[i]==Y[j]):
-                c[i,j] = c[i-1,j-1] + 1
+    
+    for i in range(length_X-2,-1,-1):
+        c[length_X-1,0]= 0
+        for j in range(length_Y-2,-1,-1):
+            if (i==length_X-2 and j==length_Y-2):
+                c[i,j] = 0
                 b[i,j] = "d"    #for diagonal
-            elif (c[i-1,j] >= c[i,j-1]):
-                c[i,j] = c[i-1,j]
+            elif (i<length_X-2 and j<length_Y-2 and X[i+1]==Y[j+1]):
+                c[i,j] = c[i+1,j+1]+1
                 b[i,j] = "u"    #for up
             else:
-                c[i,j] = c[i,j-1]
-                b[i,j] = "l"    #for left
-        for j in range(0,length_X):
-            c[0,j] = c[1,j]
-    length = c[length_X-1,length_Y-1]
+                c[i,j] = max(c[i+1,j],c[i,j+1])
+                b[i,j] = "l"    #for up
+    length = c[0,0]
     #LCS_List = LCS_list(b,X,length_X-1,length_Y-1,[])
-    return c, b, length#, LCS_List
+    return c, b, length #, LCS_List
+#Retournez tous les indices ( De bas droit à haut gauche)
     
-
 #driver for LCS
 def LCS(file1,file2,mode):
-    if mode =="linear-space":
-        c, b, length = LCS_linear_space(file1,file2)
+    if mode =="backwards":
+        c, b, length = LCS_linear_space_backward(file1,file2)
         return c, b, length
 
     

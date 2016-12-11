@@ -1,17 +1,1 @@
-inheritanc   ba concep  objec orien programming.  model  re  exis clas cod   classe       relationship.
- example,  ho     build,  offic bloc     building.  ho  offic bloc wil inhe  characteristic  buildings,   ha thei o per characteristic   ho  ha  numbe  occupants,   offic bloc wil ha  numbe  offices.,  per characteristic don appl   type  buildings.
-  example,  build wo  conside  superclas    genera characteristic  o objec  inhe    ho  offic bloc   subclasse    spec type  specia  characteristic   superclass.
-ja allo objec inheritance. whe  clas inhe   class,   pub variable  method  avai   subclass.
-pub clas sha {
- priva col colour
- pub  setcolourcol newcolour{
-  col = newcolour
- }
-}
-pub clas circ extend sha {
- priva in radius
- pub  setradiusin newradius{
-  radi = newradius
- }
-}
-  example,  circ clas   subclas   sha class.  sha clas   pub setcol method, whic wil  avai   circ clas  o subclasse  shape.,  priva va col  def   sha clas wil   avai  direc manipulati   circ clas     inherited.  circ clas specialise  sha class, whic   setradi  avai   circ clas   subclasse  circle,   isn avai   superclas shape. 
+inheritance basic concept object oriented programming. models reuse existing class code classes kind relationship. for example, house kind building, office block kind building. house office block will inherit characteristics buildings, personal characteristics house number occupants, office block will number offices., personal characteristics dont apply types buildings. in example, building considered superclass general characteristics objects inherit house office block subclasses specific types specialise characteristics superclass. java allows object inheritance. class inherits class, public variables methods subclass. public class shape { private color colour public void setcolourcolor newcolour{ colour = newcolour } } public class circle extends shape { private int radius public void setradiusint newradius{ radius = newradius } } in example, circle class subclass shape class. shape class public setcolour method, will circle class subclasses shape., private variable colour defined shape class will direct manipulation circle class inherited. circle class specialises shape class, setradius circle class subclasses circle, isnt superclass shape.

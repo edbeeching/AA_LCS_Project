@@ -1,0 +1,9 @@
+a algebraic an and any as as documents general identifiers, in index is model model objects, of of or representing space such term terms text vector vector vectors way. and filtering, in indexing information information is it rankings relevancy retrieval, used. application first in information its retrieval smart system the was.
+a a as be can document represented vector. a different dimension every relates term to. a appears document, if in in is non term terms the the the value vector zero. as been calculating developed different have known many methods of sometimes term these values, weights,. idf is known most of one schemes tf the weighting well. below example see.
+the a application definition depends of on term the. a a a is keyword, longer normally or phrase single term word,. are be chosen corpus dimensionality distinct if in in is number number occurring of of of terms, the the the the the the the the to vector vocabulary words words words.
+the a a a a a and are associated, be because but context, could different dimensionality
+search document documents documents documents false false has have have in in keywords large limitations:
+longer match match match
+semantic model namely negative poor poorly positive potentially precisely product represented result resulting scalar sensitivity similar similarity small some space substrings term terms the to values vector vocabulary with wont word.
+the a appear document in in in is lost order representation space terms the vector which.
+.

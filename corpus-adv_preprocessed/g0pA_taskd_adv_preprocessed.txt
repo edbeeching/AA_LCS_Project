@@ -9,7 +9,7 @@ sixty percent males as students. the female students can only wear
 skirts or trousers in equal numbers whereas all the male students can
 only wear trousers. an observer randomly sees a student from a
 distance and all he can see is that this student is wearing
-trousers. what is the probability this student is female 
+trousers. what is the probability this student is female? 
 there is a debate amongst frequentists and bayesians about how bayes 
 theorem plays a major role around the beginnings of statistical
 mathematics. frequentist and bayesian explanations do not agree about

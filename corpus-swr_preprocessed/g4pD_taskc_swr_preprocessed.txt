@@ -1,10 +1,1 @@
- vec spac model,  documen  whic      retrie    vectors.  te weigh indentifie  succes  fail   vec spac method. term  basicall  word       identif  conten   text.,  te weigh sche pla      similarit measure.  similarit mea  identif  retrieva efficienc     retrieva system.
-   depend  formulas.   form depe    frequencie wi  documen    depe  inter-documen frequencies.  ma componen   form   follows:
-binary:
-binar form     appear   documen equa relevance.    usef whe  numbe  time   appear   consider.
-te frequency:
- form co   time  te occur   document.  m time  te  occur  documen   m       relevan   document., favor comm word  l documents.  form  m cred  word  appear m frequently,  ofte  muc credit.
-augmen normali te frequency
- form trie  gi cred     appear   gi  additi cred  word  appea frequently.
-logari te frequency
-logarithm     de-emphasi  e_ec  frequency. literat propose l  alterna l    used
+in vector space model, documents retrieved represented vectors. term weighting indentifies success failure vector space method. terms basically indexing unit identify contents text., term weighting scheme plays role similarity measure. similarity measures identify retrieval efficiency retrieval system. depends formulas. formulas depend frequencies document depend inter document frequencies. main components formulas follows: binary: binary formula word appears document equal relevance. number times word appears considered. term frequency: this formula counts times term occurs document. times term occurs document relevant document., favors common long documents. formula credit appears frequently, credit. augmented normalized term frequency this formula credit word appears additional credit appear frequently. logarithmic term frequency logarithms de emphasize e_ect frequency. literature proposes log alternate log used

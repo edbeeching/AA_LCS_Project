@@ -1,9 +1,9 @@
 dynamic programming is a very powerful mathematical technique, often utilised in programming, for solving optimization problems. normally, minimizing or maximizing.
  greedy algorithms focus on making the best local choice at each decision making stage. without a proof of correctness, such an algorithm is likely to fail. with dynamic programming, we can design our own algorithm which searches for all possibilities which ensures correctness whilst storing the results to avoid having to recomputed leading to computational efficiency.
 dynamic programming solves problems by combining the solutions of subproblems. these subproblems are not, however, independent. subproblems can share subsubproblems, but the solution to one subproblem doesn t necessarily affect the solutions to other subproblems stemming from the same problem.
-dynamic programming reduces computation time by solving subproblems in a bottom-up way. it stores the solution to a subproblem the first time it is solved, meaning that it can look up the solution when that subproblem is encountered subsequently. 
+dynamic programming reduces computation time by solving subproblems in a bottom up way. it stores the solution to a subproblem the first time it is solved, meaning that it can look up the solution when that subproblem is encountered subsequently. 
 the key to dynamic programming is to find the structure of optimal solutions. the steps required are as follows:
 generalise the structure of an optimal solution
 recursively define the value of an optimal solution
-compute the optimal solution values either top-down with caching, or bottom-up using a table
+compute the optimal solution values either top down with caching, or bottom up using a table
 generate the optimal solution of these computed values

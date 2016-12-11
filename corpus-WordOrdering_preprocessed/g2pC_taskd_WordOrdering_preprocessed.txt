@@ -1,0 +1,11 @@
+and bayes conditional events in marginal of probabilities probability random relates the theorem theory, two. compute given is it observations often posterior probabilities to used.
+bayes = a a a, and as:
+pa|b b b, b, conditional conditional expressed given given is is is is is mathematically of of of of pa pa|b pb pb|a pb|apapb
+where prior prior probability probability probability probability the the the the theorem. 
+bayes all and and and common conditional events in interpretations is marginal of of pa pb, probabilities probability random relates the theorem two valid. 25 35 a all and and boys boys equal example, for girls girls, in in in made numbers of of school skirts the the trousers trousers up wear wear. a a a bayes be being can determine distance from girl if is observed of probability student student the theorem this to trousers, used wearing. 
+pa 25 a being girl is is of probability student the the which. 
+pb|a 0 a girl, given is is is of probability student student that the the the trousers wearing which.   
+pb 0 5 = a a as be calculated can complementary denotes event, is is of pb pb|apa pb|apa probability random student the trousers, wearing where which which.8. 
+therefore 0 formula is probability the the using.25. 
+bayes a certain compute correct, diagnosis for given given instance is is medical observations, observed often posterior probabilities probability proposed symptoms that the theorem to used. 
+.

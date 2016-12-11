@@ -1,12 +1,1 @@
- compute scienc  mathematics, d programming
-  me  proble sol  utilise  properties
- overlap subproblem  optima substructure.  thus
- me  muc    m nai methods.
- d programming,   program  no
-rea connecti  compute programming,  actually
-   te mathematica programming,
- synon  optimisation.,  prog   optimal
-  acti    produced.  example, a
-sched  even   exhibiti   cal a
-programme. programming,   sense,  fi an
-accep plan,  algorithm.
+in computer science mathematics, dynamic programming is method problem solving utilises properties of overlapping subproblems optimal substructure. thus the method takes time naive methods. in dynamic programming, word programming no real connection computer programming, actually comes term mathematical programming, a synonym optimisation., program optimal plan action produced. example, a schedule events exhibition called a programme. programming, sense, finding an acceptable plan, algorithm.

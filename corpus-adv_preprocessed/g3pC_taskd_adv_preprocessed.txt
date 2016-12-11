@@ -7,5 +7,5 @@ symptoms, we can use bayes theorem to compute the probability that a
 suggested diagnosis is correct.
 pa is the prior probability of a. pa|b is the conditional probabilty
 of a given b. pb|a is the conditional probabilty of b given a. pb is
-the prior probability of b, and must be non-zero. bayes theorem is given
+the prior probability of b, and must be non zero. bayes theorem is given
 by pa|b = pb|apapb.

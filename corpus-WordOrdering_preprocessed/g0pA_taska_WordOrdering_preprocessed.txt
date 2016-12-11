@@ -1,0 +1,22 @@
+a add basic basic classes classes concept create detail extra idea inheritance is is new object of oriented programming that to to
+existing where
+the. added allowing and and and
+classes are by class classes classes done existing is methods methods new new new of reuse
+the specialise the the the this to to variables. and are between both entities example,
+postgraduates for inheritance is kind kinds models objects, of of or relationship student the
+ undergraduates. 
+node 
+would a and and
+ as be be be both can child extensions general kind
+of more more node nodes of or postgraduate relationship root specialised structure, student student the the the this tree undergraduate visualised where would. 
+class as as be
+known because child class class class extends in known or or parent postgraduate postgraduate relationship student student subclass superclass the the the the this whereas, would would
+be.
+inheritance a can if larger layers, occur on several structure tree visualised where would
+display. adding and as both by classes could example, extend
+the extended extra for further it
+called, kinds msc node of of phd postgraduate postgraduate student student student student
+are these to two types we.  and and and both both classes classes inherit mean methods msc
+student phd postgraduate student student that the the this variables
+from would would.
+.

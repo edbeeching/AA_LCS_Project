@@ -1,6 +1,1 @@
-  develo    2.0, goog      popula searc eng  ,    algorithm    search., implementation  li anal algorithm wil typica disco suc inte links.   compute   expl   searc engine suc  google.,     li  graph,   pagerank, whic    techniq  anal  li whic  assign   nod in
-  gra  numerica sc  0  1.   pagera     algorithm whic     goog engine.  example,     group:,,  .   pa li,    pagera val sho   tota valu,    .
-p = p + p + prd
-moreover,     = 0.15 whic     , li  genera algori below:
- 
-however,  disadvanta   pagera algori     syste   slow.
+since develop web 2.0, google popular search engine, algorithms web search., implementations link analysis algorithms will typical discount internal links. word computer exploited web search engines google., web graph, pagerank, technique analysing link assigns node in the web graph numerical score 0 1. pagerank algorithms google engine. example, group:,,. link, pagerank shoule total, . pra = prb prc prd moreover, = 0.15 web, general algorithm below: however, disadvantage pagerank algorithm renew system slow.

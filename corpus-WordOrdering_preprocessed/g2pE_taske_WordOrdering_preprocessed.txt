@@ -1,0 +1,6 @@
+algorithm an and basic design dp dynamic for in involves is is maximizing minimizing often optimization or problems programming technique terms that used. 
+furthermore, by combining dp problems solutions solves subproblems, to. affect and and cases, contain even in in include involved many may may not one other other problem same solution solutions subproblem subproblems subproblems subsubproblems such the the the to to. 
+by a a a across and basically bottom cause come computations dp fashion, find first in is is is it looking more, once reduce solution solution solved solving storing subproblem subproblem subproblems the the this time to to to up up when when which would. 
+the a an be characterize dynamic following generalization in is is it needed of optimal path programming:
+firstly solution structure taken the to to. define of optimal recursively secondly solution the the to value. a a a bottom by caching, compute down either following furthermore, in method method optimal or solution table the to top up values with. an be computed construct from last optimal point solution the the to values would.
+.

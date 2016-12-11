@@ -1,17 +1,1 @@
- pagera algori   goog harnesse  implic collective
-intelligenc    struct     web.  pa on
- inte wil generall li    ,  model this
-li struct   graph,   bui   symb representati of
-   web.
-  ba level,  node   highes degree   considered
-  popula   inferenc    - whic   used
- ra   whe ret searc.
-expa   theory,       link   important
-  themselve mor.      ad the
-ranking       li      pages
- conside m relevant.
- actua goog pagera algori  muc m com , but
-  sa underl principles.  incorporate  m advanced
-rea  a web creator expl thei knowled   algorithm
- artificiall increa thei pagera    web-ring  other
-simila reciproca hyperli schemes.
+the pagerank algorithm google harnesses implicit collective intelligence structure wide web. on the internet will generally link, modelling this link structure graph, build symbolic representation of the wide web. as basic level, nodes highest degrees considered the popular inference used to rank returning search. expanding theory, links important pages. idea adjust the rankings linked pages are considered relevant. the actual google pagerank algorithm complex, but follows underlying principles. incorporates advanced reasoning avoid website creators exploiting knowledge algorithm to artificially increase pagerank web rings other similar reciprocal hyperlinking schemes.

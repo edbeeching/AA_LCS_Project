@@ -1,0 +1,8 @@
+algebraic an and any as as documents for general identifiers, in index is model model model objects, of or representing space such term terms text the vector vector vectors. and filtering, in indexing information information is it rankings relevancy retrieval, used. first in in information it retrieval smart system the the time used was.
+a a as document is represented vector. a and corresponds dimension each every separate term to. a a document, equal exists if in in is its not term the to value vector zero. a algorithms also as been computing couple created different have known of of term these values, weights,. idf is most of one popular schemes tf the weighting.
+the application definition dependent is of on term the. are keywords, longer or phrases single terms typically words. are be dimensionality equal in is number of of provided selected terms, that the the the the the to to vector vocabulary words words. 
+
+it angle angle between by calculate cosinus costheta=v1 easiest formula:
+ instead is of of the the the the the to vectors.and and cosinus document document encountered ever had in match means no no null of orthogonal query query says term that that the the the v2||v1||||v2||
+a value vector was were which.
+.

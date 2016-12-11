@@ -1,0 +1,10 @@
+algebraic an and any as as, documents example, for for general, identifiers, in index is model model objects of representing space such terms text vector vectors. first in information its retrieval smart system the use was. and filtering, in indexing information information is it rankings relevancy retrieval, used.
+a a a and as corresponds dimension document each is represented separate term to vector,. a document, if in in is its non occurs term the the value vector zero. also as been computing developed different have known of several term these values, ways weights,. application definition depends of on term the the. are keywords, longer or phrases single terms typically words,. are be chosen corpus dimensionality distinct if in in is number number occurring of of of terms, the the the the the the the the to vector vocabulary words words words.
+one and best by idf is known of proposed salton, schemes tf the weighting, wong yang. and are classic document global in in local model, of parameters products space specific term the the the vector vectors weights.
+relevancy a and angles as as assumptions be between by calculated, can comparing deviation document document documents documents each in is keyword kind of of of of original query query rankings represented same search similarities the the the the the theory, using vector vector vector where.    
+the * * * * a a a a and appear are associated, be because but context different dimensionality document document documents documents false false following has have in in in in in is keywords large limitations:
+ long lost match match
+ match
+ might model must negative order poor poorly positive precisely product representation
+ represented result resulting scalar search semantic sensitivity similar similarity small space space substrings term terms terms the the the the the they values vector vector vocabulary which with wont word.
+.
