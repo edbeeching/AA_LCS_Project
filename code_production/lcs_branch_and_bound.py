@@ -69,8 +69,9 @@ def branch_n_bound(words1, words2):
     # logfile.write("estimate of best is " + str(best) + "\n")
     # logfile.write("max length is " + str(max_lcs_length) + "\n")
     # logfile.write("--------------------------------" + "\n")
-
+    max_queue_length = 0
     while not lifo_queue.empty():
+        max_queue_length = max(lifo_queue.qsize(),max_lcs_length)
         node = lifo_queue.get()
         # if node[3] > best:
         #     logfile.write(str(_get_solution(words1, words2, node[0])) + str(node) + "\n")
@@ -98,8 +99,8 @@ def branch_n_bound(words1, words2):
                 best = node[3]
                 best_solution = node[0]
     # logfile.close()
+    print("Max length is: ", max_lcs_length, " max queue size was: ", max_queue_length)
     return _get_solution(words1, words2, best_solution)
-
 
 def _find_bounds(list1, list2):
     """

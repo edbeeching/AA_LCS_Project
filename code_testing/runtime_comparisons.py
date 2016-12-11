@@ -1,9 +1,12 @@
 from __future__ import print_function
+
 import random
 import string
 import time
-import lcs_recursive
+
 import lcs_branch_and_bound
+import lcs_recursive
+
 
 def generate_random_list(length):
 
@@ -16,10 +19,10 @@ def generate_random_list(length):
 
 if __name__ == '__main__':
     print("Runtime comparisons")
-    # start = time.time()
-    # print("hello")
-    # end = time.time()
-    # print(end - start)
+    start = time.time()
+    print("hello")
+    end = time.time()
+    print(end - start)
     time_dict_rec = {}
     for i in range(0, 14):
         time_dict_rec[i] = 0

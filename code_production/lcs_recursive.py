@@ -1,5 +1,7 @@
 import time
+
 import lcs_branch_and_bound
+
 
 def lcs_recursive(list1, list2):
     if len(list1) == 0 or len(list2) == 0:
@@ -21,7 +23,7 @@ if __name__ == '__main__':
 
 
     start = time.time()
-    print("hello")
+    print("testing")
     end = time.time()
     print(end - start)
 

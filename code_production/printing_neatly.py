@@ -5,7 +5,7 @@ from operator import itemgetter
 import sys
 import random
 import string
-
+import time
 
 def _compute_extras(i, j, list_of_strings, lines_per_row):
 
@@ -157,15 +157,43 @@ def print_neatly_recursive(list_of_strings, lines_per_row):
 
     return best_score, result
 
+def print_neatly_branch_and_bound2(list_of_strings, lines_per_row, current_score, best_score):
+    result = []
+    max_words_per_row = find_num_words(list_of_strings, lines_per_row)
+    if max_words_per_row >= len(list_of_strings):
+        return current_score, [" ".join(list_of_strings)]
+
+    best = 1000000000
+    for i in range(1, max_words_per_row+1):
+        subscore = 0
+        for x in range(0, i):
+            subscore += len(list_of_strings[x])
+            subscore += 1
+
+        subscore -= 1
+        subscore = lines_per_row - subscore
+        subscore = subscore * subscore * subscore
+        if subscore + current_score > best_score:
+            #print("score is",i,subscore, subscore + current_score, "continuing", list_of_strings)
+            continue
+
+        score, res = print_neatly_branch_and_bound2(list_of_strings[i:], lines_per_row,current_score + subscore, best_score)
+        if score < best_score:
+            result = [" ".join(list_of_strings[0:i])] + res
+            best = score
+            best_score = score
+
+    return best, result
+
+
+
 def print_neatly_branch_and_bound(list_of_strings, lines_per_row, current_score, best_score):
-    bound_threshold = 40
+    bound_threshold = 0
 
     result = []
     #print(list_of_strings,lines_per_row, current_score, best_score)
     max_words_per_row = find_num_words(list_of_strings, lines_per_row)
     if max_words_per_row >= len(list_of_strings):
-        if current_score < best_score:
-            best_score = current_score
         return 0, [" ".join(list_of_strings)]
 
     bound_list = []
@@ -192,7 +220,8 @@ def print_neatly_branch_and_bound(list_of_strings, lines_per_row, current_score,
         if bound < best_score + bound_threshold:
             score, res = print_neatly_branch_and_bound(list_of_strings[i:], lines_per_row, current_score + subscore, best_score)
 
-            if score <= best_score:
+            if score < best_score:
+                best_score = score
                 result = res
                 best = score + subscore
                 best_i = i
@@ -232,7 +261,11 @@ if __name__ == '__main__':
 
     # print(generate_random_word_list(10,2,10))
     words = generate_random_word_list(10, 2, 10)
-    words = ['TKSGHVLAJ', 'PK', 'XKEBDCKHHU', 'LWSU', 'MVZWQBD', 'CLJW', 'WRKAHNBZV', 'FKKHGDO']
+    words = ['ODP', 'WPR', 'TKSGHVLAJ', 'PK', 'XKEBDCKHHU', 'LWSU', 'MVZWQBD', 'CLJW', 'WRKAHNBZV', 'FKKHGDO']
+
+
+
+
     print(words)
     print("---------------------------------------------------")
     line_length = 15
@@ -242,39 +275,68 @@ if __name__ == '__main__':
 
     print("bnb", greedy_estimate)
     print("Branch and bound", print_neatly_branch_and_bound(words, line_length, 0, greedy_estimate + 1))
+    print("Branch and bound2", print_neatly_branch_and_bound2(words, line_length, 0, greedy_estimate + 1))
 
     print("Dynamic", print_neatly_dynamic(words, line_length))
 
 
 
     print("---------------------------------------------------")
-    line_length = 15
-    words = ["This", "is", "a", "test", "of", "strings"]
-    #words = ["of", "strings"]
-    print(find_num_words(["of", "strings"], line_length))
-    print("Recursive", print_neatly_recursive(words, line_length))
-    print("Dynamic", print_neatly_dynamic(words, line_length))
+    print("------ RUNTIME COMPARISON TESTS")
 
-    print("Greedy", print_neatly_greedy(words, line_length))
+    #exit()
 
-    greedy_estimate = get_greedy_bound(words, line_length)
-    greedy_estimate -1
-    print("bnb", greedy_estimate)
-    print("Branch and bound", print_neatly_branch_and_bound(words, line_length, 0, greedy_estimate+1))
+    num_tests = 40
+    num_vals = 60
+    time_dict_dyn = {}
+    time_dict_rec = {}
+    time_dict_bnb = {}
+    time_dict_greed = {}
+    for j in range(num_vals):
+        time_dict_dyn[j] = 0
+        time_dict_rec[j] = 0
+        time_dict_bnb[j] = 0
+        time_dict_greed[j] = 0
 
-    print("Sorting test")
-    list1 = []
-    list1.append([1, 120])
-    list1.append([2, 70])
-    list1.append([3, 40])
-    list1.append([4, 10])
-    list1.append([5, 20])
+    for i in range(num_tests):
+        print("Test", i)
+        for j in range(2, num_vals):
+            words = generate_random_word_list(j, 2, 10)
+            start = time.time()
+            print_neatly_dynamic(words, 20)
+            time_dict_dyn[j] += time.time() - start
 
-    print(list1)
-    print(sorted(list1, key=itemgetter(0)))
-    print(sorted(list1,  key=itemgetter(1)))
+            # start = time.time()
+            # print_neatly_recursive(words, 20)
+            # time_dict_rec[j] += time.time() - start
 
+            start = time.time()
+            print_neatly_branch_and_bound2(words, line_length, 0, get_greedy_bound(words, line_length) + 1)
+            time_dict_bnb[j] += time.time() - start
 
+            start = time.time()
+            print_neatly_greedy(words, 20)
+            time_dict_greed[j] += time.time() - start
+
+    print("Dynamic runtimes")
+    for i in range(0, num_vals):
+        print(i, time_dict_dyn.get(i)/40)
+    print("---------------------------------------------------")
+
+    # print("Recursive runtimes")
+    # for i in range(0, num_vals):
+    #     print(i, time_dict_rec.get(i)/40)
+    # print("---------------------------------------------------")
+
+    print("Branch and bound runtimes")
+    for i in range(0, num_vals):
+        print(i, time_dict_bnb.get(i)/40)
+    print("---------------------------------------------------")
+
+    print("Greedy runtimes")
+    for i in range(0, num_vals):
+        print(i, time_dict_greed.get(i)/40)
+    print("---------------------------------------------------")
 
 
 
