@@ -19,12 +19,10 @@ def plagiarism(lcs_text,corpus_text,treshold):
 
     for word in corpus_text.split():
         if index < len(lcs_text) and same_as(word, lcs_text[index]) and (word != "." or lcs_text[index] != "."):
-            print("passage1")
             length_sentence += 1
             copied_word_in_sentence.append(word)
             index += 1
         elif index < len(lcs_text) and same_as(word, lcs_text[index]) and (word == "." or lcs_text[index] == ".") :
-            print("passage2")
             number_sentences_corpus += 1
             percentage_copied_sentence = ((len(copied_word_in_sentence)*100)/length_sentence)
             if percentage_copied_sentence >=treshold:
@@ -32,7 +30,6 @@ def plagiarism(lcs_text,corpus_text,treshold):
             length_sentence = 0
             copied_word_in_sentence = []
         else:
-            print("passage3")
             length_sentence += 1
     
     percentage_copied = ((copied_sentence *100)/number_sentences_corpus)
