@@ -89,7 +89,8 @@ O(n^2 + m^2) in the worst case, which is when a leaf node is found in the search
 However, if pointers are used and new copies of the input texts are not made for each recurive call, then the space complexity become linear with respect to the input texts lengths.
 
 LCS Branch and Bound
-The space complexity for the the branch and bound extension is the same as recusive algorithm, except that a Queue of possible solutions to explore is also kept, which could potentially get quite large.
+The space complexity for the the branch and bound extension is the same as recusive algorithm, except that a Queue of possible solutions to explore is also kept
+As the branch and bound algorithm explores the tree in a depth first search, the space complexity of the queue is bounded by the depth of the tree, min(n,m).
 
 
 Printing Neatly Greedy
