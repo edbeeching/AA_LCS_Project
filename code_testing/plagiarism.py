@@ -45,8 +45,9 @@ def plagiarism(lcs_text,corpus_text,treshold):
         
     percentage_copied = ((copied_sentence *100)/number_sentences_corpus)
     print(percentage_copied)
-    #print(number_sentences_corpus)
-    return percentage_copied
+    print(copied_sentence)
+    print(number_sentences_corpus)
+    return percentage_copied, number_sentences_corpus,copied_sentence
     
 #Call function
 #plagiarism(LCSLIST,corpus_text,70) #70 is the treshold for plagiarism
