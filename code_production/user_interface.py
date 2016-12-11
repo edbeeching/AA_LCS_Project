@@ -1,20 +1,19 @@
-
-from PyQt4 import QtGui, QtCore
-
-import sys, os
-import prototype
-import printing_neatly
-import pandas_model
-import pandas as pd
-
-from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
-import resource
+import os
+import sys
 import time
 
+import pandas as pd
+from PyQt4 import QtGui, QtCore
+from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
+
+import pandas_model
+import plagiarism
 import plotting
+import printing_neatly
+import prototype
 
 
-memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+#memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
 
 class LCS_UI(QtGui.QMainWindow):
 
@@ -186,14 +185,17 @@ class LCS_UI(QtGui.QMainWindow):
 
         self.corpus_length_label = QtGui.QLabel("Corpus length")
         self.substring_length_label  = QtGui.QLabel("LCS Length")
+        self.plagiarised_sentences = QtGui.QLabel("9/11 Sentences plagiarised")
         self.plagiarism_score_label  = QtGui.QLabel("Running Time")
         self.running_time_label  = QtGui.QLabel("Running Time")
+
         self.pieChart = plotting.init_pieChart()
         self.pieChartCanvas = FigureCanvas(self.pieChart)
         self.pieChartCanvas.draw()
 
         synth_layout.addWidget(self.corpus_length_label)
         synth_layout.addWidget(self.substring_length_label)
+        synth_layout.addWidget(self.plagiarised_sentences)
         synth_layout.addWidget(self.plagiarism_score_label)
         synth_layout.addWidget(self.running_time_label)
         # synth_layout.addWidget(self.pieChartCanvas)
@@ -331,15 +333,17 @@ class LCS_UI(QtGui.QMainWindow):
         running_time_end = time.time()
         
         running_time = int((running_time_end - running_time_start) * 1000)
-        memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+        #memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
         # memory_usage = new_memory_usage
         # print("MEM = " + str(memory_usage))
-
+        _, s2, s1 = plagiarism.plagiarism(LCSLIST, corpus_text, 70.0)
+        print(s1, s2)
         bold_corpus_text = self.get_bold_text(LCSLIST, corpus_text)
         self.corpus_text.setHtml(bold_corpus_text)
 
         self.corpus_length_label.setText("Corpus Length:\n" + str(cor_length))
         self.substring_length_label.setText("LCS Length:\n" + str(len(LCSLIST)))
+        self.plagiarised_sentences.setText(str(s1) + "/" + str(s2) + " Sentences plagiarised")
         self.plagiarism_score_label.setText("Plagiarism Score:\n" + str(self.score(LCSLIST,corpus_text)))
         self.running_time_label.setText("Running Time:\n" + str(running_time) + "ms")
         plotting.update_pieChart(self.pieChart, length, lengthLCS)

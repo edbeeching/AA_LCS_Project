@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29ef24c0-3e89-4d18-8c13-54b974f5730a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Advanced_Algorithms_Project_plan_EB-JR_JM-JB-AD_final.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Presentation_v1.pptx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Project_Planning_images.pptx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Project_Presentation_Ideas.docx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../code_testing/LCS_linear_backward.py" afterPath="$PROJECT_DIR$/lcs_linear_backward.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../code_testing/backwards.py" afterPath="$PROJECT_DIR$/../code_testing/lcs_backwards.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../code_testing/lcs_branch_and_bound.py" afterPath="$PROJECT_DIR$/lcs_branch_and_bound.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../code_testing/lcs_linear_space.py" afterPath="$PROJECT_DIR$/lcs_linear_space.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../code_testing/lcs_linear_space_backward.py" afterPath="$PROJECT_DIR$/lcs_linear_space_backward.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../code_testing/lcs_recursive.py" afterPath="$PROJECT_DIR$/lcs_recursive.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../code_testing/plagiarism.py" afterPath="$PROJECT_DIR$/plagiarism.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Advanced_Algorithms_Project_plan_EB-JR_JM-JB-AD_start.xlsx" afterPath="$PROJECT_DIR$/../Advanced_Algorithms_Project_plan_EB-JR_JM-JB-AD_start.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/printing_neatly.py" afterPath="$PROJECT_DIR$/printing_neatly.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_interface.py" afterPath="$PROJECT_DIR$/user_interface.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../code_testing/runtime_comparisons.py" afterPath="$PROJECT_DIR$/../code_testing/runtime_comparisons.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../code_testing/zeb.py" afterPath="$PROJECT_DIR$/../code_testing/zeb.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,8 +23,8 @@
       <file leaf-file-name="user_interface.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/user_interface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="356" column="38" lean-forward="true" selection-start-line="356" selection-start-column="38" selection-end-line="356" selection-end-column="38" />
+            <state relative-caret-position="4177">
+              <caret line="357" column="4" lean-forward="false" selection-start-line="357" selection-start-column="4" selection-end-line="357" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -1065,8 +1049,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user_interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="356" column="38" lean-forward="true" selection-start-line="356" selection-start-column="38" selection-end-line="356" selection-end-column="38" />
+        <state relative-caret-position="4177">
+          <caret line="357" column="4" lean-forward="false" selection-start-line="357" selection-start-column="4" selection-end-line="357" selection-end-column="4" />
           <folding />
         </state>
       </provider>
