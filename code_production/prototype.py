@@ -268,6 +268,7 @@ def getLCSdata(mode, folder, sentence):
     file_list = os.listdir('..\\' + folder)
     lengths = []
     ratios = []
+    scores = []
     for each in file_list:
         task = each[9]
         file_end = each[10:]
@@ -279,7 +280,8 @@ def getLCSdata(mode, folder, sentence):
             Length, LCSlength, LCSLIST = LCS(file1,file2,mode) 
         lengths.append(LCSlength)
         ratios.append(float(LCSlength) / Length)
-    return lengths[:-5], ratios[:-5]  #last 5 elements are LCS of original files vs. themselves
+        scores.append(score(LCSLIST, file1))
+    return lengths[:-5], ratios[:-5], scores[:-5] #last 5 elements are LCS of original files vs. themselves
     
         
 def generate_random_list(length):
@@ -289,7 +291,38 @@ def generate_random_list(length):
         words[i] = (random.choice(string.ascii_uppercase))
 
     return words
-    
+
+
+
+def score(lcs_text, corpus_text):
+    def same_as(word1, word2):
+        word1 = word1.replace(".", "")
+        word1 = word1.replace(",", "")
+        word2 = word2.replace(".", "")
+        word2 = word2.replace(",", "")
+        return word1 == word2
+
+    corpus_text = make_compsentence_array(corpus_text)
+    index = 0
+    add = False
+    score = 0
+    side_by_side = 1
+    for word in corpus_text:
+
+        if index < len(lcs_text) and same_as(word, lcs_text[index]):
+            # bold_text.append("<b>" + word + "</b>")
+            index += 1
+            if (add == False):
+                add = True
+                side_by_side = 1
+            else:
+                side_by_side += 1
+        else:
+            if (add == True):
+                add = False
+                score += (side_by_side * side_by_side)
+            # bold_text.append(word)
+    return float(score) / (len(corpus_text)*len(corpus_text))
 ##########################################################################################
 # Testing
 if __name__ == "__main__":
@@ -299,11 +332,13 @@ if __name__ == "__main__":
 ##    for sentence in sentences:
 ##        print sentence
 
-    lengths, ratios = getLCSdata("classic","corpus-adv_preprocessed",True)
+    lengths, ratios, scores = getLCSdata("classic","corpus-adv_preprocessed",True)
     for each in lengths:
         print each
     for each in ratios:
         print round(each,5)
+    for each in scores:
+        print each
 ##   
 ##    print("Runtime comparisons")
 ##    time_dict_rec = {}
