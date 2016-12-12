@@ -348,10 +348,10 @@ class LCS_UI(QtGui.QMainWindow):
         self.plagiarised_sentences.setText(str(s1) + "/" + str(s2) + " Sentences plagiarised")
         self.plagiarism_score_label.setText("Plagiarism Score:\n" + str(self.score(LCSLIST,corpus_text)))
         self.running_time_label.setText("Running Time:\n" + str(running_time) + "ms")
-        plotting.update_pieChart(self.pieChart, length, lengthLCS)
+        plotting.update_pieChart(self.pieChart, length, lengthLCS,"Word grouping score")
         self.pieChartCanvas.draw()
 
-        plotting.update_pieChart(self.pieChart2, length, lengthLCS)
+        plotting.update_pieChart(self.pieChart2, length, lengthLCS, "Percentage of sentences plagiarised")
         self.pieChartCanvas2.draw()
 
         self.neatly_string_list = LCSLIST
