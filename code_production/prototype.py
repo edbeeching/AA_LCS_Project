@@ -302,6 +302,9 @@ def score(lcs_text, corpus_text):
         word2 = word2.replace(",", "")
         return word1 == word2
 
+    if len(lcs_text) == len(corpus_text):
+        return 1
+    
     corpus_text = make_compsentence_array(corpus_text)
     index = 0
     add = False
