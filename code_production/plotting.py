@@ -17,34 +17,34 @@ import statistics as stats
 #                  PIE CHART                  #
 ###############################################
 def init_pieChart():
-	figure = plot.figure()
-	update_pieChart(figure,100,50) # to remove
-	return figure
+    figure = plot.figure()
+    update_pieChart(figure,100,50) # to remove
+    return figure
 
-def update_pieChart(figure,length,lengthLCS):
-	ax = figure.add_subplot(111)
-	ax.clear()
-	
-	labels = ['Original','Copied']
-	plagiarismPercentage = (lengthLCS / (length * 1.0))
-	p2 = int(100 * plagiarismPercentage)
-	p1 = int(100 - p2)
-	sizes = [p1,p2]
-	colors = ['green','red']
+def update_pieChart(figure, length, lengthLCS):
+    ax = figure.add_subplot(111)
+    ax.clear()
+    
+    labels = ['Original','Copied']
+    plagiarismPercentage = (lengthLCS / (length * 1.0))
+    p2 = int(100 * plagiarismPercentage)
+    p1 = int(100 - p2)
+    sizes = [p1,p2]
+    colors = ['green','red']
 
-	ax.pie(
-		sizes,
-		colors=colors,
-		autopct='%1.1f%%',
-		startangle=90
-	)
-	ax.axis('equal')
-	patches, texts = ax.pie(sizes, colors=colors, startangle=90)
-	ax.legend(patches, labels, loc="best")
-	if (plagiarismPercentage > .7):
-		figure.suptitle('This text is probably plagiarized (>70%)',fontsize=14,color='red')
-	else:
-		figure.suptitle('This text is probably not plagiarized (<70%)',fontsize=14,color='green')
+    ax.pie(
+        sizes,
+        colors=colors,
+        autopct='%1.1f%%',
+        startangle=90
+    )
+    ax.axis('equal')
+    patches, texts = ax.pie(sizes, colors=colors, startangle=90)
+    ax.legend(patches, labels, loc="best")
+    if plagiarismPercentage > .7:
+        figure.suptitle('This text is probably plagiarized (>70%)',fontsize=14,color='red')
+    else:
+        figure.suptitle('This text is probably not plagiarized (<70%)',fontsize=14,color='green')
 
 
 
@@ -53,35 +53,35 @@ def update_pieChart(figure,length,lengthLCS):
 #################################################
 
 def plotAllLCS(self):
-	figure = plot.figure()
-	canvas = FigureCanvas(figure)
-	
-	xl = pd.ExcelFile("../corpus-final09.xls")
-	df = xl.parse("File list")
+    figure = plot.figure()
+    canvas = FigureCanvas(figure)
+    
+    xl = pd.ExcelFile("../corpus-final09.xls")
+    df = xl.parse("File list")
 
-	colors = ['y-','g-','b-','r-']
-	
-	labels = [
-		'LCS Ratio (No Preprocessing)',
-		'LCS Ratio (Light Preprocessing)',
-		'LCS Ratio (Advanced Preprocessing)',
-		'LCS Ratio (By Sentence, Advanced Pre)'
-	]
+    colors = ['y-','g-','b-','r-']
+    
+    labels = [
+        'LCS Ratio (No Preprocessing)',
+        'LCS Ratio (Light Preprocessing)',
+        'LCS Ratio (Advanced Preprocessing)',
+        'LCS Ratio (By Sentence, Advanced Pre)'
+    ]
 
-	figure.suptitle('LCS Ratios / file', fontsize=20)
+    figure.suptitle('LCS Ratios / file', fontsize=20)
 
-	ax = figure.add_subplot(111)
+    ax = figure.add_subplot(111)
 
-	for i in range(0,4): ax.plot(df[labels[i]], colors[i])
-	
-	handles,labelsX = ax.get_legend_handles_labels()
-	ax.legend(handles,labels, loc='lower right')
+    for i in range(0,4): ax.plot(df[labels[i]], colors[i])
+    
+    handles,labelsX = ax.get_legend_handles_labels()
+    ax.legend(handles,labels, loc='lower right')
 
-	ax.set_xlabel('#File')
-	ax.set_ylabel('LCS Ratio')
-	
-	canvas.draw()
-	return canvas
+    ax.set_xlabel('#File')
+    ax.set_ylabel('LCS Ratio')
+    
+    canvas.draw()
+    return canvas
 
 
 
@@ -91,63 +91,63 @@ def plotAllLCS(self):
 
 
 def subplotByCategoryLabels(self,axIn,axOut):
-	handles,labelsX = axIn.get_legend_handles_labels()
-	labels = ['non','light','heavy','cut']
-	axOut.legend(handles,labels,loc='center')
-	axOut.get_xaxis().set_visible(False)
-	axOut.get_yaxis().set_visible(False)
-	axOut.set_title('legend')
+    handles,labelsX = axIn.get_legend_handles_labels()
+    labels = ['non','light','heavy','cut']
+    axOut.legend(handles,labels,loc='center')
+    axOut.get_xaxis().set_visible(False)
+    axOut.get_yaxis().set_visible(False)
+    axOut.set_title('legend')
 
 def subplotByCategory(self,task,ax):
-	xl = pd.ExcelFile("../corpus-final09.xls")
-	df = xl.parse("File list")
-	dfTask = df.loc[df['Task'] == task]
-	selectNon = dfTask.loc[df['Category'] == 'non']
-	selectLight = dfTask.loc[df['Category'] == 'light']
-	selectHeavy = dfTask.loc[df['Category'] == 'heavy']
-	selectCut = dfTask.loc[df['Category'] == 'cut']
+    xl = pd.ExcelFile("../corpus-final09.xls")
+    df = xl.parse("File list")
+    dfTask = df.loc[df['Task'] == task]
+    selectNon = dfTask.loc[df['Category'] == 'non']
+    selectLight = dfTask.loc[df['Category'] == 'light']
+    selectHeavy = dfTask.loc[df['Category'] == 'heavy']
+    selectCut = dfTask.loc[df['Category'] == 'cut']
 
-	colName = 'LCS Ratio (By Sentence, Advanced Pre)'
-	ax.plot(selectNon[colName],'yo')
-	ax.plot(selectLight[colName],'gs')
-	ax.plot(selectHeavy[colName],'b^')
-	ax.plot(selectCut[colName],'rD')
-	
-	ax.set_xlabel('#File')
-	ax.set_ylabel('LCS Ratio')
-	
-	ax.set_title('Task '+task)
+    colName = 'LCS Ratio (By Sentence, Advanced Pre)'
+    ax.plot(selectNon[colName],'yo')
+    ax.plot(selectLight[colName],'gs')
+    ax.plot(selectHeavy[colName],'b^')
+    ax.plot(selectCut[colName],'rD')
+    
+    ax.set_xlabel('#File')
+    ax.set_ylabel('LCS Ratio')
+    
+    ax.set_title('Task '+task)
 
 def plotByCategory(self):
-	figure = plot.figure()
-	canvas = FigureCanvas(figure)
+    figure = plot.figure()
+    canvas = FigureCanvas(figure)
 
-	figure.suptitle('LCS Ratios / Plagiarism Category', fontsize=20)
-	
-	ax1 = figure.add_subplot(231)
-	subplotByCategory(self,'a',ax1)
+    figure.suptitle('LCS Ratios / Plagiarism Category', fontsize=20)
+    
+    ax1 = figure.add_subplot(231)
+    subplotByCategory(self,'a',ax1)
 
-	ax2 = figure.add_subplot(232)
-	subplotByCategory(self,'b',ax2)
+    ax2 = figure.add_subplot(232)
+    subplotByCategory(self,'b',ax2)
 
-	ax3 = figure.add_subplot(233)
-	subplotByCategory(self,'c',ax3)
+    ax3 = figure.add_subplot(233)
+    subplotByCategory(self,'c',ax3)
 
-	ax4 = figure.add_subplot(234)
-	subplotByCategory(self,'d',ax4)
+    ax4 = figure.add_subplot(234)
+    subplotByCategory(self,'d',ax4)
 
-	ax5 = figure.add_subplot(235)
-	subplotByCategory(self,'e',ax5)
+    ax5 = figure.add_subplot(235)
+    subplotByCategory(self,'e',ax5)
 
-	ax6 = figure.add_subplot(236)
-	subplotByCategoryLabels(self,ax1,ax6)
+    ax6 = figure.add_subplot(236)
+    subplotByCategoryLabels(self,ax1,ax6)
 
 
-	plot.tight_layout()
-	figure = plot.gcf()
+    plot.tight_layout()
+    figure = plot.gcf()
 
-	canvas.draw()
-	return canvas
+    canvas.draw()
+    return canvas
 
 
 #################################################
@@ -155,43 +155,43 @@ def plotByCategory(self):
 #################################################
 
 def plotByCategory2(self):
-	figure = plot.figure()
-	canvas = FigureCanvas(figure)
+    figure = plot.figure()
+    canvas = FigureCanvas(figure)
 
-	xl = pd.ExcelFile("../corpus-final09.xls")
-	df = xl.parse("File list")
+    xl = pd.ExcelFile("../corpus-final09.xls")
+    df = xl.parse("File list")
 
-	colName = 'LCS Ratio (By Sentence, Advanced Pre)'
+    colName = 'LCS Ratio (By Sentence, Advanced Pre)'
 
-	# selectNon = df.loc[df['Category'] == 'non']
-	
-	categories = ['non','heavy','light','cut']
-	colors = ['y.','g.','b.','r.']
+    # selectNon = df.loc[df['Category'] == 'non']
+    
+    categories = ['non','heavy','light','cut']
+    colors = ['y.','g.','b.','r.']
 
-	ax = figure.add_subplot(111)
-	ax.axis([-1,4,0,1.2])
+    ax = figure.add_subplot(111)
+    ax.axis([-1,4,0,1.2])
 
-	values = []
-	means = []
-	std_devs = []
-	for x in range(0,4):
-		values.append(df.loc[df['Category'] == categories[x]][colName])
-		ax.plot(len(values[x])*[x],values[x],colors[x])
-		m = stats.mean(values[x])
-		std = stats.standard_deviation(values[x])
-		m_str = str('%.3f' % round(m,3))
-		std_str = str('%.3f' % round(std,3))
-		ax.text((x+.1),m,'mean = '+m_str+'\nstd =  '+std_str)
+    values = []
+    means = []
+    std_devs = []
+    for x in range(0,4):
+        values.append(df.loc[df['Category'] == categories[x]][colName])
+        ax.plot(len(values[x])*[x],values[x],colors[x])
+        m = stats.mean(values[x])
+        std = stats.standard_deviation(values[x])
+        m_str = str('%.3f' % round(m,3))
+        std_str = str('%.3f' % round(std,3))
+        ax.text((x+.1),m,'mean = '+m_str+'\nstd =  '+std_str)
 
 
-	handles,labelsX = ax.get_legend_handles_labels()
-	ax.legend(handles,categories,loc='lower right')
+    handles,labelsX = ax.get_legend_handles_labels()
+    ax.legend(handles,categories,loc='lower right')
 
-	ax.yaxis.grid()
-	ax.xaxis.set_ticklabels(['','non','heavy','light','cut',''])
+    ax.yaxis.grid()
+    ax.xaxis.set_ticklabels(['','non','heavy','light','cut',''])
 
-	canvas.draw()
-	return canvas
+    canvas.draw()
+    return canvas
 
 
 

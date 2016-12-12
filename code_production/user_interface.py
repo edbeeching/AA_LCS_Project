@@ -1,3 +1,15 @@
+"""
+    The User Interfact for the plagiarism detector
+    There are 5 Tabs containing:
+        1. Options to compare the different texts from the corpus and their associated LCS
+           LCS words are highlight in bold, the LCS text is shown of the right with options
+           to change the length of the "printing neatly" and the choise to use dynamic or greedy
+        2. A table with the corpus data and the scores generated from different methods
+        3. A graph displaying the various scores obtains from the analysis
+        4. Plots of the individual tasks and their scores
+        5. Plots of the different types of plagiarism (cut, light, heavy & non) vs. their scores
+"""
+
 import os
 import sys
 import time
@@ -7,7 +19,7 @@ from PyQt4 import QtGui, QtCore
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
 
 import pandas_model
-import plagiarism
+import plagiarism_detector
 import plotting
 import printing_neatly
 import prototype
@@ -50,9 +62,6 @@ class LCS_UI(QtGui.QMainWindow):
 
         self.setWindowTitle("Plagiarism Detector")
         self.statusBar().showMessage('Ready')
-
-
-
 
 
     def menu(self):
@@ -114,27 +123,12 @@ class LCS_UI(QtGui.QMainWindow):
         self.algo_combo_box.addItem("LCS")
         self.algo_combo_box.addItem("LCS-Sentence")
 
-
-        # self.raw_btn = QtGui.QRadioButton("Raw")
-        # self.raw_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.raw_btn))
-        # self.preproc_btn = QtGui.QRadioButton("PreProc")
-        # self.preproc_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.preproc_btn))
-        # self.adv_preproc_btn = QtGui.QRadioButton("Adv PreProc")
-        # self.adv_preproc_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.adv_preproc_btn))
-        # self.adv_preproc_sentence_btn = QtGui.QRadioButton("Adv PreProc And Sentence")
-        # self.adv_preproc_sentence_btn.toggled.connect(lambda: self.tab1_radio_toggled(self.adv_preproc_sentence_btn))
-
         h1_layout.addWidget(task_label)
         h1_layout.addWidget(self.task_combo_box)
         h1_layout.addWidget(text_label)
         h1_layout.addWidget(self.text_combo_box)
         h1_layout.addWidget(self.process_combo_box)
         h1_layout.addWidget(self.algo_combo_box)
-
-        # h1_layout.addWidget(self.raw_btn)
-        # h1_layout.addWidget(self.preproc_btn)
-        # h1_layout.addWidget(self.adv_preproc_btn)
-        # h1_layout.addWidget(self.adv_preproc_sentence_btn)
         h1_layout.addStretch()
 
 
@@ -146,7 +140,7 @@ class LCS_UI(QtGui.QMainWindow):
         self.neatly_slider.setValue(20)
         self.neatly_slider.valueChanged[int].connect(self.tab1_neatly_slider_change_value)
         self.neatly_text = QtGui.QLabel(str(self.neatly_slider.value()))
-        # Create an empty sting which hold the LCS text, so i cna be changed dynamically with printing neatly
+        # Create an empty sting which hold the LCS text, so it can be changed dynamically with printing neatly
         self.neatly_string_list = []
 
         self.neatly_algo_combo_box = QtGui.QComboBox()
@@ -154,10 +148,10 @@ class LCS_UI(QtGui.QMainWindow):
         self.neatly_algo_combo_box.addItem("Dynamic")
         self.neatly_algo_combo_box.addItem("Greedy")
 
-        h2_layout.addWidget(QtGui.QLabel("Printing neatly"),stretch=0)
-        h2_layout.addWidget(self.neatly_slider,stretch=0)
+        h2_layout.addWidget(QtGui.QLabel("Printing neatly"), stretch=0)
+        h2_layout.addWidget(self.neatly_slider, stretch=0)
         h2_layout.addWidget(self.neatly_algo_combo_box)
-        h2_layout.addWidget(self.neatly_text,stretch=1)
+        h2_layout.addWidget(self.neatly_text, stretch=1)
         h2_layout.addStretch()
 
         self.corpus_text = QtGui.QTextEdit()
@@ -167,8 +161,6 @@ class LCS_UI(QtGui.QMainWindow):
         self.corpus_text.setReadOnly(True)
         self.wiki_text.setReadOnly(True)
         self.substring.setReadOnly(True)
-        # set the corpus text to HTML formatting so we can make the LCS bold
-
 
 
         v1_layout = QtGui.QVBoxLayout()
@@ -181,7 +173,7 @@ class LCS_UI(QtGui.QMainWindow):
         v1_layout.addWidget(self.wiki_text)
 
         v2_layout.addLayout(h2_layout)
-        v2_layout.addWidget(self.substring,stretch=3)
+        v2_layout.addWidget(self.substring, stretch=3)
 
         self.corpus_length_label = QtGui.QLabel("Corpus length")
         self.substring_length_label  = QtGui.QLabel("LCS Length")
@@ -193,6 +185,10 @@ class LCS_UI(QtGui.QMainWindow):
         self.pieChartCanvas = FigureCanvas(self.pieChart)
         self.pieChartCanvas.draw()
 
+        self.pieChart2 = plotting.init_pieChart()
+        self.pieChartCanvas2 = FigureCanvas(self.pieChart2)
+        self.pieChartCanvas2.draw()
+
         synth_layout.addWidget(self.corpus_length_label)
         synth_layout.addWidget(self.substring_length_label)
         synth_layout.addWidget(self.plagiarised_sentences)
@@ -203,11 +199,12 @@ class LCS_UI(QtGui.QMainWindow):
 
         v2h_layout.addLayout(synth_layout)
         v2h_layout.addWidget(self.pieChartCanvas)
+        v2h_layout.addWidget(self.pieChartCanvas2)
 
-        v2_layout.addLayout(v2h_layout,stretch=1)
+        v2_layout.addLayout(v2h_layout, stretch=1)
 
-        h_layout.addLayout(v1_layout)
-        h_layout.addLayout(v2_layout)
+        h_layout.addLayout(v1_layout,stretch=2)
+        h_layout.addLayout(v2_layout,stretch=2)
 
         # v_layout.addLayout(h1_layout)
 
@@ -242,8 +239,8 @@ class LCS_UI(QtGui.QMainWindow):
     def get_process_folder(self,text):
         if text=='Raw' :
             return "corpus-20090418"
-        path = text.replace('preprocessing','preprocessed')
-        path = path.replace(' ','_')
+        path = text.replace('preprocessing', 'preprocessed')
+        path = path.replace(' ', '_')
         path = 'corpus-'+path
         return path
 
@@ -284,29 +281,34 @@ class LCS_UI(QtGui.QMainWindow):
         add = False
         score = 0
         side_by_side = 1
+        corpus_length = len(corpus_text.split()) - 1
+        if corpus_length == len(lcs_text):
+            return 1.0
+
         for word in corpus_text.split():
 
             if index < len(lcs_text) and same_as(word, lcs_text[index]):
                 # bold_text.append("<b>" + word + "</b>")
                 index += 1
-                if (add == False):
+                if add == False:
                     add = True
                     side_by_side = 1
                 else:
                     side_by_side += 1
             else:
-                if (add == True):
+                if add == True:
                     add = False
                     score += (side_by_side * side_by_side)
                 # bold_text.append(word)
-        return score
+        final_score = float(score) #/ float(corpus_length*corpus_length)
+        return final_score
 
     def update_text(self):
         path = self.get_process_folder(self.process_combo_box.currentText())
         algo = self.algo_combo_box.currentText()
         file_suffix = self.get_current_process_suffix()
         filename = self.text_combo_box.currentText()
-        filename = filename.replace('.txt',file_suffix)
+        filename = filename.replace('.txt', file_suffix)
         file_object = open("../" + path + "/" + filename)
 
         corpus_text = file_object.read()
@@ -336,7 +338,7 @@ class LCS_UI(QtGui.QMainWindow):
         #memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
         # memory_usage = new_memory_usage
         # print("MEM = " + str(memory_usage))
-        _, s2, s1 = plagiarism.plagiarism(LCSLIST, corpus_text, 70.0)
+        _, s2, s1 = plagiarism_detector.plagiarised_sentences(LCSLIST, corpus_text, 70.0)
 
         bold_corpus_text = self.get_bold_text(LCSLIST, corpus_text)
         self.corpus_text.setHtml(bold_corpus_text)
@@ -348,6 +350,10 @@ class LCS_UI(QtGui.QMainWindow):
         self.running_time_label.setText("Running Time:\n" + str(running_time) + "ms")
         plotting.update_pieChart(self.pieChart, length, lengthLCS)
         self.pieChartCanvas.draw()
+
+        plotting.update_pieChart(self.pieChart2, length, lengthLCS)
+        self.pieChartCanvas2.draw()
+
         self.neatly_string_list = LCSLIST
         neatly = printing_neatly.print_neatly_dynamic(self.neatly_string_list, self.neatly_slider.value())
 
