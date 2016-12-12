@@ -94,14 +94,14 @@ def is_plagisised(lcs_text, corpus_text, threshold=70.0):
 
     percentage_copied, number_sentences_corpus, copied_sentence = plagiarised_sentences(lcs_text, corpus_text, threshold)
 
-    word_score = math.sqrt(score(lcs_text, corpus_text))
+    word_score = score(lcs_text, corpus_text)
     percent_threshold = 20.0
     group_score_threshold = 0.2
 
-    threshold_sum = (percent_threshold / 200.0) * (group_score_threshold / 2.0)
+    threshold_sum = (percent_threshold / 200.0) + (group_score_threshold / 2.0)
+    print(threshold_sum, percentage_copied, word_score)
 
-
-    return ((percentage_copied/100.0)*word_score > threshold_sum)
+    return (percentage_copied/100.0) + word_score > threshold_sum
 
 
 #Call function
