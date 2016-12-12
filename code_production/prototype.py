@@ -293,6 +293,9 @@ def generate_random_list(length):
 
     return words
 
+
+#copy of sentence plagarism threshold function
+#used to gather data on the corpus when testing
 def plagiarism1(lcs_text,corpus_text,treshold):
     def same_as(word1,word2):
          word1 = word1.replace(",","")
@@ -330,6 +333,8 @@ def plagiarism1(lcs_text,corpus_text,treshold):
     percentage_copied = ((copied_sentence *100)/number_sentences_corpus)
     return percentage_copied, number_sentences_corpus,copied_sentence
 
+#copy of the word grouping plagarism score function
+#used for gathering data on the corpus for testing
 def scoretest(lcs_text, corpus_text):
     def same_as(word1, word2):
         word1 = word1.replace(".", "")
