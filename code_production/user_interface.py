@@ -13,7 +13,7 @@
 import os
 import sys
 import time
-
+import math
 import pandas as pd
 from PyQt4 import QtGui, QtCore
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
@@ -175,6 +175,7 @@ class LCS_UI(QtGui.QMainWindow):
         v2_layout.addLayout(h2_layout)
         v2_layout.addWidget(self.substring, stretch=3)
 
+        self.is_plagiarised_label = QtGui.QLabel("Plagiarised: YES")
         self.corpus_length_label = QtGui.QLabel("Corpus length")
         self.substring_length_label  = QtGui.QLabel("LCS Length")
         self.plagiarised_sentences = QtGui.QLabel("9/11 Sentences plagiarised")
@@ -189,6 +190,7 @@ class LCS_UI(QtGui.QMainWindow):
         self.pieChartCanvas2 = FigureCanvas(self.pieChart2)
         self.pieChartCanvas2.draw()
 
+        synth_layout.addWidget(self.is_plagiarised_label)
         synth_layout.addWidget(self.corpus_length_label)
         synth_layout.addWidget(self.substring_length_label)
         synth_layout.addWidget(self.plagiarised_sentences)
@@ -281,14 +283,8 @@ class LCS_UI(QtGui.QMainWindow):
         add = False
         score = 0
         side_by_side = 1
-<<<<<<< HEAD
-        corpus_length = len(corpus_text.split()) - 1
-        if corpus_length == len(lcs_text):
-            return 1.0
 
-=======
         length = 0
->>>>>>> d3fda6f942cef3d58c25acdf32c5910bf0e77b72
         for word in corpus_text.split():
             length = length + 1
             if index < len(lcs_text) and same_as(word, lcs_text[index]):
@@ -304,12 +300,9 @@ class LCS_UI(QtGui.QMainWindow):
                     add = False
                     score += (side_by_side * side_by_side)
                 # bold_text.append(word)
-<<<<<<< HEAD
-        final_score = float(score) #/ float(corpus_length*corpus_length)
-        return final_score
-=======
-        return float(score) / (length * length)
->>>>>>> d3fda6f942cef3d58c25acdf32c5910bf0e77b72
+
+        return score
+
 
     def update_text(self):
         path = self.get_process_folder(self.process_combo_box.currentText())
@@ -346,20 +339,27 @@ class LCS_UI(QtGui.QMainWindow):
         #memory_usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
         # memory_usage = new_memory_usage
         # print("MEM = " + str(memory_usage))
-        _, s2, s1 = plagiarism_detector.plagiarised_sentences(LCSLIST, corpus_text, 70.0)
-
+        _, s2, s1 = plagiarism_detector.plagiarised_sentences(LCSLIST, corpus_text)
+        plagiarism_score = plagiarism_detector.score(LCSLIST, corpus_text)
+        is_plagiarised = plagiarism_detector.is_plagisised(LCSLIST, corpus_text)
         bold_corpus_text = self.get_bold_text(LCSLIST, corpus_text)
         self.corpus_text.setHtml(bold_corpus_text)
 
-        self.corpus_length_label.setText("Corpus Length:\n" + str(cor_length))
+        if  is_plagiarised:
+            self.is_plagiarised_label.setText("Plagiarised: YES")
+        else:
+            self.is_plagiarised_label.setText("Plagiarised: NO")
+
+
+        self.corpus_length_label.setText("Corpus Length:\n" + str(length))
         self.substring_length_label.setText("LCS Length:\n" + str(len(LCSLIST)))
         self.plagiarised_sentences.setText(str(s1) + "/" + str(s2) + " Sentences plagiarised")
-        self.plagiarism_score_label.setText("Plagiarism Score:\n" + str(self.score(LCSLIST,corpus_text)))
+        self.plagiarism_score_label.setText("Plagiarism Score:\n" + str(round(plagiarism_score, 2)))
         self.running_time_label.setText("Running Time:\n" + str(running_time) + "ms")
-        plotting.update_pieChart(self.pieChart, length, lengthLCS,"Word grouping score")
+        plotting.update_pieChart(self.pieChart, 1.0, plagiarism_score, "Word grouping score")
         self.pieChartCanvas.draw()
 
-        plotting.update_pieChart(self.pieChart2, length, lengthLCS, "Percentage of sentences plagiarised")
+        plotting.update_pieChart(self.pieChart2, s2, s1, "% of sentences plagiarised")
         self.pieChartCanvas2.draw()
 
         self.neatly_string_list = LCSLIST
@@ -369,20 +369,20 @@ class LCS_UI(QtGui.QMainWindow):
         return
 
     def tab1_neatly_algo_change(self):
-    	algo = self.neatly_algo_combo_box.currentText()
-    	if algo == "Dynamic":
-        	neatly = printing_neatly.print_neatly_dynamic(self.neatly_string_list, self.neatly_slider.value())
+        algo = self.neatly_algo_combo_box.currentText()
+        if algo == "Dynamic":
+            neatly = printing_neatly.print_neatly_dynamic(self.neatly_string_list, self.neatly_slider.value())
         else:
-        	neatly = printing_neatly.print_neatly_greedy(self.neatly_string_list, self.neatly_slider.value())
+            neatly = printing_neatly.print_neatly_greedy(self.neatly_string_list, self.neatly_slider.value())
         self.substring.setPlainText("\n".join(neatly))
 
     def tab1_neatly_slider_change_value(self, value):
         self.neatly_text.setText(str(value))
-    	algo = self.neatly_algo_combo_box.currentText()
-    	if algo == "Dynamic":
-        	neatly = printing_neatly.print_neatly_dynamic(self.neatly_string_list, self.neatly_slider.value())
+        algo = self.neatly_algo_combo_box.currentText()
+        if algo == "Dynamic":
+            neatly = printing_neatly.print_neatly_dynamic(self.neatly_string_list, self.neatly_slider.value())
         else:
-        	neatly = printing_neatly.print_neatly_greedy(self.neatly_string_list, self.neatly_slider.value())
+            neatly = printing_neatly.print_neatly_greedy(self.neatly_string_list, self.neatly_slider.value())
         self.substring.setPlainText("\n".join(neatly))
         #self.update_text()
 

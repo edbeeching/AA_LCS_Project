@@ -300,7 +300,7 @@ def plagiarism1(lcs_text,corpus_text,treshold):
          word2 = word2.replace(",","")
          word2 = word2.replace(".","")
          return word1 == word2
-    
+
     index = 0
     length_sentence = 0
     number_sentences_corpus= -1

@@ -40,7 +40,7 @@ def update_pieChart(figure, length, lengthLCS,title):
     )
     ax.axis('equal')
     patches, texts = ax.pie(sizes, colors=colors, startangle=90)
-    ax.legend(patches, labels, loc="best")
+    ax.legend(patches, labels, loc=(0,0))
 
     figure.suptitle(title, fontsize=14, color='black')
 
