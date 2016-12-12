@@ -341,7 +341,7 @@ class LCS_UI(QtGui.QMainWindow):
         # print("MEM = " + str(memory_usage))
         _, s2, s1 = plagiarism_detector.plagiarised_sentences(LCSLIST, corpus_text)
         plagiarism_score = plagiarism_detector.score(LCSLIST, corpus_text)
-        is_plagiarised = plagiarism_detector.is_plagisised(LCSLIST, corpus_text)
+        is_plagiarised = plagiarism_detector.is_plagiarised(LCSLIST, corpus_text)
         bold_corpus_text = self.get_bold_text(LCSLIST, corpus_text)
         self.corpus_text.setHtml(bold_corpus_text)
 
