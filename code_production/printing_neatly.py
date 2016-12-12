@@ -1,11 +1,37 @@
+"""
+Created by Edward Beeching
 
+This module implements the following printing neatly algorithms:
+    1. print_neatly_greedy(list_of_strings, lines_per_row)
+        This fills each line with as many lines as possible without consideration of the overall cost
+        This approach is linear, but does not produce an optimal solution
+
+    2. print_neatly_dynamic(list_of_strings, lines_per_row)
+        This produces and optimal solution using a dynamic approach, the compute extras function has both a dynamic,
+        and non-dynnamic version, and the line costs are only computed where appropriate.
+
+    3. print_neatly_recursive(list_of_strings, lines_per_row)
+        This enumerates every possible solution with a recursive approach, the solution returned is optimal
+        but run-time is exponential
+
+    4. print_neatly_branch_and_bound(list_of_strings, lines_per_row)
+        This makes an initial estimate of the cost of a solution using the greedy approach, solutions are explored
+        recursively and estimates of a bound are make with remaining words with a greedy approach, in order to cut
+        solutions. Unfortunately the resulting solutions are always optimal.
+    5. print_neatly_branch_and_bound2(list_of_strings, lines_per_row)
+
+        This is a second branch and bound approach, the difference here is the greedy function is only used at the start
+        in order to get an upper bound, solutions are the explored recursively and solutions are cut when the
+        accumulated cost exceeds the greedy estimate. The result return by this algorithm is optimal.
+
+"""
 from __future__ import print_function
 import numpy
 from operator import itemgetter
-import sys
 import random
 import string
 import time
+
 
 def _compute_extras(i, j, list_of_strings, lines_per_row):
 
@@ -120,7 +146,7 @@ def print_neatly_dynamic(list_of_strings, lines_per_row):
     return output
 
 def find_num_words(list_of_strings, lines_per_row):
-    #print("Find num words",list_of_strings)
+    # Function to find maximum number of words that cna fit on a line
     counter = 0
     index = 0
     while(index < len(list_of_strings)):

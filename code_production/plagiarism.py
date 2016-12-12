@@ -44,9 +44,9 @@ def plagiarism(lcs_text,corpus_text,treshold):
                 length_sentence += 1
         
     percentage_copied = ((copied_sentence *100)/number_sentences_corpus)
-    print(percentage_copied)
-    print(copied_sentence)
-    print(number_sentences_corpus)
+    #print(percentage_copied)
+    #print(copied_sentence)
+    #print(number_sentences_corpus)
     return percentage_copied, number_sentences_corpus,copied_sentence
     
 #Call function
