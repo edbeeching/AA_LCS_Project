@@ -90,7 +90,8 @@ def score(lcs_text, corpus_text):
                 # bold_text.append(word)
     return math.sqrt(float(score) / (len(corpus_text) * len(corpus_text)))
 
-def is_plagisised(lcs_text, corpus_text, threshold=70.0):
+
+def is_plagiarised(lcs_text, corpus_text, threshold=70.0):
 
     percentage_copied, number_sentences_corpus, copied_sentence = plagiarised_sentences(lcs_text, corpus_text, threshold)
 

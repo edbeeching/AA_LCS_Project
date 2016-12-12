@@ -40,6 +40,18 @@
               <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="63" selection-end-column="16" />
               <folding>
                 <element signature="e#84#97#0" expanded="true" />
+                <marker date="1481557366328" expanded="true" signature="11478:12425" ph="..." />
+                <marker date="1481557366328" expanded="true" signature="11509:11695" ph="..." />
+                <marker date="1481557366328" expanded="true" signature="11909:12363" ph="..." />
+                <marker date="1481557366328" expanded="true" signature="11979:12199" ph="..." />
+                <marker date="1481557366328" expanded="true" signature="12087:12147" ph="..." />
+                <marker date="1481557366328" expanded="true" signature="12213:12363" ph="..." />
+                <marker date="1481557366328" expanded="true" signature="12243:12363" ph="..." />
+                <marker date="1481557366328" expanded="true" signature="12426:12526" ph="..." />
+                <marker date="1481557366328" expanded="true" signature="12553:12951" ph="..." />
+                <marker date="1481557366328" expanded="true" signature="12554:12719" ph="..." />
+                <marker date="1481557366328" expanded="true" signature="12805:12908" ph="..." />
+                <marker date="1481557366328" expanded="true" signature="12952:14036" ph="..." />
               </folding>
             </state>
           </provider>
@@ -58,8 +70,8 @@
       <file leaf-file-name="plagiarism_detector.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plagiarism_detector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="100" column="79" lean-forward="true" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="79" />
+            <state relative-caret-position="315">
+              <caret line="93" column="14" lean-forward="false" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
               <folding>
                 <element signature="e#261#272#0" expanded="true" />
                 <element signature="e#675#1860#0" expanded="false" />
@@ -541,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481552212062</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;code_production/Plotting.pyc&#10;">
+      <created>1481557351308</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1481557351308</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1020,6 +1039,18 @@
           <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="63" selection-end-column="16" />
           <folding>
             <element signature="e#84#97#0" expanded="true" />
+            <marker date="1481557366328" expanded="true" signature="11478:12425" ph="..." />
+            <marker date="1481557366328" expanded="true" signature="11509:11695" ph="..." />
+            <marker date="1481557366328" expanded="true" signature="11909:12363" ph="..." />
+            <marker date="1481557366328" expanded="true" signature="11979:12199" ph="..." />
+            <marker date="1481557366328" expanded="true" signature="12087:12147" ph="..." />
+            <marker date="1481557366328" expanded="true" signature="12213:12363" ph="..." />
+            <marker date="1481557366328" expanded="true" signature="12243:12363" ph="..." />
+            <marker date="1481557366328" expanded="true" signature="12426:12526" ph="..." />
+            <marker date="1481557366328" expanded="true" signature="12553:12951" ph="..." />
+            <marker date="1481557366328" expanded="true" signature="12554:12719" ph="..." />
+            <marker date="1481557366328" expanded="true" signature="12805:12908" ph="..." />
+            <marker date="1481557366328" expanded="true" signature="12952:14036" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1044,8 +1075,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plagiarism_detector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="100" column="79" lean-forward="true" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="79" />
+        <state relative-caret-position="315">
+          <caret line="93" column="14" lean-forward="false" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
           <folding>
             <element signature="e#261#272#0" expanded="true" />
             <element signature="e#675#1860#0" expanded="false" />
