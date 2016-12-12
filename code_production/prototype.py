@@ -268,6 +268,7 @@ def getLCSdata(mode, folder, sentence):
     file_list = os.listdir('..\\' + folder)
     lengths = []
     ratios = []
+    scores = []
     for each in file_list:
         task = each[9]
         file_end = each[10:]
@@ -279,7 +280,9 @@ def getLCSdata(mode, folder, sentence):
             Length, LCSlength, LCSLIST = LCS(file1,file2,mode) 
         lengths.append(LCSlength)
         ratios.append(float(LCSlength) / Length)
-    return lengths[:-5], ratios[:-5]  #last 5 elements are LCS of original files vs. themselves
+        percent, numsent, copysent = plagiarism1(LCSLIST, file1, 70)
+        scores.append(percent)
+    return lengths[:-5], ratios[:-5], scores[:-5] #last 5 elements are LCS of original files vs. themselves
     
         
 def generate_random_list(length):
@@ -289,7 +292,76 @@ def generate_random_list(length):
         words[i] = (random.choice(string.ascii_uppercase))
 
     return words
+
+def plagiarism1(lcs_text,corpus_text,treshold):
+    def same_as(word1,word2):
+         word1 = word1.replace(",","")
+         word1 = word1.replace(".","")
+         word2 = word2.replace(",","")
+         word2 = word2.replace(".","")
+         return word1 == word2
     
+    index = 0
+    length_sentence = 0
+    number_sentences_corpus= -1
+    copied_word_in_sentence = []
+    copied_sentence = 0
+
+    corpus_text = make_sentence_array(corpus_text)
+    
+    for sentence in corpus_text:
+        if length_sentence != 0:
+            percentage_copied_sentence = ((len(copied_word_in_sentence)*100)/length_sentence)
+            if percentage_copied_sentence >=treshold:
+                copied_sentence +=1
+        copied_word_in_sentence = []
+        length_sentence = 0
+        number_sentences_corpus += 1
+        for word in sentence:
+            if index < len(lcs_text) and same_as(word, lcs_text[index]):
+                #print("passage1")
+                copied_word_in_sentence.append(word)
+                index += 1
+                length_sentence+=1
+            else:
+                #print("passage3")
+                length_sentence += 1
+        
+    percentage_copied = ((copied_sentence *100)/number_sentences_corpus)
+    return percentage_copied, number_sentences_corpus,copied_sentence
+
+def scoretest(lcs_text, corpus_text):
+    def same_as(word1, word2):
+        word1 = word1.replace(".", "")
+        word1 = word1.replace(",", "")
+        word2 = word2.replace(".", "")
+        word2 = word2.replace(",", "")
+        return word1 == word2
+
+    if len(lcs_text) == len(corpus_text):
+        return 1
+    
+    corpus_text = make_compsentence_array(corpus_text)
+    index = 0
+    add = False
+    score = 0
+    side_by_side = 1
+    for word in corpus_text:
+
+        if index < len(lcs_text) and same_as(word, lcs_text[index]):
+            # bold_text.append("<b>" + word + "</b>")
+            index += 1
+            if (add == False):
+                add = True
+                side_by_side = 1
+            else:
+                side_by_side += 1
+        else:
+            if (add == True):
+                add = False
+                score += (side_by_side * side_by_side)
+            # bold_text.append(word)
+    return float(score) / (len(corpus_text)*len(corpus_text))
 ##########################################################################################
 # Testing
 if __name__ == "__main__":
@@ -299,11 +371,13 @@ if __name__ == "__main__":
 ##    for sentence in sentences:
 ##        print sentence
 
-    lengths, ratios = getLCSdata("classic","corpus-adv_preprocessed",True)
-    for each in lengths:
+    lengths, ratios, scores = getLCSdata("classic","corpus-adv_preprocessed",False)
+##    for each in lengths:
+##        print each
+##    for each in ratios:
+##        print round(each,5)
+    for each in scores:
         print each
-    for each in ratios:
-        print round(each,5)
 ##   
 ##    print("Runtime comparisons")
 ##    time_dict_rec = {}

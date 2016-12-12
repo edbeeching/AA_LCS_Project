@@ -281,12 +281,16 @@ class LCS_UI(QtGui.QMainWindow):
         add = False
         score = 0
         side_by_side = 1
+<<<<<<< HEAD
         corpus_length = len(corpus_text.split()) - 1
         if corpus_length == len(lcs_text):
             return 1.0
 
+=======
+        length = 0
+>>>>>>> d3fda6f942cef3d58c25acdf32c5910bf0e77b72
         for word in corpus_text.split():
-
+            length = length + 1
             if index < len(lcs_text) and same_as(word, lcs_text[index]):
                 # bold_text.append("<b>" + word + "</b>")
                 index += 1
@@ -300,8 +304,12 @@ class LCS_UI(QtGui.QMainWindow):
                     add = False
                     score += (side_by_side * side_by_side)
                 # bold_text.append(word)
+<<<<<<< HEAD
         final_score = float(score) #/ float(corpus_length*corpus_length)
         return final_score
+=======
+        return float(score) / (length * length)
+>>>>>>> d3fda6f942cef3d58c25acdf32c5910bf0e77b72
 
     def update_text(self):
         path = self.get_process_folder(self.process_combo_box.currentText())
