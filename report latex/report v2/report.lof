@@ -1,0 +1,16 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Path to the solution of the LCS of [A,B,C,A] and [B,C,A,A]}}{24}{figure.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces LCS Unit}}{25}{figure.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Table}}{25}{figure.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces General graph}}{26}{figure.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Graph by task}}{26}{figure.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Repartition by Category}}{27}{figure.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Normal distributions of the repartition by category / $|\text {words}|$}}{27}{figure.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Running times for different algorithms on linear scale / $|\text {words}|$}}{28}{figure.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Running times for different algorithms on logarithmic scale / $|\text {words}|$}}{28}{figure.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Running times for different algorithms on logarithmic scale / $(|\text {words}|)^2$}}{29}{figure.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Comparison between Printing neatly algorithms, linear scale.}}{29}{figure.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Comparison between Printing neatly algorithms with a log score, showing the exponential runtimes of the recursive and branch and bound (optimal) algorithms.}}{30}{figure.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Comparison between the Printing neatly Dynamic, Branch \& Bound (non-optimal) and greedy algorithms}}{30}{figure.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces The final scores of the plagiarism detector. Excluding outliers, a good separation is observed between the non-plagiarised texts (yellow).}}{31}{figure.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Planning: the plan at the start of the project.}}{31}{figure.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Planning: the actual dates.}}{32}{figure.16}

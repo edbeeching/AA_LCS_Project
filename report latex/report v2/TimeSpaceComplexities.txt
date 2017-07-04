@@ -1,0 +1,120 @@
+TIME COMPLEXITIES
+
+LCS Dynamic Programming
+The dynamic programing algorithm for finding the length of the LCS requires O(mn) time, where m and n are the lengths (number of words) of the two input texts.
+This can be observed from the algorithm itself, as there is a for loop from 1 to n nested inside a for loop from 1 to m.
+The recursive algorithm used to build the solution from the b matrix requires O(m+n) time. Each run of the algorithm takes constant time, and each recursive call to the algorithm decreases at least one of the lengths by one.
+Combining these two results gives a time complexity of O(mn) to compute the length and build the LCS.
+
+LCS Linear Space (Forwards and Backwards)
+The linear space versions of the dynamic programming algorithm do the same computations, with an added step at copying the row of the matrix after each row iteration. As a result, the asymptotic time complexity remains O(mn).
+
+LCS Divide and Conquer
+Let T(m,n) denote the run time of the algorithm. At each call of the algorithm, it performs two O(mn) calls to the space-efficient algorithm. 
+Then it makes two recursive calls on strings of size q and n/2, and m - q and n/2, respectively. Then, for constant c, we have:
+	T(m,n) =< cmn + T(q,n/2) + T(m-q,n/2)
+	T(m,2) =< cm
+	T(2,n) =< cn
+If we assume m = n and q = n/2, then we have:
+	T(m,n) =< 2T(n/2) + cn^2
+From the master theorem, we have a = 2, b = 2, f(n) = n^2, and logb(a) = 1.
+Then, since f(n) is bigOmega(n^c) where c=2>logb(a)=1, and the regularity condition holds, since 2(n^2/4) =< kn^2 with k = 1/2, then it follows that T(m,n) = bigTheta(f(n)) = bigTheta(n^2)
+So, when m=n, the run time is bigTheta(n^2). We can assume that when m != n, T(m,n) =< kmn, and prove it by induction:
+Assume T(m',n') =< km'n' for m'<m and n'<n:
+	
+	T(m, n) =< cmn + T(q,n/2) + T(m-q,n/2)
+		=< cmn + kq(n/2) + k(m-q)(n/2)  by induction hypothesis
+		=  cmn + kq(n/2) + km(n/2) - kn(n/2)
+		=  (c+k/2)mn.
+So, if c = k/2, then the proof works. Thus, the LCS divide and conquer has a time complexity of O(mn)
+
+LCS Recursive
+The recursion for the recursive solution is as follows:
+	T(m,n)  = T(n,m-1) + T(n-1,m) + c
+		= (T(n,m-2) + T(n-1,m-1) + T(n-1,m-1) + T(n-2,m)) + c'
+		>= 2T(n-1,m-1)
+Therefore the algorithm is exponential, since it is O(2^(min(n,m)))
+
+LCS Branch and Bound
+In the worst case, the branch and bound solution take the same time as the recursive. Thus, it is exponential. However, in practice, it is faster (see runtimes).
+
+Printing Neatly Greedy Solution
+In the greedy algorithm, there is just one iteration over the whole text, as a decision is made to print a word on the same line if possible or move to the next line.
+As a result, the time complexity is O(n) where n is the number of words in the text.
+
+Printing Neatly Dynamic Programming
+The dynamic programming algorithm can be broken into 3 sections: first, computing the extras matrix; next, computing the line cost matrix; and finally, computing the optimal solution.
+1. The extras matrix is an n by n matrix where each element is computed in constant time. Thus, it is O(n^2).
+2. The line cost matrix is also an n by n matrix with constant cost for each element, so it is O(n^2).
+3. The optimal cost matrix is an array of length n, but the cost to compute the element at index i is a function of i. Thus, it is O(n^2).
+Since all three main parts of the algorithm are O(n^2), the algorithm is O(n^2).
+
+Printing Neatly Recursive
+The recursive solution iterates through all possible solutions of lines that have at least one word on each line and have 0 or more spaces on the end (that fit).
+Let i be the number of words that can fit on the first line, then we have the following recursion:
+	T(n) 	=  T(n-1) + T(n-2) + ... + T(n-i)
+Expanding each recursion on the right hand side of the equation gives an exponential growth.
+
+Printing Neatly Branch and Bound
+In the worst case, the branch and bound extension behaves just as the plain recursive algorithm, thus it is also exponential. However, the bounding can limit the number of unneeded computations (see runtimes).
+
+
+
+RUNTIME ANALYSIS
+Graph of runtimes with short explanation
+
+
+
+SPACE COMPLEXITIES
+LCS Dynamic Programming 
+In the dynamic programming algorithm, there are two m by n matrices (m is length of first input text, n is length of second), one for the c matrix denoting optimal solutions, and one for the b matrix that is used to build the solution.
+These matrices are in addition to the two input word arrays and LCS word array. Thus, the space complexity is O(mn).
+
+LCS Linear Space (forward and backward)
+In the linear space versions of the dynamic programming algorithm, we don't use the b matrix, and the c matrix is reduced to just 2 rows by n columns. Thus, the space complexity is O(n).
+
+LCS Divide and Conquer
+The divide and conquer algorithm uses the linear space algorithm on each half of the first input text and the full second text. The space complexity for these algorithms alone is O(n); 
+however, we must save the full column indexed at j = n/2 in order to find the optimal row to divide our problem. Since there are m rows, the space needed to save the two columns (one for forwards LCS, one for backwards LCS) is 2m.
+Adding this to the O(n) from the linear space algorithm, we have a space complexity of O(m+n).
+
+LCS Recursive
+Since the algorithm does a depth first search of the search space, a search will go all the way to a leaf node (base case) before backtracking back up the call tree. Each call to the function needs the two input texts that get smaller
+as the search gets closer to the base case. In terms of space used in addition to the input texts, the space complexity is constant. However, if a new copy of each input text is made for each recursive call, the space complexity becomes 
+O(n^2 + m^2) in the worst case, which is when a leaf node is found in the search space and both input texts have been reduced to a length of 2 or less:
+	S(m,n)  = (m+(m-1)+...+1) + (n+(n-1)+...+1)
+		= (m^2 + m)/2  + (n^2 + n)/2
+		= O(m^2) + O(n^2)
+		= O(m^2 + n^2)
+However, if pointers are used and new copies of the input texts are not made for each recurive call, then the space complexity become linear with respect to the input texts lengths.
+
+LCS Branch and Bound
+The space complexity for the the branch and bound extension is the same as recusive algorithm, except that a Queue of possible solutions to explore is also kept, which could potentially get quite large.
+
+
+Printing Neatly Greedy
+There are no additional matrices or arrays used to compute the greedy solution, as the input text is the only array stored. Thus, the space needed is linear, O(n) where n is the number of words in the input text.
+
+Printing Neatly Dynamic Programming
+The dynamic programming algorithm uses two matrices (one for extras, one for line cost) of size n by n, where n is the number of words in the input text. Additionally, an array of size n is used to compute the optimal solution. Thus, the 
+asymptotic space complexity is O(n^2).
+
+Printing Neatly Recursive
+There are no additional matrices or arrays used for the plain recursive solution. Thus, as long as pointers are used instead of copying a new input text array for each recursive call, the space complexity is O(n). If copies are made, then the 
+space complexity would be O(n^2) (see LCS recursive space complexity analysis).
+
+Printing Neatly Branch and Bound
+The space complexity is that of the recursive solution plus an array of possible solutions to explore. This array is created at each level of recursion, and contains at most every word in the input. Since there are at most n - 1 levels of recursion 
+(in the case where there is just one word per line), the worst case space complexity would be O(n^2).
+
+
+SCALABILITY
+
+LCS
+For input texts that are very large, it is clear that the LCS Divide and Conquer strategy would scale the best out of all of them. It runs in pseudo-polynomial time which is much faster than the recusive or branch and bound solutions.
+Also, the space improvement over the classic dynamic programming algorithm would be needed when the input texts are very large.
+
+Printing Neatly
+If an input text is very large, the recursive and branch and bound solutions would take too long. Furthermore, since the dynamic programming approach takes polynomial space and time, it would be unsuitable for extremely large input texts. 
+A only solution left is the greedy solution, which takes linear space and time. It offers the best chance of scaling reasonably with large input texts. However, the solution is not guarenteed to be optimal. If an optimal solution was needed,
+the dynamic programming algorithm would offer the best scalability.

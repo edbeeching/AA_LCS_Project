@@ -1,0 +1,72 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {section}{\numberline {2}Algorithms presentation}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}LCS}{4}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Dynamic programming}{4}{subsubsection.2.1.1}
+\contentsline {paragraph}{LCS Linear Space Forwards:}{4}{section*.2}
+\contentsline {paragraph}{LCS Linear Space Backwards:}{4}{section*.3}
+\contentsline {subsubsection}{\numberline {2.1.2}Divide and Conquer}{4}{subsubsection.2.1.2}
+\contentsline {paragraph}{LCS Divide and Conquer:}{4}{section*.4}
+\contentsline {subsubsection}{\numberline {2.1.3}Recursive}{5}{subsubsection.2.1.3}
+\contentsline {paragraph}{LCS Recursive:}{5}{section*.5}
+\contentsline {subsubsection}{\numberline {2.1.4}LCS Branch and bound}{5}{subsubsection.2.1.4}
+\contentsline {paragraph}{Bounds:}{5}{section*.6}
+\contentsline {paragraph}{Implementation:}{5}{section*.7}
+\contentsline {subsection}{\numberline {2.2}Printing Neatly}{6}{subsection.2.2}
+\contentsline {paragraph}{Greedy Solution:}{6}{section*.8}
+\contentsline {paragraph}{Dynamic Programming:}{6}{section*.9}
+\contentsline {paragraph}{Recursive:}{6}{section*.10}
+\contentsline {paragraph}{Branch and Bound:}{6}{section*.11}
+\contentsline {section}{\numberline {3}Preprocessing techniques}{7}{section.3}
+\contentsline {paragraph}{Introduction:}{7}{section*.12}
+\contentsline {subsection}{\numberline {3.1}Light Preprocessing}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Advanced Preprocessing}{7}{subsection.3.2}
+\contentsline {paragraph}{Stop Word Removal:}{7}{section*.13}
+\contentsline {paragraph}{Word Ordering}{8}{section*.14}
+\contentsline {section}{\numberline {4}Graphical User Interface}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Plagiarism detector}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Data table}{9}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Graphs}{9}{subsection.4.3}
+\contentsline {paragraph}{General graph:}{9}{section*.15}
+\contentsline {paragraph}{Graph by task:}{9}{section*.16}
+\contentsline {paragraph}{Repartition by category:}{9}{section*.17}
+\contentsline {section}{\numberline {5}Experimental study}{10}{section.5}
+\contentsline {subsection}{\numberline {5.1}Time complexity}{10}{subsection.5.1}
+\contentsline {paragraph}{LCS Dynamic Programming:}{10}{section*.18}
+\contentsline {paragraph}{LCS Linear Space (Forwards and Backwards):}{10}{section*.19}
+\contentsline {paragraph}{LCS Divide and Conquer:}{10}{section*.20}
+\contentsline {paragraph}{LCS Recursive:}{11}{section*.21}
+\contentsline {paragraph}{LCS Branch and Bound:}{11}{section*.22}
+\contentsline {paragraph}{Printing Neatly Greedy Solution:}{11}{section*.23}
+\contentsline {paragraph}{Printing Neatly Dynamic Programming:}{11}{section*.24}
+\contentsline {paragraph}{Printing Neatly Recursive:}{11}{section*.25}
+\contentsline {paragraph}{Printing Neatly Branch and Bound:}{11}{section*.26}
+\contentsline {subsection}{\numberline {5.2}Runtime analysis}{11}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}LCS}{11}{subsubsection.5.2.1}
+\contentsline {paragraph}{Running times on linear scale / $|\text {words}|$:}{12}{section*.27}
+\contentsline {paragraph}{Running times on logarithmic scale / $|\text {words}|$:}{12}{section*.28}
+\contentsline {paragraph}{Running times on logarithmic scale / $(|\text {words}|)^2$:}{12}{section*.29}
+\contentsline {subsubsection}{\numberline {5.2.2}Printing Neatly}{12}{subsubsection.5.2.2}
+\contentsline {paragraph}{Running times on linear scale / $|\text {words}|$:}{12}{section*.30}
+\contentsline {paragraph}{Running times on logarithmic scale / $|\text {words}|$:}{12}{section*.31}
+\contentsline {paragraph}{Running times on linear scale / $(|\text {words}|)^2$:}{12}{section*.32}
+\contentsline {subsection}{\numberline {5.3}Space complexity}{12}{subsection.5.3}
+\contentsline {paragraph}{LCS Dynamic Programming :}{12}{section*.33}
+\contentsline {paragraph}{LCS Linear Space (forward and backward):}{12}{section*.34}
+\contentsline {paragraph}{LCS Divide and Conquer:}{13}{section*.35}
+\contentsline {paragraph}{LCS Recursive:}{13}{section*.36}
+\contentsline {paragraph}{LCS Branch and Bound:}{13}{section*.37}
+\contentsline {paragraph}{Printing Neatly Greedy:}{13}{section*.38}
+\contentsline {paragraph}{Printing Neatly Dynamic Programming:}{13}{section*.39}
+\contentsline {paragraph}{Printing Neatly Recursive:}{13}{section*.40}
+\contentsline {paragraph}{Printing Neatly Branch and Bound:}{13}{section*.41}
+\contentsline {subsection}{\numberline {5.4}Outliers}{14}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Scalability}{14}{subsection.5.5}
+\contentsline {paragraph}{LCS:}{14}{section*.42}
+\contentsline {paragraph}{Printing Neatly:}{14}{section*.43}
+\contentsline {section}{\numberline {6}Plagiarism Detector}{14}{section.6}
+\contentsline {section}{\numberline {7}Project planning \& difficulties}{15}{section.7}
+\contentsline {paragraph}{Planning:}{15}{section*.44}
+\contentsline {paragraph}{Difficulties:}{15}{section*.45}
+\contentsline {section}{\numberline {8}Conclusion}{16}{section.8}
+\contentsline {section}{\numberline {9}References}{16}{section.9}
+\contentsline {section}{Appendices}{17}{section*.46}

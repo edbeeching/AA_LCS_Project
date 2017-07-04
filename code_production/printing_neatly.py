@@ -290,6 +290,11 @@ if __name__ == '__main__':
     words = ['ODP', 'WPR', 'TKSGHVLAJ', 'PK', 'XKEBDCKHHU', 'LWSU', 'MVZWQBD', 'CLJW', 'WRKAHNBZV', 'FKKHGDO']
 
 
+    text = ["Mikey", "Rat", "likes", "to", "code", "everyday"]
+    print(print_neatly_recursive(text, 12))
+    print(get_greedy_bound(print_neatly_greedy(text, 12),12))
+    print(print_neatly_greedy(text, 12))
+    exit()
 
 
     print(words)

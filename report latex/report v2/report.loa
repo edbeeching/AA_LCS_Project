@@ -1,0 +1,12 @@
+\contentsline {algocf}{\numberline {1}{\ignorespaces Optimal substructure}}{18}{algocf.1}
+\contentsline {algocf}{\numberline {2}{\ignorespaces Recursive solution}}{18}{algocf.2}
+\contentsline {algocf}{\numberline {3}{\ignorespaces LCS-Length(input: $X,Y$)}}{19}{algocf.3}
+\contentsline {algocf}{\numberline {4}{\ignorespaces Print-LCS(input: $b, X, |X|, |Y|)$}}{19}{algocf.4}
+\contentsline {algocf}{\numberline {5}{\ignorespaces LCS\_LSF (input: $X,Y$)}}{20}{algocf.5}
+\contentsline {algocf}{\numberline {6}{\ignorespaces LCS\_LSB(input: $X,Y$)}}{20}{algocf.6}
+\contentsline {algocf}{\numberline {7}{\ignorespaces LCS\_DC(input: $X,Y$)}}{21}{algocf.7}
+\contentsline {algocf}{\numberline {8}{\ignorespaces LCS\_Recursive(input: $X, Y$)}}{21}{algocf.8}
+\contentsline {algocf}{\numberline {9}{\ignorespaces Brand\_and\_bound(inputs: $X,Y$)}}{22}{algocf.9}
+\contentsline {algocf}{\numberline {10}{\ignorespaces PN\_Greedy(input: X (list of words to be printed), L (number of spaces per line))}}{22}{algocf.10}
+\contentsline {algocf}{\numberline {11}{\ignorespaces PN\_DP(input: $X, L$)}}{23}{algocf.11}
+\contentsline {algocf}{\numberline {12}{\ignorespaces PN\_Recursive(input: $X, L$)}}{23}{algocf.12}
