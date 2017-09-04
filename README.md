@@ -12,4 +12,4 @@ This repository contains the following algorithms:
 - [X] LCS Branch and bound
 - [X] Printing neatly (Branch and bound, Dynamic, recursive, Greedy)
 
-See report here
+ [See report here](https://github.com/edbeeching/AA_LCS_Project/blob/master/report%20latex/report%20v2/report.pdf)
